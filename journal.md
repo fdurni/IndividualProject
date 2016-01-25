@@ -21,4 +21,4 @@ Completed:
 * Added journal
 * Added timelog
 * Modifed readme
-* Research http://usapl.liftingdatabase.com/. This website shows stats for nationally ranked powerlifters. 
+* Research http://usapl.liftingdatabase.com/. This website shows stats for nationally ranked USAPL powerlifters. 
