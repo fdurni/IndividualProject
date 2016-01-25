@@ -5,7 +5,7 @@ To document project progress, accomplishments, snags and time spent on this clas
 [Time Log](TimeLog.md)
 
 ##Week 1
-###1/23/16
+###1/24/16
 
 Completed:
 * Chose a project 
@@ -13,3 +13,11 @@ Completed:
 * Worked on Project Plan
 * Started thinking how I want the web pages to look 
 * Began listing technologies and how they could fit in
+
+###1/25/16
+
+Completed:
+* Added project plan
+* Added journal
+* Added timelog
+* Modifed readme
