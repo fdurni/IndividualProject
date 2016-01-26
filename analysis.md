@@ -1,4 +1,4 @@
-#Analysis
+#Individual Project Analysis
 
 ###Dashboard
 * Name
