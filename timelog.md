@@ -6,3 +6,5 @@
 | 1/24/16 | Completed Week 1 exercises | 2 | |
 | 1/25/16 | Completed reading, worked on problem statement and project plan | 3 | |
 | 1/26/16 | Worked on mockup for landing page of website | 2 | |
+| 2/2/16 | Worked on mockup for landing page of website | 2 | |
+| 2/3/16 | Worked on Week 2 exercises| 6 | |
