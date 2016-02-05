@@ -8,3 +8,4 @@
 | 1/26/16 | Worked on mockup for landing page of website | 2 | |
 | 2/2/16 | Worked on mockup for landing page of website | 2 | |
 | 2/3/16 | Worked on Week 2 exercises| 6 | |
+| 2/4/16 | Re-setup environment | 3 | |
