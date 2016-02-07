@@ -72,8 +72,8 @@ public class UserDaoWithSql implements UserDao {
     private User createUserFromResults(ResultSet results) throws SQLException {
         User user = new User();
         user.setId(results.getInt("id"));
-        user.setFirstName(results.getString("first_name"));
-        user.setLastName(results.getString("last_name"));
+        user.setFirstName(results.getString("firstName"));
+        user.setLastName(results.getString("lastName"));
         user.setPassword(results.getString("password"));
         return user;
     }
