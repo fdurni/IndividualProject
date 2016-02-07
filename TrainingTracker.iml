@@ -17,10 +17,10 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" />
+          <unit-entry name="hibernate.cfg.xml" value="42ed7352-7103-44d1-91c8-b073bf209854" />
         </datasource-map>
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
   </component>
@@ -29,6 +29,7 @@
     <content url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker">
       <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/tests" isTestSource="true" />
+      <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/resources" type="java-resource" />
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -36,6 +37,6 @@
     <orderEntry type="library" exported="" name="log4j" level="application" />
     <orderEntry type="library" exported="" name="mysql-connector-java-5.1.35-bin" level="application" />
     <orderEntry type="library" exported="" name="Hibernate 4.2.2-4.2.2" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>
