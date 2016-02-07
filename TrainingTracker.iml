@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/web" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="hibernate.cfg.xml" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker">
+      <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/tests" isTestSource="true" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" scope="TEST" name="junit" level="application" />
+    <orderEntry type="library" exported="" name="log4j" level="application" />
+    <orderEntry type="library" exported="" name="mysql-connector-java-5.1.35-bin" level="application" />
+    <orderEntry type="library" exported="" name="Hibernate 4.2.2-4.2.2" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+  </component>
+</module>
