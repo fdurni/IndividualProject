@@ -27,7 +27,7 @@ I would like to build a website that will allow me to input my training schedule
 
 ###Design
 * Application Flow - link to follow
-* Screen Design - link to follow
+* Screen Design - (images/dashboard.PNG)
 * Database Design - link to follow
 
 ###[Project Plan](projectPlan.md)
