@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1763124c-d9eb-4ce2-aad6-3c33d855385d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="cfdb088b-1f53-4354-9771-22a6718c05eb" name="Rejected commit: Default" comment="adding test file" />
@@ -580,7 +579,7 @@
       <option name="number" value="Default" />
       <updated>1454639884054</updated>
       <workItem from="1454639887828" duration="779000" />
-      <workItem from="1454863945256" duration="1265000" />
+      <workItem from="1454863945256" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="updating timelog">
       <created>1454640162032</created>
@@ -600,11 +599,17 @@
       <option name="project" value="LOCAL" />
       <updated>1454865109730</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updating&#10;">
+      <created>1454865217260</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1454865217260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2044000" />
+    <option name="totallyTimeSpent" value="2169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="166" y="17" width="1542" height="998" extended-state="0" />
