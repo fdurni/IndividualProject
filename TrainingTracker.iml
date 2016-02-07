@@ -4,13 +4,14 @@
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/web/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/web" relative="/" />
+          <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src" />
+          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/resources" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -20,24 +21,25 @@
           <unit-entry name="hibernate.cfg.xml" value="42ed7352-7103-44d1-91c8-b073bf209854" />
         </datasource-map>
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/resources/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker">
-      <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/src" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/tests" isTestSource="true" />
-      <sourceFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/resources" type="java-resource" />
-      <excludeFolder url="file://$USER_HOME$/GitHub/FDurni/TrainingTracker/lib" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" scope="TEST" name="junit" level="application" />
     <orderEntry type="library" exported="" name="log4j" level="application" />
     <orderEntry type="library" exported="" name="mysql-connector-java-5.1.35-bin" level="application" />
+    <orderEntry type="library" exported="" name="geronimo-osgi-locator-1.0" level="application" />
     <orderEntry type="library" exported="" name="Hibernate 4.2.2-4.2.2" level="project" />
-    <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>
