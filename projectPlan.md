@@ -35,40 +35,42 @@
 - [ ] Add user registration
 - [ ] Code Review
 - [ ] Add Maven for building
-- 
+
 ##Week 5
 - [ ] Weekly Journal entry
-- 
+
 ##Week 6
 - [ ] Weekly Journal entry
-- 
+
 ##Week 7
 - [ ] Weekly Journal entry
-- 
+
 ##Week 8
 - [ ] Weekly Journal entry
 - [ ] Code review
+
 ##Week 9
 - [ ] Weekly Journal entry
-- 
+
 ##Week 10
 - [ ] Weekly Journal entry
-- 
+
 ##Week 11
 - [ ] Weekly Journal entry
-- 
+
 ##Week 12
 - [ ] Weekly Journal entry
-- 
+
 ##Week 13
 - [ ] Weekly Journal entry
-- 
+
 ##Week 14
 - [ ] Weekly Journal entry
 - [ ] Create final presentation
+
 ##Week 15
 - [ ] Weekly Journal entry
 - [ ] Final Presentation
+
 ##Week 16
 - [ ] Weekly Journal entry
-- 
