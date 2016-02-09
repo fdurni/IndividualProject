@@ -41,10 +41,10 @@ In class, my VM was very unstable and froze/crashed on several occasions. Instea
 I spent a few hours re-setting up my environment. Most things seem to be working, except deploying a WAR using tomcat. I will need to troubleshoot this more soon. 
 
 ###2/7/16
-I worked on the exercises for Week 3 and began looking over a bootstrap theme. The bootstrap files contain so much information I'm not sure where to start. It may be easier to start from scratch and only add-in what I need, rather than trying to delete what I don't need. 
+Yesterday I spent the entire day working on a project for another class, so I wasn't able to work on anything for this class. Today, I worked on the exercises for Week 3 and began looking over a bootstrap theme. The bootstrap files contain so much information that I'm not sure where to start. It may be easier to start from scratch and only add-in what I need, rather than trying to delete what I don't need. 
 
 ###2/8/16
-I found a free template for a dashboard that works off of bootstrap. The code is very well commented, which would make it easy to find out how the code all works together. A blank template is also provided, so that the user can add in the content they want. Many examples are also provided. I've forked the GitHub repository, and will tenatively plan to use this in my project. 
+I found a free template for a dashboard that works off of bootstrap. The code is very well commented, which would make it easy to figure out how the code all works together. A blank template is also provided, so that the user can add in the content they want. Many examples are also provided. I've forked the GitHub repository, and will tenatively plan to use this in my project. 
 
 ###2/9/16
 I'm not sure where the weeks have gone. I feel like I've spent so much time working on the exercises and setting up my environment that I have had very little time to work on my project. I took a first cut at my database design and created an ERD in visio. I then created the tables in my local database. I think that I may need to modify my tables slightly, but this should give me a good starting point. I also created my JSP pages. 
