@@ -2,22 +2,20 @@
 
 ###Dashboard
 * Name
-* Current Bodyweight
-* My Workouts (# of workouts added)
+* Current Program
+* Next Session
 * Training Schedule (Google Calendar API)
 * Recent Progress (12 weeks?) (Squats, Deadlifts, Bench) (highcharts)
-* Current PRs? (highcharts)
-* My Upcoming Meets (Google Calendar API)
-* Goals?
+* Current PRs
+* Goals
 
 ###Navigation
 * Profile
 	- Edit
 	- View
-* My Workouts
-	- Add Workout
-	- Edit Workout
-	- View Workout
+* My Training Sessions
+	- Add Session
+	- View Session(s)
 * Training Schedule (Google Calendar API?)
 	- Add Workout to Training Schedule
 	- Edit Training Schedule
@@ -26,11 +24,6 @@
 	- View Progress (highcharts) (Squats, Deadlifts, Bench)
 * Current PRs (highcharts)
 	- View Current PRs
-* Upcoming Meets (Google Calendar API)
-	- Add Meet
-	- Edit Meet
-	- View Calendar
 * Goals	
 	- Add Goal
-	- View Current Goal Progress (highcharts)
-	- View Past Goals
+	- View Goals (dashboard)
