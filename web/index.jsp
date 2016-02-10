@@ -5,12 +5,11 @@
   Time: 2:11 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="contentType.jsp"/>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
+  <jsp:include page="header.jsp"/>
   <body>
-  Hello!
+    Home page content goes here...
   </body>
+  <jsp:include page="footer.jsp"/>
 </html>
