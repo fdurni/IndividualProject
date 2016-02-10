@@ -89,14 +89,15 @@ pages.  JDBCRealm used for authentication (users, users_roles, and roles table).
 1. Servlet sends list back to training sessions jsp.
 1. Training sessions jsp displays the session(s) in a table format (specific session, sessions for week, sessions for program)
 
-### View PRs
+### View PRs & Goals
 
-1. Page sends a request to view PR servlet
+1. Page sends a request to servlet
 2. Servlet uses the PR dao to select PRs
-3. Dao performs select and creates PR objects from results.
-4. Dao returns list of PRs to servlet.
-5. Servlet sends list back to PR jsp.
-6. PR jsp displays the PRs in a chart.
+3. Servlet uses the Goal dao to select Goals
+4. Dao performs select and creates PR and Goal objects from results.
+5. Dao returns list of PRs and Goals to servlet.
+6. Servlet sends list back to PR jsp.
+7. PR jsp displays the PRs vs. Goals in a chart.
 
 ### View Progress
 1. Page sends a request to view Progress servlet
