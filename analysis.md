@@ -26,5 +26,4 @@
 	- View Current PRs
 * Goals	
 	- Add Goal
-	- View Current Goal Progress (highcharts)
-	- View Past Goals
+	- View Goals (dashboard)
