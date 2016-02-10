@@ -32,12 +32,13 @@ pages.  JDBCRealm used for authentication (users, users_roles, and roles table).
 1. Option only available to logged in users
 2. User enters program details
   2.1. enter name for program
-  2.2. enter program begin date
-  2.3. enter program end dt
-  2.4. enter program notes
-  2.5. enter number of training sessions per week
-  2.6  enter deload week frequency (e.g. every 3 weeks)
-  2.7  enter check-in frequency (e.g. every 3 weeks)
+  2.2. enter program type
+  2.3. enter program begin date
+  2.4. enter program end dt
+  2.5. enter program notes
+  2.6. enter number of training sessions per week
+  2.7  enter deload week frequency (e.g. every 3 weeks)
+  2.8  enter check-in frequency (e.g. every 3 weeks)
 
 ### Add Training Session 
 1. Option only available to logged in users
