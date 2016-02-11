@@ -58,10 +58,9 @@ pages.  JDBCRealm used for authentication (users, users_roles, and roles table).
 ### Add Training Session Details (individual session)
 1. Option only available to logged in users
 2. User enters training session details
-  2.1. enters completed date (if applicable)
+  2.1. enters completed date
   2.2. enters weight, reps, sets performed/completed
   2.3. enters notes
-  3.5. enter weight, reps, sets for each occurence (if 4 occurences, enter data for 4 occurences)
 3. Details are sent to Add TrainingSessionDetails servlet
 4. Servlet creates TrainingSessionDetails object
 5. Servlet sends object to dao
