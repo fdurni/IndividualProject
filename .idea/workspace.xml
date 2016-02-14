@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1763124c-d9eb-4ce2-aad6-3c33d855385d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/databaseERD.vsd" afterPath="$PROJECT_DIR$/design/databaseERD.vsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/com/feliciadurni/tt/persistence/UserDaoWithHibernateTest.java" afterPath="$PROJECT_DIR$/tests/com/feliciadurni/tt/persistence/UserDaoWithHibernateTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/design/~$$databaseERD.~vsd" afterPath="" />
     </list>
     <list id="cfdb088b-1f53-4354-9771-22a6718c05eb" name="Rejected commit: Default" comment="adding test file" />
     <ignored path="TrainingTracker.iws" />
