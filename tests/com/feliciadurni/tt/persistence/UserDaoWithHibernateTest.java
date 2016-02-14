@@ -1,6 +1,7 @@
 package com.feliciadurni.tt.persistence;
 
 import com.feliciadurni.tt.entity.User;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import javax.ejb.TransactionAttribute;
