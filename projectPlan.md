@@ -30,14 +30,16 @@
 - [X] Add unit tests for DAO
 
 ##Week 4
-- [ ] Add in bootstrap
-- [ ] Add user login
-- [ ] Add user registration
-- [ ] Code Review
-- [ ] Add Maven for building
+- [X] Add in bootstrap
+- [X] Add user login
+- [X] Add user registration
+- [X] Code Review
+- [X] Finish setting up database
 
 ##Week 5
 - [ ] Weekly Journal entry
+- [ ] Continue work on DAOs.
+- [ ] Begin setting up servlets.
 
 ##Week 6
 - [ ] Weekly Journal entry
