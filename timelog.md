@@ -11,3 +11,5 @@
 | 2/4/16 | Re-setup environment | 3 | |
 | 2/7/16 | Began looking over bootstrap files and worked on Week 3 exercises | 7 | |
 | 2/8/16 | Created ERD, Created tables in database locally, and setup JSPs | 3 | |
+| 2/14/16 | Set up JSPs, and worked on HTML. | 6 | |
+| 2/8/16 | Completed code reviews, updated project plan and journal. | 1 | |
