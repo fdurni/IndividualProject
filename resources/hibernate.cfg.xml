@@ -19,8 +19,8 @@
         <property name="connection.password">
             felicia
         </property>
-        <mapping resource="User.hbm.xml" />
-        <mapping class="com.feliciadurni.tt.entity.User" />
+        <mapping resource="Person.hbm.xml" />
+        <mapping class="com.feliciadurni.tt.entity.Person" />
     </session-factory>
 
 </hibernate-configuration>

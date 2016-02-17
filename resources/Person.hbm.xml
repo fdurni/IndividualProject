@@ -4,11 +4,11 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.feliciadurni.tt.entity.User" table="users">
+    <class name="com.feliciadurni.tt.entity.Person" table="person">
         <meta attribute="class-description">
-            This class contains the user detail.
+            this class contains the person detail.
         </meta>
-        <id name="id" type="int" column="id">
+        <id name="personId" type="int" column="personId">
             <generator class="native"/>
         </id>
         <property name="firstName" column="firstName" type="string"/>

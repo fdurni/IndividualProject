@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TrainingTracker | Registration Page</title>
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, person-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -43,7 +43,7 @@
         <form action="../../index.html" method="post">
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="Full name">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <span class="glyphicon glyphicon-person form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="Email">

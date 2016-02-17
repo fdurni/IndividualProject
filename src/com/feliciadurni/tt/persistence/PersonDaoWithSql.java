@@ -1,6 +1,6 @@
 package com.feliciadurni.tt.persistence;
 
-import com.feliciadurni.tt.entity.User;
+import com.feliciadurni.tt.entity.Person;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -13,20 +13,20 @@ import java.util.List;
 /**
  * Created by felic on 2/7/2016.
  */
-public class UserDaoWithSql implements UserDao {
+public class PersonDaoWithSql implements PersonDao {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
     @Override
-    public List<User> getAllUsers() {
-        List<User> users = new ArrayList<User>();
+    public List<Person> getAllPeople() {
+        List<Person> people = new ArrayList<Person>();
 
         Database database = Database.getInstance();
 
         Connection connection = null;
 
 
-        String sql = "select * from users order by id";
+        String sql = "select * from Person order by personId";
         try {
 
         } catch (Exception e) {
@@ -39,10 +39,10 @@ public class UserDaoWithSql implements UserDao {
             Statement selectStatement = connection.createStatement();
             ResultSet results = selectStatement.executeQuery(sql);
 
-            // iterate over the resultset, adding each user to the list
+            // iterate over the resultset, adding each person to the list
             while (results.next()) {
-                User user = createUserFromResults(results);
-                users.add(user);
+                Person person = createPersonFromResults(results);
+                people.add(person);
             }
         } catch (SQLException e) {
             log.error("SQL Exception: ", e);
@@ -51,30 +51,30 @@ public class UserDaoWithSql implements UserDao {
         }
 
 
-        return users;
+        return people;
     }
 
     @Override
-    public void updateUser(User user) {
-
-    }
-
-    @Override
-    public void deleteUser(User user) {
+    public void updatePerson(Person person) {
 
     }
 
     @Override
-    public int addUser(User user) {
+    public void deletePerson(Person person) {
+
+    }
+
+    @Override
+    public int addPerson(Person person) {
         return 0;
     }
 
-    private User createUserFromResults(ResultSet results) throws SQLException {
-        User user = new User();
-        user.setId(results.getInt("id"));
-        user.setFirstName(results.getString("firstName"));
-        user.setLastName(results.getString("lastName"));
-        user.setPassword(results.getString("password"));
-        return user;
+    private Person createPersonFromResults(ResultSet results) throws SQLException {
+        Person person = new Person();
+        person.setPersonId(results.getInt("personId"));
+        person.setFirstName(results.getString("firstName"));
+        person.setLastName(results.getString("lastName"));
+        person.setPassword(results.getString("password"));
+        return person;
     }
 }

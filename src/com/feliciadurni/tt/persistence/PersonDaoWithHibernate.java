@@ -1,6 +1,6 @@
 package com.feliciadurni.tt.persistence;
 
-import com.feliciadurni.tt.entity.User;
+import com.feliciadurni.tt.entity.Person;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -16,43 +16,43 @@ import java.util.List;
 /**
  * Created by felic on 2/7/2016.
  */
-public class UserDaoWithHibernate implements UserDao {
+public class PersonDaoWithHibernate implements PersonDao {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
     @Override
-    public List<User> getAllUsers() {
-        List<User> users = new ArrayList<User>();
-        return users;
+    public List<Person> getAllPeople() {
+        List<Person> people = new ArrayList<Person>();
+        return people;
     }
 
     @Override
-    public void updateUser(User user) {
-
-    }
-
-    @Override
-    public void deleteUser(User user) {
+    public void updatePerson(Person person) {
 
     }
 
     @Override
-    public int addUser(User user) {
+    public void deletePerson(Person person) {
+
+    }
+
+    @Override
+    public int addPerson(Person person) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
-        Integer userId = null;
+        Integer personId = null;
         try {
             tx = session.beginTransaction();
-            userId = (Integer) session.save(user);
+            personId = (Integer) session.save(person);
             tx.commit();
-            log.info("Added user: " + user + " with id of: " + userId);
+            log.info("Added person: " + person + " with id of: " + personId);
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
         } finally {
             session.close();
         }
-        return userId;
+        return personId;
     }
 }

@@ -3,30 +3,31 @@ package com.feliciadurni.tt.entity;
 /**
  * Created by felic on 2/7/2016.
  */
-public class User {
-    private int id;
+public class Person {
+
+    private int personId;
     private String firstName;
     private String lastName;
     private String emailAddress;
     private String password;
 
-    public User() {
+    public Person() {
     }
 
-    public User(int id, String firstName, String lastName, String emailAddress, String password) {
-        this.id = id;
+    public Person(int personId, String firstName, String lastName, String emailAddress, String password) {
+        this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
         this.password = password;
     }
 
-    public int getId() {
-        return id;
+    public int getPersonId() {
+        return personId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPersonId(int personId) {
+        this.personId = personId;
     }
 
     public String getFirstName() {
@@ -63,8 +64,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
+        return "Person{" +
+                "personId=" + personId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +

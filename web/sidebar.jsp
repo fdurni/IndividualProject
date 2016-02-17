@@ -11,8 +11,8 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel">
+        <!-- Sidebar person panel (optional) -->
+        <div class="person-panel">
             <div class="pull-left image">
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
