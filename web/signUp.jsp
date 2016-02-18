@@ -38,7 +38,7 @@
     </div>
 
     <div class="register-box-body">
-        <p class="login-box-msg">Registration/p>
+        <p class="login-box-msg">Registration</p>
 
         <form action="../../index.html" method="post">
             <div class="form-group has-feedback">

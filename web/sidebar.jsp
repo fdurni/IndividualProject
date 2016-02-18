@@ -5,14 +5,13 @@
   Time: 4:55 PM
   To change this template use File | Settings | File Templates.
 --%>
-<!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-        <!-- Sidebar person panel (optional) -->
-        <div class="person-panel">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
             <div class="pull-left image">
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
@@ -25,7 +24,7 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">Navigation</li>
+            <li class="header">Main Navigation</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="treeview">
                 <a href="#"><span>My Programs</span> <i class="fa fa-angle-left pull-right"></i></a>

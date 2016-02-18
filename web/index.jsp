@@ -23,12 +23,13 @@
           <!-- Page content -->
           <jsp:include page="index-content.jsp"/>
 
+          <!-- Main Footer -->
+          <jsp:include page="footer.jsp"/>
+
       </div>
 
       <!-- REQUIRED JS SCRIPTS -->
       <jsp:include page="include.jsp"/>
 
   </body>
-  <!-- Main Footer -->
-  <jsp:include page="footer.jsp"/>
 </html>
