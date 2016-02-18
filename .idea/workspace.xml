@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1763124c-d9eb-4ce2-aad6-3c33d855385d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/dist/css/AdminLTE.css" afterPath="$PROJECT_DIR$/web/dist/css/AdminLTE.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/head.jsp" afterPath="$PROJECT_DIR$/web/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/header.jsp" afterPath="$PROJECT_DIR$/web/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index-content.jsp" afterPath="$PROJECT_DIR$/web/index-content.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/plugins/datatables/extensions/ColReorder/examples/realtime.html" afterPath="$PROJECT_DIR$/web/plugins/datatables/extensions/ColReorder/examples/realtime.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sidebar.jsp" afterPath="$PROJECT_DIR$/web/sidebar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/signUp.jsp" afterPath="$PROJECT_DIR$/web/signUp.jsp" />
-    </list>
+    <list default="true" id="1763124c-d9eb-4ce2-aad6-3c33d855385d" name="Default" comment="" />
     <list id="cfdb088b-1f53-4354-9771-22a6718c05eb" name="Rejected commit: Default" comment="adding test file" />
     <ignored path="TrainingTracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -222,7 +212,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/geronimo-osgi-locator-1.0.jar!/" />
@@ -889,9 +879,7 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="TrainingTracker:Web exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <list size="6">
@@ -932,7 +920,7 @@
       <workItem from="1455149520799" duration="13230000" />
       <workItem from="1455496454187" duration="3139000" />
       <workItem from="1455499621646" duration="1235000" />
-      <workItem from="1455751683054" duration="6140000" />
+      <workItem from="1455751683054" duration="6264000" />
     </task>
     <task id="LOCAL-00001" summary="updating timelog">
       <created>1454640162032</created>
@@ -994,7 +982,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34265000" />
+    <option name="totallyTimeSpent" value="34389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1399,7 +1387,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>TrainingTracker:Web exploded</last-edited>
+          <last-edited>TrainingTracker:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
