@@ -8,17 +8,17 @@ public class Person {
     private int personId;
     private String firstName;
     private String lastName;
-    private String emailAddress;
+    private String userName;
     private String password;
 
     public Person() {
     }
 
-    public Person(int personId, String firstName, String lastName, String emailAddress, String password) {
+    public Person(int personId, String firstName, String lastName, String userName, String password) {
         this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailAddress = emailAddress;
+        this.userName = userName;
         this.password = password;
     }
 
@@ -46,12 +46,12 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -68,7 +68,7 @@ public class Person {
                 "personId=" + personId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
+                ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

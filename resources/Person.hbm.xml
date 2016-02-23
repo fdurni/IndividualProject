@@ -13,7 +13,7 @@
         </id>
         <property name="firstName" column="firstName" type="string"/>
         <property name="lastName" column="lastName" type="string"/>
-        <property name="emailAddress" column="emailAddress" type="string"/>
+        <property name="userName" column="userName" type="string"/>
         <property name="password" column="password" type="string"/>
     </class>
 </hibernate-mapping>

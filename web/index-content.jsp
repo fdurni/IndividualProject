@@ -75,6 +75,12 @@
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">Line Chart</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
             </div>
             <div class="box-body">
                 <div id="mainChart" style="width:100%; height:400px;"></div>
@@ -89,6 +95,12 @@
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Goal Progress</h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body no-padding">
@@ -136,6 +148,12 @@
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Training Routine</h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

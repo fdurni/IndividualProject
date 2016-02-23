@@ -74,6 +74,7 @@ public class PersonDaoWithSql implements PersonDao {
         person.setPersonId(results.getInt("personId"));
         person.setFirstName(results.getString("firstName"));
         person.setLastName(results.getString("lastName"));
+        person.setUserName(results.getString("userName"));
         person.setPassword(results.getString("password"));
         return person;
     }
