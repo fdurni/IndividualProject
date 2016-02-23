@@ -35,8 +35,8 @@ public class PersonDaoWithHibernateTest {
         Person person = new Person();
         person.setFirstName("First");
         person.setLastName("Test");
-        person.setUserName("testUser01");
-        person.setPassword("supersecret");
+        person.setUserName("test");
+        person.setPassword("test");
         person.setPersonId(0);
 
         insertedPersonId = dao.addPerson(person);

@@ -3,4 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!-- Protect everything within the "person" directory.
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>person</web-resource-name>
+            <url-pattern>/person/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>person</role-name>
+        </auth-constraint>
+    </security-constraint>
+     -->
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/index.jsp</form-login-page>
+            <form-error-page>/signInError.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
 </web-app>
