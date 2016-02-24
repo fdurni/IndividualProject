@@ -17,7 +17,11 @@
             felicia
         </property>
         <property name="connection.password">
+<<<<<<< HEAD
             Dodgers4
+=======
+            felicia
+>>>>>>> 1885a41d6a16ad38e1599d62895f157ff70ef9d6
         </property>
         <mapping resource="Person.hbm.xml" />
         <mapping class="com.feliciadurni.tt.entity.Person" />

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <module type="JAVA_MODULE" version="4">
+=======
+<module version="4">
+>>>>>>> 1885a41d6a16ad38e1599d62895f157ff70ef9d6
   <component name="FacetManager">
     <facet type="web" name="Web">
       <configuration>
@@ -11,13 +15,21 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />
+<<<<<<< HEAD
+=======
+          <root url="file://$MODULE_DIR$/resources" />
+>>>>>>> 1885a41d6a16ad38e1599d62895f157ff70ef9d6
         </sourceRoots>
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
+<<<<<<< HEAD
           <unit-entry name="resources:hibernate.cfg.xml" />
+=======
+          <unit-entry name="hibernate.cfg.xml" value="23cc5ef3-1879-481e-b12f-974a1374c3b3" />
+>>>>>>> 1885a41d6a16ad38e1599d62895f157ff70ef9d6
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resources/hibernate.cfg.xml" />
@@ -30,6 +42,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
+<<<<<<< HEAD
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -39,5 +52,17 @@
     <orderEntry type="library" exported="" name="log4j" level="application" />
     <orderEntry type="library" exported="" name="mysql-connector-java-5.1.35-bin" level="application" />
     <orderEntry type="library" name="Hibernate 4.2.2-4.2.2" level="project" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" scope="TEST" name="junit" level="application" />
+    <orderEntry type="library" exported="" name="log4j" level="application" />
+    <orderEntry type="library" exported="" name="mysql-connector-java-5.1.35-bin" level="application" />
+    <orderEntry type="library" exported="" name="geronimo-osgi-locator-1.0" level="application" />
+    <orderEntry type="library" exported="" name="Hibernate 4.2.2-4.2.2" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+>>>>>>> 1885a41d6a16ad38e1599d62895f157ff70ef9d6
   </component>
 </module>
