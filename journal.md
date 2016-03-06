@@ -55,3 +55,9 @@ Today, I took a first cut at my database design and created an ERD in visio. I t
 
 ###2/14/16
 Finally, I had some time to work on my project. I changed User in my database to Person, as this seemed to make more sense for my application. I still need to finish up work on the DAO, but I feel like I have a better understanding of how the DAO is working. I got many of my JSPs set up, and a lot of the HTML in the JSPs complete. I used bootstrap for my template, which was fairly easy to use and customize. I would definitely recommend bootstrap to others; this seems like a great resource. I was able to finish my database design, which I had been struggling with the past couple of weeks. I also set up my database within Intellij. I feel much better about where my project is at after code reviews last week, and the progress I was able to make today. 
+
+###2/21/16
+I spent time working on week 5 exercises, but wasn't able to get the login to work. I will continue working on this. 
+
+###2/24/16
+I worked on week 4 exercises over lunch at work today, and my laptop installed a windows update. This update moved many things on my laptop, which caused many issues with my project. With Paula's help, I was able to get everything back up and running, but this was pretty stressful. I was able to get the week 5 exercises working though, which is great. 

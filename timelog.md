@@ -13,3 +13,6 @@
 | 2/8/16 | Created ERD, Created tables in database locally, and setup JSPs | 3 | |
 | 2/14/16 | Set up JSPs, and worked on HTML. | 6 | |
 | 2/8/16 | Completed code reviews, updated project plan and journal. | 1 | |
+| 2/14/16 | Set up some JSPs and worked on html/css for landing page. | 7 | |
+| 2/21/16 | Week 5 exercises. | 3 | |
+| 2/24/16 | Week 5 exercises, re-setting up project after Windows update. | 3 | |
