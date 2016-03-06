@@ -7,20 +7,29 @@
         <property name="dialect">
             org.hibernate.dialect.MySQL5Dialect
         </property>
-        <property name="connection.url">
-            jdbc:mysql://localhost:3306/trainingtracker
-        </property>
-        <property name="connection.driver_class">
-            com.mysql.jdbc.Driver
-        </property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/trainingtracker</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">
             felicia
         </property>
         <property name="connection.password">
             Dodgers4
         </property>
+        <mapping resource="Exercises.hbm.xml" />
+        <mapping class="com.feliciadurni.tt.entity.ExercisesEntity"/>
         <mapping resource="Person.hbm.xml" />
-        <mapping class="com.feliciadurni.tt.entity.Person" />
+        <mapping class="com.feliciadurni.tt.entity.PersonEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonalRecordEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonGoalEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonProgramRoutineEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonProgramRoutineExerciseEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonProgramsEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonRolesEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.ProgramRoutineExerciseEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.ProgramRoutinesEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.ProgramsEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.RoutineExercisesEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.RoutinesEntity"/>
     </session-factory>
 
 </hibernate-configuration>

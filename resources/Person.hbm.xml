@@ -4,9 +4,9 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.feliciadurni.tt.entity.Person" table="person">
+    <class name="com.feliciadurni.tt.entity.PersonEntity" table="person">
         <meta attribute="class-description">
-            this class contains the person detail.
+            This class contains the person detail.
         </meta>
         <id name="personId" type="int" column="personId">
             <generator class="native"/>

@@ -44,7 +44,7 @@ public class Database {
         }
         String url = "jdbc:mysql://localhost:3306/trainingtracker";
 
-        connection = DriverManager.getConnection(url, "felicia", "felicia");
+        connection = DriverManager.getConnection(url, "felicia", "Dodgers4");
     }
 
     public void disconnect() {
