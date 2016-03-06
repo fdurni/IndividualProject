@@ -4,11 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <welcome-file-list>
+        <welcome-file>person/main.jsp</welcome-file>
+    </welcome-file-list>
+
     <!-- Protect everything within the "user" directory. -->
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>test</web-resource-name>
-            <url-pattern>/index.jsp</url-pattern>
+            <web-resource-name>person</web-resource-name>
+            <url-pattern>/person/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>

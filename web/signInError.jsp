@@ -7,7 +7,7 @@
 --%>
 <jsp:include page="contentType.jsp" />
 <html>
-<jsp:include page="head.jsp" />
+<jsp:include page="person/head.jsp" />
     <body role="document">
 <H2>Log In Failed!!!</H2>
 This will be the sign in error page

@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <!-- Content Type -->
-<jsp:include page="contentType.jsp"/>
+<jsp:include page="../contentType.jsp"/>
 <html>
   <jsp:include page="head.jsp"/>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -21,7 +21,7 @@
           <jsp:include page="sidebar.jsp"/>
 
           <!-- Page content -->
-          <jsp:include page="index-content.jsp"/>
+          <jsp:include page="main-content.jsp"/>
 
           <!-- Main Footer -->
           <jsp:include page="footer.jsp"/>
