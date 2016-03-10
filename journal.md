@@ -61,3 +61,6 @@ I spent time working on week 5 exercises, but wasn't able to get the login to wo
 
 ###2/24/16
 I worked on week 4 exercises over lunch at work today, and my laptop installed a windows update. This update moved many things on my laptop, which caused many issues with my project. With Paula's help, I was able to get everything back up and running, but this was pretty stressful. I was able to get the week 5 exercises working though, which is great. 
+
+###3/6/16
+This week I set up entities for all of my tables and began setting up DAOs. I also refactored my project structure so that a user must log in to access the website.  
