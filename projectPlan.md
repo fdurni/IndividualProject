@@ -46,16 +46,23 @@
 
 ##Week 7
 - [ ] Weekly Journal entry
+- [ ] Continue setting up DAOs. 
 
 ##Week 8
 - [ ] Weekly Journal entry
 - [ ] Code review
+- [ ] Finish setting up DAOs. 
+- [ ] Create JSPs for remaining pages.
+- [ ] Work on adding forms to pages, and making forms work. 
 
 ##Week 9
 - [ ] Weekly Journal entry
+- [ ] Integrate web service (calendar)
+- [ ] Work on showing data from tables in highcharts.
 
 ##Week 10
 - [ ] Weekly Journal entry
+- [ ] Add metrics to dashboard
 
 ##Week 11
 - [ ] Weekly Journal entry

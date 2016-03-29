@@ -16,3 +16,4 @@
 | 2/14/16 | Set up some JSPs and worked on html/css for landing page. | 7 | |
 | 2/21/16 | Week 5 exercises. | 3 | |
 | 2/24/16 | Week 5 exercises, re-setting up project after Windows update. | 3 | |
+| 3/6/16 | Set up DAOs. | 3 | |
