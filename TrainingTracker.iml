@@ -39,5 +39,6 @@
     <orderEntry type="library" exported="" name="log4j" level="application" />
     <orderEntry type="library" exported="" name="mysql-connector-java-5.1.35-bin" level="application" />
     <orderEntry type="library" exported="" name="Hibernate 4.2.2-4.2.2" level="project" />
+    <orderEntry type="library" name="taglibs-standard-impl-1.2.5" level="application" />
   </component>
 </module>

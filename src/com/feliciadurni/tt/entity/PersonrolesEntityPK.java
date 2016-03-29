@@ -5,20 +5,20 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by felic on 3/5/2016.
+ * Created by felic on 3/29/2016.
  */
-public class PersonRolesEntityPK implements Serializable {
-    private String userName;
+public class PersonrolesEntityPK implements Serializable {
+    private int personId;
     private String role;
 
-    @Column(name = "userName")
+    @Column(name = "personId")
     @Id
-    public String getUserName() {
-        return userName;
+    public int getPersonId() {
+        return personId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setPersonId(int personId) {
+        this.personId = personId;
     }
 
     @Column(name = "role")
@@ -36,9 +36,9 @@ public class PersonRolesEntityPK implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PersonRolesEntityPK that = (PersonRolesEntityPK) o;
+        PersonrolesEntityPK that = (PersonrolesEntityPK) o;
 
-        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
+        if (personId != that.personId) return false;
         if (role != null ? !role.equals(that.role) : that.role != null) return false;
 
         return true;
@@ -46,8 +46,16 @@ public class PersonRolesEntityPK implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = userName != null ? userName.hashCode() : 0;
+        int result = personId;
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonrolesEntityPK{" +
+                "personId=" + personId +
+                ", role='" + role + '\'' +
+                '}';
     }
 }

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.feliciadurni.tt.entity.ProgramsEntity" table="programs" schema="trainingtracker">
+        <id name="programId" column="programId"/>
+        <property name="programName" column="programName"/>
+        <property name="programType" column="programType"/>
+        <property name="programDescription" column="programDescription"/>
+    </class>
+</hibernate-mapping>

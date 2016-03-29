@@ -9,12 +9,6 @@
         </property>
         <property name="connection.url">jdbc:mysql://localhost:3306/trainingtracker</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.username">
-            felicia
-        </property>
-        <property name="connection.password">
-            Dodgers4
-        </property>
         <mapping resource="Exercises.hbm.xml" />
         <mapping class="com.feliciadurni.tt.entity.ExercisesEntity"/>
         <mapping resource="Person.hbm.xml" />
@@ -30,6 +24,28 @@
         <mapping class="com.feliciadurni.tt.entity.ProgramsEntity"/>
         <mapping class="com.feliciadurni.tt.entity.RoutineExercisesEntity"/>
         <mapping class="com.feliciadurni.tt.entity.RoutinesEntity"/>
+        <mapping resource="ExercisesEntity.hbm.xml"/>
+        <mapping resource="PersonEntity.hbm.xml"/>
+        <mapping resource="PersonalrecordEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonalrecordEntity"/>
+        <mapping resource="PersongoalEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.PersongoalEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonprogramroutineEntity"/>
+        <mapping resource="PersonprogramroutineEntity.hbm.xml"/>
+        <mapping resource="PersonprogramroutineexerciseEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonprogramroutineexerciseEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonprogramsEntity"/>
+        <mapping resource="PersonprogramsEntity.hbm.xml"/>
+        <mapping resource="ProgramroutineexerciseEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.ProgramroutineexerciseEntity"/>
+        <mapping class="com.feliciadurni.tt.entity.ProgramroutinesEntity"/>
+        <mapping resource="ProgramroutinesEntity.hbm.xml"/>
+        <mapping resource="ProgramsEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.RoutineexercisesEntity"/>
+        <mapping resource="RoutineexercisesEntity.hbm.xml"/>
+        <mapping resource="RoutinesEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonrolesEntity"/>
+        <mapping resource="PersonrolesEntity.hbm.xml"/>
     </session-factory>
 
 </hibernate-configuration>

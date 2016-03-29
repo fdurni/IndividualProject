@@ -3,25 +3,15 @@ package com.feliciadurni.tt.entity;
 import javax.persistence.*;
 
 /**
- * Created by felic on 3/5/2016.
+ * Created by felic on 3/29/2016.
  */
 @Entity
-@Table(name = "exercises", schema = "trainingtracker")
+@Table(name = "exercises", schema = "trainingtracker", catalog = "")
 public class ExercisesEntity {
     private int exerciseId;
     private String exerciseName;
     private String exerciseType;
     private String exerciseDescription;
-
-    public ExercisesEntity() {
-    }
-
-    public ExercisesEntity(int exerciseId, String exerciseName, String exerciseType, String exerciseDescription) {
-        this.exerciseId = exerciseId;
-        this.exerciseName = exerciseName;
-        this.exerciseType = exerciseType;
-        this.exerciseDescription = exerciseDescription;
-    }
 
     @Id
     @Column(name = "exerciseId")
@@ -90,12 +80,11 @@ public class ExercisesEntity {
 
     @Override
     public String toString() {
-        return "Exercise{" +
-                "id=" + exerciseId +
+        return "ExercisesEntity{" +
+                "exerciseId=" + exerciseId +
                 ", exerciseName='" + exerciseName + '\'' +
                 ", exerciseType='" + exerciseType + '\'' +
                 ", exerciseDescription='" + exerciseDescription + '\'' +
                 '}';
-
     }
 }

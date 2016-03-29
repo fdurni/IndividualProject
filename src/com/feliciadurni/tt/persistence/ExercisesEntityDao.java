@@ -1,8 +1,6 @@
 package com.feliciadurni.tt.persistence;
 
 import com.feliciadurni.tt.entity.ExercisesEntity;
-import com.feliciadurni.tt.entity.PersonEntity;
-
 import java.util.List;
 
 /**

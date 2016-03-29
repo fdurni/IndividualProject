@@ -3,27 +3,16 @@ package com.feliciadurni.tt.entity;
 import javax.persistence.*;
 
 /**
- * Created by felic on 3/5/2016.
+ * Created by felic on 3/29/2016.
  */
 @Entity
-@Table(name = "person", schema = "trainingtracker")
+@Table(name = "person", schema = "trainingtracker", catalog = "")
 public class PersonEntity {
     private int personId;
     private String firstName;
     private String lastName;
     private String userName;
     private String password;
-
-    public PersonEntity() {
-    }
-
-    public PersonEntity(int personId, String firstName, String lastName, String userName, String password) {
-        this.personId = personId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.password = password;
-    }
 
     @Id
     @Column(name = "personId")
@@ -103,14 +92,12 @@ public class PersonEntity {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "id=" + personId +
+        return "PersonEntity{" +
+                "personId=" + personId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
-
     }
-
 }

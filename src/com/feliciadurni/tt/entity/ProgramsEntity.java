@@ -3,10 +3,10 @@ package com.feliciadurni.tt.entity;
 import javax.persistence.*;
 
 /**
- * Created by felic on 3/5/2016.
+ * Created by felic on 3/29/2016.
  */
 @Entity
-@Table(name = "programs", schema = "trainingtracker")
+@Table(name = "programs", schema = "trainingtracker", catalog = "")
 public class ProgramsEntity {
     private int programId;
     private String programName;
@@ -78,4 +78,13 @@ public class ProgramsEntity {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "ProgramsEntity{" +
+                "programId=" + programId +
+                ", programName='" + programName + '\'' +
+                ", programType='" + programType + '\'' +
+                ", programDescription='" + programDescription + '\'' +
+                '}';
+    }
 }
