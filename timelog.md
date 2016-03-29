@@ -17,3 +17,4 @@
 | 2/21/16 | Week 5 exercises. | 3 | |
 | 2/24/16 | Week 5 exercises, re-setting up project after Windows update. | 3 | |
 | 3/6/16 | Set up DAOs. | 3 | |
+| 3/29/16 | Finished setting up DAOs. | 4.5 | |
