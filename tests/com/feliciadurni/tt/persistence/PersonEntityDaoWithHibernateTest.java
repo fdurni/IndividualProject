@@ -36,7 +36,12 @@ public class PersonEntityDaoWithHibernateTest {
     public void testUpdatePerson() throws Exception {
 
         PersonEntityDaoWithHibernate dao = new PersonEntityDaoWithHibernate();
-        PersonEntity person = new PersonEntity(15, "Second", "Test", "test2", "test2");
+        PersonEntity person = new PersonEntity();
+        person.setPersonId(6);
+        person.setFirstName("Salu");
+        person.setLastName("Digby");
+        person.setUserName("AtomGirl");
+        person.setPassword("password1");
 
         dao.updatePerson(person);
         assertEquals("This is the wrong user", "Second", person.getFirstName());
@@ -49,11 +54,11 @@ public class PersonEntityDaoWithHibernateTest {
         PersonEntity person = new PersonEntity();
         int sizeBefore;
         int sizeAfter;
+        person.setPersonId(6);
         person.setFirstName("Salu");
         person.setLastName("Digby");
         person.setUserName("AtomGirl");
         person.setPassword("password1");
-        person.setPersonId(6);
         sizeBefore = dao.getAllPeople().size();
         dao.deletePerson(person);
         sizeAfter = dao.getAllPeople().size();
@@ -73,7 +78,6 @@ public class PersonEntityDaoWithHibernateTest {
         person.setLastName("Monroe");
         person.setUserName("Storm");
         person.setPassword("password1");
-        person.setPersonId(1);
 
         insertUserId = dao.addPerson(person);
 

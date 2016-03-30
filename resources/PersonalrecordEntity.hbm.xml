@@ -5,9 +5,20 @@
 <hibernate-mapping>
 
     <class name="com.feliciadurni.tt.entity.PersonalrecordEntity" table="personalrecord" schema="trainingtracker">
-        <id name="personalRecordId" column="personalRecordId"/>
-        <property name="personalRecordWeight" column="personalRecordWeight"/>
-        <property name="personalRecordDate" column="personalRecordDate"/>
-        <property name="exerciseId" column="exerciseId"/>
+        <id name="personalRecordId">
+            <column name="personalRecordId" sql-type="int(11)"/>
+        </id>
+        <property name="weight">
+            <column name="weight" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="exerciseId">
+            <column name="exerciseId" sql-type="exerciseId" not-null="true"/>
+        </property>
+        <property name="personId">
+            <column name="personId" sql-type="personId" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -17,9 +17,9 @@ public interface PersonRolesEntityDao {
 
     /**
      * Get a personRole by id
-     * @param id to get
+     * @param userName to get
      */
-    public PersonrolesEntity getPersonRole(Integer id);
+    public PersonrolesEntity getPersonRole(String userName);
 
     /**
      * Update a personRole
@@ -40,5 +40,5 @@ public interface PersonRolesEntityDao {
      * @param personRole to be added
      * @return id of the inserted personRole
      */
-    public int addPersonRole(PersonrolesEntity personRole);
+    public String addPersonRole(PersonrolesEntity personRole);
 }

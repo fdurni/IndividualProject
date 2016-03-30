@@ -46,6 +46,15 @@
         <mapping resource="RoutinesEntity.hbm.xml"/>
         <mapping class="com.feliciadurni.tt.entity.PersonrolesEntity"/>
         <mapping resource="PersonrolesEntity.hbm.xml"/>
+        <mapping resource="ExercisesEntity.hbm.xml"/>
+        <mapping resource="PersonEntity.hbm.xml"/>
+        <mapping resource="PersonalrecordEntity.hbm.xml"/>
+        <mapping resource="ProgramsEntity.hbm.xml"/>
+        <mapping resource="RoutineexercisesEntity.hbm.xml"/>
+        <mapping resource="RoutinesEntity.hbm.xml"/>
+        <mapping resource="PersonrolesEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.GoalsEntity"/>
+        <mapping resource="GoalsEntity.hbm.xml"/>
     </session-factory>
 
 </hibernate-configuration>

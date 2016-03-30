@@ -15,7 +15,7 @@ public class PersonEntity {
     private String password;
 
     @Id
-    @Column(name = "personId")
+    @Column(name = "personId", nullable = false)
     public int getPersonId() {
         return personId;
     }
@@ -25,7 +25,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "firstName")
+    @Column(name = "firstName", nullable = true, length = 30)
     public String getFirstName() {
         return firstName;
     }
@@ -35,7 +35,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "lastName")
+    @Column(name = "lastName", nullable = true, length = 30)
     public String getLastName() {
         return lastName;
     }
@@ -45,7 +45,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "userName")
+    @Column(name = "userName", nullable = true, length = 30)
     public String getUserName() {
         return userName;
     }
@@ -55,7 +55,7 @@ public class PersonEntity {
     }
 
     @Basic
-    @Column(name = "password")
+    @Column(name = "password", nullable = false, length = 30)
     public String getPassword() {
         return password;
     }

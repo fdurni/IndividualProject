@@ -47,13 +47,13 @@ public class PersonRolesEntityDaoWithHibernate implements PersonRolesEntityDao {
         return personRoles;
     }
 
-    public PersonrolesEntity getPersonRole(Integer id) {
+    public PersonrolesEntity getPersonRole(String userName) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         List<PersonrolesEntity> personRole = new ArrayList<PersonrolesEntity>();
         Transaction dbTransaction = null;
 
-        String query = ("FROM PersonrolesEntity P WHERE P.personId =" + id);
+        String query = ("FROM PersonrolesEntity P WHERE P.userName =" + userName);
 
         try {
             dbTransaction = session.beginTransaction();
@@ -97,7 +97,7 @@ public class PersonRolesEntityDaoWithHibernate implements PersonRolesEntityDao {
 
         try {
             dbTransaction = session.beginTransaction();
-            PersonrolesEntity personRoleToDelete = (PersonrolesEntity)session.get(PersonrolesEntity.class, personRole.getPersonId());
+            PersonrolesEntity personRoleToDelete = (PersonrolesEntity)session.get(PersonrolesEntity.class, personRole.getUserName());
             session.delete(personRoleToDelete);
             dbTransaction.commit();
 
@@ -114,22 +114,22 @@ public class PersonRolesEntityDaoWithHibernate implements PersonRolesEntityDao {
     }
 
     @Override
-    public int addPersonRole(PersonrolesEntity personRole) {
+    public String addPersonRole(PersonrolesEntity personRole) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
-        Integer personId = null;
+        String userName = null;
         try {
             tx = session.beginTransaction();
-            personId = (Integer) session.save(personRole);
+            userName = (String) session.save(personRole);
             tx.commit();
-            log.info("Added personRole: " + personRole + " with id of: " + personId);
+            log.info("Added personRole: " + personRole + " with userName of: " + userName);
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
         } finally {
             session.close();
         }
-        return personId;
+        return userName;
     }
 }

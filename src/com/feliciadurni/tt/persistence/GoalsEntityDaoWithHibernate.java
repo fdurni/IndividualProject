@@ -1,6 +1,6 @@
 package com.feliciadurni.tt.persistence;
 
-import com.feliciadurni.tt.entity.ProgramroutineexerciseEntity;
+import com.feliciadurni.tt.entity.GoalsEntity;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -13,24 +13,24 @@ import java.util.List;
 /**
  * Created by felic on 3/29/2016.
  */
-public class ProgramRoutineExerciseEntityDaoWithHibernate implements ProgramRoutineExerciseEntityDao {
+public class GoalsEntityDaoWithHibernate implements GoalsEntityDao {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
     @Override
-    public List<ProgramroutineexerciseEntity> getAllProgramRoutineExercises() {
+    public List<GoalsEntity> getAllGoals() {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<ProgramroutineexerciseEntity> programRoutineExercises = new ArrayList<ProgramroutineexerciseEntity>();
+        List<GoalsEntity> goals = new ArrayList<GoalsEntity>();
         Transaction dbTransaction = null;
 
         try {
             dbTransaction = session.beginTransaction();
-            List programRoutineExercisesInDB = session.createQuery("FROM ProgramroutineexerciseEntity").list();
+            List PersonGoalsInDB = session.createQuery("FROM GoalsEntity").list();
 
-            for (Iterator iterator = programRoutineExercisesInDB.iterator(); iterator.hasNext();) {
+            for (Iterator iterator = PersonGoalsInDB.iterator(); iterator.hasNext();) {
 
-                ProgramroutineexerciseEntity exercise = (ProgramroutineexerciseEntity) iterator.next();
-                programRoutineExercises.add(exercise);
+                GoalsEntity goal = (GoalsEntity) iterator.next();
+                goals.add(goal);
             }
 
             dbTransaction.commit();
@@ -42,22 +42,22 @@ public class ProgramRoutineExerciseEntityDaoWithHibernate implements ProgramRout
             session.close();
         }
 
-        log.info("Number of programRoutineExercises: " + programRoutineExercises.size());
+        log.info("Number of goals: " + goals.size());
 
-        return programRoutineExercises;
+        return goals;
     }
 
-    public ProgramroutineexerciseEntity getProgramRoutineExercise(Integer id) {
+    public GoalsEntity getGoal(Integer id) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<ProgramroutineexerciseEntity> exercise = new ArrayList<ProgramroutineexerciseEntity>();
+        List<GoalsEntity> goal = new ArrayList<GoalsEntity>();
         Transaction dbTransaction = null;
 
-        String query = ("FROM ProgramroutineexerciseEntity E WHERE E.programRoutineExerciseId =" + id);
+        String query = ("FROM GoalsEntity P WHERE P.goalId =" + id);
 
         try {
             dbTransaction = session.beginTransaction();
-            exercise = session.createQuery(query).list();
+            goal = session.createQuery(query).list();
 
         } catch (HibernateException error) {
             if (dbTransaction!=null) dbTransaction.rollback();
@@ -66,18 +66,18 @@ public class ProgramRoutineExerciseEntityDaoWithHibernate implements ProgramRout
             session.close();
         }
 
-        return exercise.get(0);
+        return goal.get(0);
     }
 
     @Override
-    public void updateProgramRoutineExercise(ProgramroutineexerciseEntity programRoutineExercise) {
+    public void updateGoal(GoalsEntity goal) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
 
         try {
             tx = session.beginTransaction();
-            session.update(programRoutineExercise);
+            session.update(goal);
             tx.commit();
         } catch (HibernateException e) {
             if (tx != null) {
@@ -90,15 +90,15 @@ public class ProgramRoutineExerciseEntityDaoWithHibernate implements ProgramRout
     }
 
     @Override
-    public Boolean deleteProgramRoutineExercise(ProgramroutineexerciseEntity programRoutineExercise) {
+    public Boolean deleteGoal(GoalsEntity goal) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction dbTransaction = null;
 
         try {
             dbTransaction = session.beginTransaction();
-            ProgramroutineexerciseEntity exerciseToDelete = (ProgramroutineexerciseEntity)session.get(ProgramroutineexerciseEntity.class, programRoutineExercise.getProgramRoutineExerciseId());
-            session.delete(exerciseToDelete);
+            GoalsEntity personGoalToDelete = (GoalsEntity)session.get(GoalsEntity.class, goal.getGoalId());
+            session.delete(personGoalToDelete);
             dbTransaction.commit();
 
         } catch (HibernateException error) {
@@ -114,22 +114,22 @@ public class ProgramRoutineExerciseEntityDaoWithHibernate implements ProgramRout
     }
 
     @Override
-    public int addProgramRoutineExercise(ProgramroutineexerciseEntity programRoutineExercise) {
+    public int addGoal(GoalsEntity goal) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null;
-        Integer programRoutineExerciseId = null;
+        Integer goalId = null;
         try {
             tx = session.beginTransaction();
-            programRoutineExerciseId = (Integer) session.save(programRoutineExercise);
+            goalId = (Integer) session.save(goal);
             tx.commit();
-            log.info("Added programRoutineExercise: " + programRoutineExercise + " with id of: " + programRoutineExerciseId);
+            log.info("Added goal: " + goal + " with id of: " + goalId);
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
             log.error(e);
         } finally {
             session.close();
         }
-        return programRoutineExerciseId;
+        return goalId;
     }
 }

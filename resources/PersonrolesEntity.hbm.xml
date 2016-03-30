@@ -6,8 +6,15 @@
 
     <class name="com.feliciadurni.tt.entity.PersonrolesEntity" table="personroles" schema="trainingtracker">
         <composite-id mapped="true" class="com.feliciadurni.tt.entity.PersonrolesEntityPK">
-            <key-property name="personId" column="personId"/>
-            <key-property name="role" column="role"/>
+            <key-property name="userName">
+                <column name="userName" sql-type="varchar(30)" length="30"/>
+            </key-property>
+            <key-property name="role">
+                <column name="role" sql-type="varchar(30)" length="30"/>
+            </key-property>
         </composite-id>
+        <property name="personId">
+            <column name="personId" sql-type="int(11)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

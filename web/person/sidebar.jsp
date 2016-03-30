@@ -29,30 +29,15 @@
             <li class="treeview">
                 <a href="#"><span>My Programs</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="/person/viewPrograms.jsp">View Programs</a></li>
+                    <li><a href="/person/addProgram.jsp">Add Program</a></li>
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><span>My Training Routines</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
-                </ul>
+                <a href="/person/progress.jsp"><span>My Progress</span></a>
             </li>
             <li class="treeview">
-                <a href="#"><span>My Progress</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#"><span>My Personal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
-                </ul>
+                <a href="/person/personalRecords.jsp"><span>My Personal Records</span></a>
             </li>
         </ul>
         <!-- /.sidebar-menu -->

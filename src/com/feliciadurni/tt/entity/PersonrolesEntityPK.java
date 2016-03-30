@@ -8,20 +8,20 @@ import java.io.Serializable;
  * Created by felic on 3/29/2016.
  */
 public class PersonrolesEntityPK implements Serializable {
-    private int personId;
+    private String userName;
     private String role;
 
-    @Column(name = "personId")
+    @Column(name = "userName", nullable = false, length = 30)
     @Id
-    public int getPersonId() {
-        return personId;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setPersonId(int personId) {
-        this.personId = personId;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    @Column(name = "role")
+    @Column(name = "role", nullable = false, length = 30)
     @Id
     public String getRole() {
         return role;
@@ -38,7 +38,7 @@ public class PersonrolesEntityPK implements Serializable {
 
         PersonrolesEntityPK that = (PersonrolesEntityPK) o;
 
-        if (personId != that.personId) return false;
+        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
         if (role != null ? !role.equals(that.role) : that.role != null) return false;
 
         return true;
@@ -46,16 +46,8 @@ public class PersonrolesEntityPK implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = personId;
+        int result = userName != null ? userName.hashCode() : 0;
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "PersonrolesEntityPK{" +
-                "personId=" + personId +
-                ", role='" + role + '\'' +
-                '}';
     }
 }

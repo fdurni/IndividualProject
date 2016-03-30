@@ -36,8 +36,11 @@ public class ExercisesEntityDaoWithHibernateTest {
     public void testUpdateExercise() throws Exception {
 
         ExercisesEntityDaoWithHibernate dao = new ExercisesEntityDaoWithHibernate();
-        ExercisesEntity exercise = new ExercisesEntity(2, "Deadlift", "Main", "Sumo Deadlift");
-
+        ExercisesEntity exercise = new ExercisesEntity();
+        exercise.setExerciseName("Squat");
+        exercise.setExerciseType("Main");
+        exercise.setExerciseDescription("Barbell Back Squat");
+        exercise.setExerciseId(1);
         dao.updateExercise(exercise);
         assertEquals("This is the wrong exercise", "Deadlift", exercise.getExerciseName());
     }
@@ -53,6 +56,7 @@ public class ExercisesEntityDaoWithHibernateTest {
         exercise.setExerciseType("Main");
         exercise.setExerciseDescription("Barbell Back Squat");
         exercise.setExerciseId(1);
+
         sizeBefore = dao.getAllExercises().size();
         dao.deleteExercise(exercise);
         sizeAfter = dao.getAllExercises().size();
@@ -71,7 +75,6 @@ public class ExercisesEntityDaoWithHibernateTest {
         exercise.setExerciseName("Squat");
         exercise.setExerciseType("Main");
         exercise.setExerciseDescription("Barbell Back Squat");
-        exercise.setExerciseId(1);
 
         insertExerciseId = dao.addExercise(exercise);
 

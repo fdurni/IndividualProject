@@ -10,12 +10,13 @@ import java.sql.Date;
 @Table(name = "personalrecord", schema = "trainingtracker", catalog = "")
 public class PersonalrecordEntity {
     private int personalRecordId;
-    private int personalRecordWeight;
-    private Date personalRecordDate;
-    private int exerciseId;
+    private Integer weight;
+    private Date date;
+    private Integer exerciseId;
+    private Integer personId;
 
     @Id
-    @Column(name = "personalRecordId")
+    @Column(name = "personalRecordId", nullable = false)
     public int getPersonalRecordId() {
         return personalRecordId;
     }
@@ -25,33 +26,43 @@ public class PersonalrecordEntity {
     }
 
     @Basic
-    @Column(name = "personalRecordWeight")
-    public int getPersonalRecordWeight() {
-        return personalRecordWeight;
+    @Column(name = "weight", nullable = true)
+    public Integer getWeight() {
+        return weight;
     }
 
-    public void setPersonalRecordWeight(int personalRecordWeight) {
-        this.personalRecordWeight = personalRecordWeight;
-    }
-
-    @Basic
-    @Column(name = "personalRecordDate")
-    public Date getPersonalRecordDate() {
-        return personalRecordDate;
-    }
-
-    public void setPersonalRecordDate(Date personalRecordDate) {
-        this.personalRecordDate = personalRecordDate;
+    public void setWeight(Integer weight) {
+        this.weight = weight;
     }
 
     @Basic
-    @Column(name = "exerciseId")
-    public int getExerciseId() {
+    @Column(name = "date", nullable = true)
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    @Basic
+    @Column(name = "exerciseId", nullable = true)
+    public Integer getExerciseId() {
         return exerciseId;
     }
 
-    public void setExerciseId(int exerciseId) {
+    public void setExerciseId(Integer exerciseId) {
         this.exerciseId = exerciseId;
+    }
+
+    @Basic
+    @Column(name = "personId", nullable = true)
+    public Integer getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Integer personId) {
+        this.personId = personId;
     }
 
     @Override
@@ -62,18 +73,20 @@ public class PersonalrecordEntity {
         PersonalrecordEntity that = (PersonalrecordEntity) o;
 
         if (personalRecordId != that.personalRecordId) return false;
-        if (personalRecordWeight != that.personalRecordWeight) return false;
-        if (exerciseId != that.exerciseId) return false;
-        return personalRecordDate != null ? personalRecordDate.equals(that.personalRecordDate) : that.personalRecordDate == null;
+        if (weight != null ? !weight.equals(that.weight) : that.weight != null) return false;
+        if (date != null ? !date.equals(that.date) : that.date != null) return false;
+        if (exerciseId != null ? !exerciseId.equals(that.exerciseId) : that.exerciseId != null) return false;
+        return personId != null ? personId.equals(that.personId) : that.personId == null;
 
     }
 
     @Override
     public int hashCode() {
         int result = personalRecordId;
-        result = 31 * result + personalRecordWeight;
-        result = 31 * result + (personalRecordDate != null ? personalRecordDate.hashCode() : 0);
-        result = 31 * result + exerciseId;
+        result = 31 * result + (weight != null ? weight.hashCode() : 0);
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (exerciseId != null ? exerciseId.hashCode() : 0);
+        result = 31 * result + (personId != null ? personId.hashCode() : 0);
         return result;
     }
 
@@ -81,9 +94,10 @@ public class PersonalrecordEntity {
     public String toString() {
         return "PersonalrecordEntity{" +
                 "personalRecordId=" + personalRecordId +
-                ", personalRecordWeight=" + personalRecordWeight +
-                ", personalRecordDate=" + personalRecordDate +
+                ", weight=" + weight +
+                ", date=" + date +
                 ", exerciseId=" + exerciseId +
+                ", personId=" + personId +
                 '}';
     }
 }

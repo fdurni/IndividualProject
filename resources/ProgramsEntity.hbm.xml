@@ -5,9 +5,20 @@
 <hibernate-mapping>
 
     <class name="com.feliciadurni.tt.entity.ProgramsEntity" table="programs" schema="trainingtracker">
-        <id name="programId" column="programId"/>
-        <property name="programName" column="programName"/>
-        <property name="programType" column="programType"/>
-        <property name="programDescription" column="programDescription"/>
+        <id name="programId">
+            <column name="programId" sql-type="int(11)"/>
+        </id>
+        <property name="programName">
+            <column name="programName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="programType">
+            <column name="programType" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="programDescription">
+            <column name="programDescription" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
+        <property name="personId">
+            <column name="personId" sql-type="int(11)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

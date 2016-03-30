@@ -5,9 +5,17 @@
 <hibernate-mapping>
 
     <class name="com.feliciadurni.tt.entity.ExercisesEntity" table="exercises" schema="trainingtracker">
-        <id name="exerciseId" column="exerciseId"/>
-        <property name="exerciseName" column="exerciseName"/>
-        <property name="exerciseType" column="exerciseType"/>
-        <property name="exerciseDescription" column="exerciseDescription"/>
+        <id name="exerciseId">
+            <column name="exerciseId" sql-type="int(11)"/>
+        </id>
+        <property name="exerciseName">
+            <column name="exerciseName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="exerciseType">
+            <column name="exerciseType" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="exerciseDescription">
+            <column name="exerciseDescription" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

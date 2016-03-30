@@ -5,10 +5,20 @@
 <hibernate-mapping>
 
     <class name="com.feliciadurni.tt.entity.PersonEntity" table="person" schema="trainingtracker">
-        <id name="personId" column="personId"/>
-        <property name="firstName" column="firstName"/>
-        <property name="lastName" column="lastName"/>
-        <property name="userName" column="userName"/>
-        <property name="password" column="password"/>
+        <id name="personId">
+            <column name="personId" sql-type="int(11)"/>
+        </id>
+        <property name="firstName">
+            <column name="firstName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="lastName">
+            <column name="lastName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="userName">
+            <column name="userName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(30)" length="30"/>
+        </property>
     </class>
 </hibernate-mapping>

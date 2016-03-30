@@ -14,7 +14,7 @@ public class ExercisesEntity {
     private String exerciseDescription;
 
     @Id
-    @Column(name = "exerciseId")
+    @Column(name = "exerciseId", nullable = false)
     public int getExerciseId() {
         return exerciseId;
     }
@@ -24,7 +24,7 @@ public class ExercisesEntity {
     }
 
     @Basic
-    @Column(name = "exerciseName")
+    @Column(name = "exerciseName", nullable = true, length = 30)
     public String getExerciseName() {
         return exerciseName;
     }
@@ -34,7 +34,7 @@ public class ExercisesEntity {
     }
 
     @Basic
-    @Column(name = "exerciseType")
+    @Column(name = "exerciseType", nullable = true, length = 30)
     public String getExerciseType() {
         return exerciseType;
     }
@@ -44,7 +44,7 @@ public class ExercisesEntity {
     }
 
     @Basic
-    @Column(name = "exerciseDescription")
+    @Column(name = "exerciseDescription", nullable = true, length = 150)
     public String getExerciseDescription() {
         return exerciseDescription;
     }

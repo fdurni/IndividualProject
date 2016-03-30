@@ -12,9 +12,10 @@ public class ProgramsEntity {
     private String programName;
     private String programType;
     private String programDescription;
+    private Integer personId;
 
     @Id
-    @Column(name = "programId")
+    @Column(name = "programId", nullable = false)
     public int getProgramId() {
         return programId;
     }
@@ -24,7 +25,7 @@ public class ProgramsEntity {
     }
 
     @Basic
-    @Column(name = "programName")
+    @Column(name = "programName", nullable = true, length = 30)
     public String getProgramName() {
         return programName;
     }
@@ -34,7 +35,7 @@ public class ProgramsEntity {
     }
 
     @Basic
-    @Column(name = "programType")
+    @Column(name = "programType", nullable = true, length = 30)
     public String getProgramType() {
         return programType;
     }
@@ -44,13 +45,23 @@ public class ProgramsEntity {
     }
 
     @Basic
-    @Column(name = "programDescription")
+    @Column(name = "programDescription", nullable = true, length = 150)
     public String getProgramDescription() {
         return programDescription;
     }
 
     public void setProgramDescription(String programDescription) {
         this.programDescription = programDescription;
+    }
+
+    @Basic
+    @Column(name = "personId", nullable = true)
+    public Integer getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Integer personId) {
+        this.personId = personId;
     }
 
     @Override
@@ -65,8 +76,8 @@ public class ProgramsEntity {
         if (programType != null ? !programType.equals(that.programType) : that.programType != null) return false;
         if (programDescription != null ? !programDescription.equals(that.programDescription) : that.programDescription != null)
             return false;
+        return personId != null ? personId.equals(that.personId) : that.personId == null;
 
-        return true;
     }
 
     @Override
@@ -75,6 +86,7 @@ public class ProgramsEntity {
         result = 31 * result + (programName != null ? programName.hashCode() : 0);
         result = 31 * result + (programType != null ? programType.hashCode() : 0);
         result = 31 * result + (programDescription != null ? programDescription.hashCode() : 0);
+        result = 31 * result + (personId != null ? personId.hashCode() : 0);
         return result;
     }
 
@@ -85,6 +97,7 @@ public class ProgramsEntity {
                 ", programName='" + programName + '\'' +
                 ", programType='" + programType + '\'' +
                 ", programDescription='" + programDescription + '\'' +
+                ", personId=" + personId +
                 '}';
     }
 }

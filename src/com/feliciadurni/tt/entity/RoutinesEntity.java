@@ -11,9 +11,12 @@ public class RoutinesEntity {
     private int routineId;
     private String routineName;
     private String routineDescription;
+    private Integer week;
+    private Integer day;
+    private Integer programId;
 
     @Id
-    @Column(name = "routineId")
+    @Column(name = "routineId", nullable = false)
     public int getRoutineId() {
         return routineId;
     }
@@ -23,7 +26,7 @@ public class RoutinesEntity {
     }
 
     @Basic
-    @Column(name = "routineName")
+    @Column(name = "routineName", nullable = true, length = 30)
     public String getRoutineName() {
         return routineName;
     }
@@ -33,13 +36,43 @@ public class RoutinesEntity {
     }
 
     @Basic
-    @Column(name = "routineDescription")
+    @Column(name = "routineDescription", nullable = false, length = 150)
     public String getRoutineDescription() {
         return routineDescription;
     }
 
     public void setRoutineDescription(String routineDescription) {
         this.routineDescription = routineDescription;
+    }
+
+    @Basic
+    @Column(name = "week", nullable = true)
+    public Integer getWeek() {
+        return week;
+    }
+
+    public void setWeek(Integer week) {
+        this.week = week;
+    }
+
+    @Basic
+    @Column(name = "day", nullable = true)
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
+    }
+
+    @Basic
+    @Column(name = "programId", nullable = true)
+    public Integer getProgramId() {
+        return programId;
+    }
+
+    public void setProgramId(Integer programId) {
+        this.programId = programId;
     }
 
     @Override
@@ -53,8 +86,10 @@ public class RoutinesEntity {
         if (routineName != null ? !routineName.equals(that.routineName) : that.routineName != null) return false;
         if (routineDescription != null ? !routineDescription.equals(that.routineDescription) : that.routineDescription != null)
             return false;
+        if (week != null ? !week.equals(that.week) : that.week != null) return false;
+        if (day != null ? !day.equals(that.day) : that.day != null) return false;
+        return programId != null ? programId.equals(that.programId) : that.programId == null;
 
-        return true;
     }
 
     @Override
@@ -62,6 +97,9 @@ public class RoutinesEntity {
         int result = routineId;
         result = 31 * result + (routineName != null ? routineName.hashCode() : 0);
         result = 31 * result + (routineDescription != null ? routineDescription.hashCode() : 0);
+        result = 31 * result + (week != null ? week.hashCode() : 0);
+        result = 31 * result + (day != null ? day.hashCode() : 0);
+        result = 31 * result + (programId != null ? programId.hashCode() : 0);
         return result;
     }
 
@@ -71,6 +109,9 @@ public class RoutinesEntity {
                 "routineId=" + routineId +
                 ", routineName='" + routineName + '\'' +
                 ", routineDescription='" + routineDescription + '\'' +
+                ", week=" + week +
+                ", day=" + day +
+                ", programId=" + programId +
                 '}';
     }
 }
