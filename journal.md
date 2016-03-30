@@ -66,4 +66,4 @@ I worked on week 4 exercises over lunch at work today, and my laptop installed a
 This week I set up entities for all of my tables and began setting up DAOs. I also refactored my project structure so that a user must log in to access the website. I'm feeling pretty good about my project. I would like to be farther along, but I've had projects due for other classes and have not found the time. I'm hoping that I'll get some time over spring break. 
 
 ###3/29/16
-Today I refactored my database, then set up entities and DAOs for all tables in my database. 
+Today I refactored my database, then set up entities and DAOs for all tables in my database. I also setup my remaining JSPs and began setting up controllers. I need to revisit projects from last semester Advanced Java to refresh my memory of servlets and controllers. I'm also a little fuzzy on how to use hibernate to select and insert data. 
