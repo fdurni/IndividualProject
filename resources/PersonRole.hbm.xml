@@ -14,7 +14,7 @@
             </key-property>
         </composite-id>
         <property name="personId">
-            <column name="personId" sql-type="int(11)" not-null="true"/>
+            <column name="personId" sql-type="int(11)" not-null="false"/>
         </property>
     </class>
 </hibernate-mapping>
