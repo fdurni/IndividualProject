@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.feliciadurni.tt.entity.Routine" table="routine" schema="trainingtracker">
+        <id name="routineId">
+            <column name="routineId" sql-type="int(11)"/>
+            <generator class="native"/>
+        </id>
+        <property name="routineName">
+            <column name="routineName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="routineDescription">
+            <column name="routineDescription" sql-type="varchar(150)" length="150"/>
+        </property>
+        <property name="week">
+            <column name="week" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="day">
+            <column name="day" sql-type="int(11)" not-null="true"/>
+        </property>
+        <many-to-one name="program" class="com.feliciadurni.tt.entity.Program"
+                     column="programId" />
+        <set name="routineExercises" cascade="all" lazy="true">
+            <key column="routineId"/>
+            <one-to-many class="com.feliciadurni.tt.entity.RoutineExercise"/>
+        </set>
+    </class>
+</hibernate-mapping>

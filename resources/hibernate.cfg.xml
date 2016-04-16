@@ -8,53 +8,24 @@
             org.hibernate.dialect.MySQL5Dialect
         </property>
         <property name="connection.url">jdbc:mysql://localhost:3306/trainingtracker</property>
+        <property name="connection.username">
+            felicia
+        </property>
+        <property name="connection.password">
+            Dodgers4
+        </property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping resource="Exercises.hbm.xml" />
-        <mapping class="com.feliciadurni.tt.entity.ExercisesEntity"/>
+        <mapping resource="Exercise.hbm.xml" />
+        <mapping class="com.feliciadurni.tt.entity.Exercise"/>
         <mapping resource="Person.hbm.xml" />
-        <mapping class="com.feliciadurni.tt.entity.PersonEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonalRecordEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonGoalEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonProgramRoutineEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonProgramRoutineExerciseEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonProgramsEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonRolesEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.ProgramRoutineExerciseEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.ProgramRoutinesEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.ProgramsEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.RoutineExercisesEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.RoutinesEntity"/>
-        <mapping resource="ExercisesEntity.hbm.xml"/>
-        <mapping resource="PersonEntity.hbm.xml"/>
-        <mapping resource="PersonalrecordEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonalrecordEntity"/>
-        <mapping resource="PersongoalEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.PersongoalEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonprogramroutineEntity"/>
-        <mapping resource="PersonprogramroutineEntity.hbm.xml"/>
-        <mapping resource="PersonprogramroutineexerciseEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonprogramroutineexerciseEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonprogramsEntity"/>
-        <mapping resource="PersonprogramsEntity.hbm.xml"/>
-        <mapping resource="ProgramroutineexerciseEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.ProgramroutineexerciseEntity"/>
-        <mapping class="com.feliciadurni.tt.entity.ProgramroutinesEntity"/>
-        <mapping resource="ProgramroutinesEntity.hbm.xml"/>
-        <mapping resource="ProgramsEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.RoutineexercisesEntity"/>
-        <mapping resource="RoutineexercisesEntity.hbm.xml"/>
-        <mapping resource="RoutinesEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.PersonrolesEntity"/>
-        <mapping resource="PersonrolesEntity.hbm.xml"/>
-        <mapping resource="ExercisesEntity.hbm.xml"/>
-        <mapping resource="PersonEntity.hbm.xml"/>
-        <mapping resource="PersonalrecordEntity.hbm.xml"/>
-        <mapping resource="ProgramsEntity.hbm.xml"/>
-        <mapping resource="RoutineexercisesEntity.hbm.xml"/>
-        <mapping resource="RoutinesEntity.hbm.xml"/>
-        <mapping resource="PersonrolesEntity.hbm.xml"/>
-        <mapping class="com.feliciadurni.tt.entity.GoalsEntity"/>
-        <mapping resource="GoalsEntity.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.Person"/>
+        <mapping resource="PersonRole.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.PersonRole"/>
+        <mapping resource="Program.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.Program"/>
+        <mapping resource="Routine.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.Routine"/>
+        <mapping resource="RoutineExercise.hbm.xml"/>
+        <mapping class="com.feliciadurni.tt.entity.RoutineExercise"/>
     </session-factory>
-
 </hibernate-configuration>

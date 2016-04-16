@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.feliciadurni.tt.entity.Exercise" table="exercise" schema="trainingtracker">
+        <id name="exerciseId">
+            <column name="exerciseId" sql-type="int(11)"/>
+            <generator class="native"/>
+        </id>
+        <property name="exerciseName">
+            <column name="exerciseName" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="exerciseType">
+            <column name="exerciseType" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="exerciseDescription">
+            <column name="exerciseDescription" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
+        <set name="exerciseRoutines" cascade="all" lazy="true">
+            <key column="exerciseId"/>
+            <one-to-many class="com.feliciadurni.tt.entity.RoutineExercise"/>
+        </set>
+    </class>
+</hibernate-mapping>
