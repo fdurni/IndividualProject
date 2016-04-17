@@ -40,21 +40,30 @@
     <div class="register-box-body">
         <p class="login-box-msg">Registration</p>
 
-        <form action="../../index.html" method="post">
+        <form id="signUpForm" role="form" action="/signUpUser" method="post">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Full name">
+                <input type="text" class="form-control" id="firstName"
+                       name="firstName" placeholder="First Name">
                 <span class="glyphicon glyphicon-person form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="User Name">
+                <input type="text" class="form-control" id="lastName"
+                       name="lastName" placeholder="Last Name">
+                <span class="glyphicon glyphicon-person form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" id="userName"
+                       name="userName" placeholder="User Name">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" id="password"
+                       name="password" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Retype password">
+                <input type="password" class="form-control" id="confirmPassword"
+                       name="confirmPassword" placeholder="Retype password">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             <div class="row">
@@ -85,6 +94,14 @@
             radioClass: 'iradio_square-blue',
             increaseArea: '20%' // optional
         });
+    });
+
+    $( '#signUpForm' ).submit(function() {
+        if($('#password').val()!=$('#confirmPassword').val()){
+            alert('Passwords do not match');
+            return false;
+        }
+        return true;
     });
 </script>
 </body>
