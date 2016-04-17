@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: felic
@@ -6,30 +7,30 @@
   To change this template use File | Settings | File Templates.
 --%>
 <!-- Content Type -->
-<jsp:include page="../contentType.jsp"/>
+<c:import url="../contentType.jsp"/>
 <html>
-<jsp:include page="head.jsp"/>
+<c:import url="head.jsp"/>
 <body class="hold-transition skin-blue sidebar-mini">
 
 <!-- wrapper -->
 <div class="wrapper">
 
     <!-- Main Header -->
-    <jsp:include page="header.jsp"/>
+    <c:import url="header.jsp"/>
 
     <!-- Left side column. contains the logo and sidebar -->
-    <jsp:include page="sidebar.jsp"/>
+    <c:import url="sidebar.jsp"/>
 
     <!-- Page content -->
-    <jsp:include page="progress-content.jsp"/>
+    <c:import url="progress-content.jsp"/>
 
     <!-- Main Footer -->
-    <jsp:include page="footer.jsp"/>
+    <c:import url="footer.jsp"/>
 
 </div>
 
 <!-- REQUIRED JS SCRIPTS -->
-<jsp:include page="include.jsp"/>
+<c:import url="include.jsp"/>
 
 </body>
 </html>
