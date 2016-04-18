@@ -82,12 +82,16 @@
                 <thead>
                 <tr>
                     <th>Program Name</th>
+                    <th>Program Type</th>
+                    <th>Program Description</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="program" items="${programInfo}">
                     <tr>
                         <td>${program.programName}</td>
+                        <td>${program.programType}</td>
+                        <td>${program.programDescription}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
