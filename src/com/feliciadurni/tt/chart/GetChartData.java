@@ -79,8 +79,6 @@ public class GetChartData {
 
         for (int i = 0; i < chartDataArray.size(); i++) {
 
-            System.out.println("Json data " + i);
-
             xaxisArr.put(chartDataArray.get(i).getWeek());
 
             squat_weight.put(chartDataArray.get(i).getSquat_weight());
@@ -109,8 +107,6 @@ public class GetChartData {
         dataObj.put("color", " #5DBCD2");
         dataObj.put("data", bench_weight);
         chartData.put(dataObj);
-
-        System.out.println("Json data " + chartData);
 
         finalJSonObj.put(chartType, chartData);
 
