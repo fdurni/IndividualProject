@@ -1,10 +1,14 @@
 package com.feliciadurni.tt.persistence;
 
+import com.feliciadurni.tt.entity.Exercise;
 import com.feliciadurni.tt.entity.RoutineExercise;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.CriteriaSpecification;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;

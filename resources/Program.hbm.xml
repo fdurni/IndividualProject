@@ -17,6 +17,15 @@
         <property name="programDescription">
             <column name="programDescription" sql-type="varchar(150)" length="150" not-null="true"/>
         </property>
+        <property name="numberOfWeeks">
+            <column name="numberOfWeeks" sql-type="int(11)" />
+        </property>
+        <property name="beginDate">
+            <column name="beginDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="endDate">
+            <column name="endDate" sql-type="date" not-null="true"/>
+        </property>
         <set name="routines" cascade="all" lazy="true">
             <key column="programId"/>
             <one-to-many class="com.feliciadurni.tt.entity.Routine"/>

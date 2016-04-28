@@ -2,8 +2,10 @@ package com.feliciadurni.tt;
 
 import com.feliciadurni.tt.entity.Exercise;
 import com.feliciadurni.tt.entity.Routine;
+import com.feliciadurni.tt.entity.RoutineExercise;
 import com.feliciadurni.tt.persistence.ExerciseDao;
 import com.feliciadurni.tt.persistence.RoutineDao;
+import com.feliciadurni.tt.persistence.RoutineExerciseDao;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -33,6 +35,19 @@ public class ExerciseDaoTest {
 
         ExerciseDao dao = new ExerciseDao();
         Exercise exercise = dao.getExercise(5);
+        assertNotNull("Could not get exercise", exercise);
+    }
+
+    @Test
+    public void testGetExerciseByName() throws Exception {
+
+        ExerciseDao dao = new ExerciseDao();
+        Exercise exercise = dao.getExerciseByName("Squat");
+        RoutineExerciseDao routineExerciseDao = new RoutineExerciseDao();
+
+        //RoutineExercise routineExercise = routineExerciseDao.getRoutineExercise(exercise.getExerciseId());
+        log.info(exercise);
+
         assertNotNull("Could not get exercise", exercise);
     }
 

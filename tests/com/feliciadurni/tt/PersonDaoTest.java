@@ -37,6 +37,18 @@ public class PersonDaoTest {
     }
 
     @Test
+    public void testGetPersonByUsername() throws Exception {
+
+        PersonDao dao = new PersonDao();
+        Person person = dao.getPersonByUsername("Storm");
+
+        Integer personId = person.getPersonId();
+        log.info("Person Id: " + personId);
+
+        assertNotNull("Could not get person", person.getPersonId());
+    }
+
+    @Test
     public void testUpdatePerson() throws Exception {
 
         PersonDao dao = new PersonDao();

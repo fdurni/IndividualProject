@@ -10,7 +10,7 @@
             <generator class="native"/>
         </id>
         <property name="exerciseName">
-            <column name="exerciseName" sql-type="varchar(30)" length="30" not-null="true"/>
+            <column name="exerciseName" sql-type="varchar(30)" length="30" not-null="true" unique="true"/>
         </property>
         <property name="exerciseType">
             <column name="exerciseType" sql-type="varchar(30)" length="30" not-null="true"/>

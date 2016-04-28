@@ -30,7 +30,7 @@ public class RoutineExerciseDaoTest {
     public void testGetRoutineExercise() throws Exception {
 
         RoutineExerciseDao dao = new RoutineExerciseDao();
-        RoutineExercise routineExercise = dao.getRoutineExercise(5);
+        RoutineExercise routineExercise = dao.getRoutineExercise(12);
         assertNotNull("Could not get routineExercise", routineExercise);
     }
 

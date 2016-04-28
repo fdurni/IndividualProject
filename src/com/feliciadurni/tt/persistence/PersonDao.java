@@ -3,9 +3,11 @@ package com.feliciadurni.tt.persistence;
 import com.feliciadurni.tt.entity.Person;
 import com.feliciadurni.tt.entity.Program;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,16 @@ public class PersonDao {
     public Person getPerson(Integer id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         return (Person)session.get(Person.class, id);
+    }
+
+    public Person getPersonByUsername(String username) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Criteria crit = session.createCriteria(Person.class);
+        crit.add( Restrictions.eq("userName",username) );
+        List<Person> person = crit.list();
+
+        return person.get(0);
     }
 
     public void updatePerson(Person person) {

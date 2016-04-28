@@ -32,10 +32,10 @@
 <!-- REQUIRED JS SCRIPTS -->
 <c:import url="include.jsp"/>
 <script>
-    var date_input=$('input[name="date"]');
+    var date_input=$('input[name="beginDate"]');
     var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
     var options={
-        format: 'mm/dd/yyyy',
+        format: 'yyyy-mm-dd',
         container: container,
         todayHighlight: true,
         autoclose: true,

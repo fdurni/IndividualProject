@@ -83,7 +83,9 @@
                 </div>
             </div>
             <div class="box-body">
-                <div id="mainChart" style="width:100%; height:400px;"></div>
+                <!-- <div id="mainChart" style="width:100%; height:400px;"></div> -->
+                <hf:chart type="line" value="# {lineChartBean.simpleList}" var="point"
+                          point="# {point}" title="List of Integer values" xaxisLabel="Index" yaxisLabel="Amount"/>
             </div>
             <!-- /.box-body -->
         </div>

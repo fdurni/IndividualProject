@@ -23,7 +23,6 @@
                     <label class="col-sm-2 control-label" for="programName">Program Name</label>
                     <div class="col-md-4">
                         <input id="programName" name="programName" placeholder="Program Name" class="form-control input-md" type="text">
-
                     </div>
                 </div>
 
@@ -38,17 +37,17 @@
 
                 <!-- Date input -->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="date">Begin Date</label>
+                    <label class="col-sm-2 control-label" for="beginDate">Begin Date</label>
                     <div class="col-md-4">
-                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                        <input class="form-control" id="beginDate" name="beginDate" placeholder="YYYY-MM-DD" type="text"/>
                     </div>
                 </div>
 
                 <!-- Spinbox -->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="spinner">Number of Weeks</label>
+                    <label class="col-sm-2 control-label" for="numberOfWeeks">Number of Weeks</label>
                     <div class="spinner col-md-4">
-                        <input type="text" id="spinner" class="form-control" value="1">
+                        <input type="text" id="numberOfWeeks" name="numberOfWeeks" class="form-control" value="1">
                         <div class="input-group-btn-vertical">
                             <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
                             <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -68,7 +67,8 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="submit"></label>
                     <div class="col-md-4">
-                        <button class="btn btn-primary " name="submit" id="submit" type="submit">Go to Step 2</button>
+                        <button class="btn btn-primary " name="submit" id="submit" type="submit">Submit</button>
+                        <button class="btn btn-primary " name="submitAndAdd" id="submitAndAdd" type="submit">Submit and Add Routine</button>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@
         </form>
         <!-- Form code ends -->
 
-        <!-- Display programs -->
+        <!-- Display programs
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
@@ -97,7 +97,7 @@
                 </tbody>
             </table>
         </div>
-
+         -->
     </section>
     <!-- /.content -->
 </div>

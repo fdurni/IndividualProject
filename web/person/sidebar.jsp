@@ -13,7 +13,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../dist/img/user.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>Alexander Pierce</p>
@@ -29,15 +29,16 @@
             <li class="treeview">
                 <a href="#"><span>My Programs</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/person/viewPrograms.jsp">View Programs</a></li>
-                    <li><a href="/person/addProgram.jsp">Add Program</a></li>
+                    <li><a href="/person/viewProgram">View Program</a></li>
+                    <li><a href="/person/addProgram">Add Program</a></li>
+                    <li><a href="/person/selectProgram">Add Routine</a></li>
                 </ul>
             </li>
             <li class="treeview">
-                <a href="/person/progress.jsp"><span>My Progress</span></a>
+                <a href="/person/progress"><span>My Progress</span></a>
             </li>
             <li class="treeview">
-                <a href="/person/personalRecords.jsp"><span>My Personal Records</span></a>
+                <a href="/person/personalRecords"><span>My Personal Records</span></a>
             </li>
         </ul>
         <!-- /.sidebar-menu -->

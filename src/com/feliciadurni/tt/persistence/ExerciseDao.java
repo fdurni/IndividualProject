@@ -2,9 +2,11 @@ package com.feliciadurni.tt.persistence;
 
 import com.feliciadurni.tt.entity.Exercise;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,16 @@ public class ExerciseDao {
     public Exercise getExercise(Integer id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         return (Exercise)session.get(Exercise.class, id);
+    }
+
+    public Exercise getExerciseByName(String exerciseName) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Criteria crit = session.createCriteria(Exercise.class);
+        crit.add( Restrictions.eq("exerciseName",exerciseName) );
+        Exercise exercise = (Exercise)crit.uniqueResult();
+
+        return exercise;
     }
 
     public void updateExercise(Exercise exercise) {

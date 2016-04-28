@@ -16,7 +16,7 @@
             <column name="lastName" sql-type="varchar(30)" length="30" not-null="true"/>
         </property>
         <property name="userName">
-            <column name="userName" sql-type="varchar(30)" length="30" not-null="true"/>
+            <column name="userName" sql-type="varchar(30)" length="30" not-null="true" unique="true"/>
         </property>
         <property name="password">
             <column name="password" sql-type="varchar(30)" length="30"/>

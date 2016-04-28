@@ -1,7 +1,10 @@
 package com.feliciadurni.tt.entity;
 
 import javax.persistence.Transient;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
+import org.apache.commons.lang.time.DateUtils;
 
 /**
  * Created by felic on 3/29/2016.
@@ -11,8 +14,12 @@ public class Program {
     private String programName;
     private String programType;
     private String programDescription;
+    private Integer numberOfWeeks;
     private Set<Routine> routines;
     private Person person;
+    private Date beginDate;
+    private Date endDate;
+    private Date calculatedEndDate;
 
     public Program() {}
 
@@ -55,6 +62,14 @@ public class Program {
         this.programDescription = programDescription;
     }
 
+    public Integer getNumberOfWeeks() {
+        return numberOfWeeks;
+    }
+
+    public void setNumberOfWeeks(Integer numberOfWeeks) {
+        this.numberOfWeeks = numberOfWeeks;
+    }
+
     public Set<Routine> getRoutines() {
         return routines;
     }
@@ -76,13 +91,26 @@ public class Program {
         this.person = person;
     }
 
-    @Override
-    public String toString() {
-        return "Program{" +
-                "programId=" + programId +
-                ", programName='" + programName + '\'' +
-                ", programType='" + programType + '\'' +
-                ", programDescription='" + programDescription + '\'' +
-                '}';
+    public Date getBeginDate() {
+        return beginDate;
+    }
+
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public Date calculateEndDate(Date beginDate, int numberOfWeeks) {
+
+        calculatedEndDate = DateUtils.addDays(beginDate, (numberOfWeeks * 7));
+
+        return calculatedEndDate;
     }
 }

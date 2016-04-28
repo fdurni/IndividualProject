@@ -7,6 +7,8 @@ import com.feliciadurni.tt.persistence.ProgramDao;
 import com.feliciadurni.tt.persistence.RoutineDao;
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,10 +29,20 @@ public class TestForeignKeyAssociation {
         person.setUserName("User-Name");
         person.setPassword("Password");
 
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        String beginDate = "2016-01-01";
+        Date formattedBeginDate = format.parse(beginDate);
+
+        String endDate = "2016-04-01";
+        Date formattedEndDate = format.parse(endDate);
+
         Program program1 = new Program();
         program1.setProgramName("Program-Name");
         program1.setProgramType("Program-Type");
         program1.setProgramDescription("Program-Description");
+        program1.setBeginDate(formattedBeginDate);
+        program1.setEndDate(formattedEndDate);
 
         Routine routine1 = new Routine();
         routine1.setDay(1);
