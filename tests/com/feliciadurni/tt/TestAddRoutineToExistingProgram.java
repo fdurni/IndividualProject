@@ -36,56 +36,47 @@ public class TestAddRoutineToExistingProgram {
         Routine routine1 = new Routine();
         routine1.setDay(1);
         routine1.setRoutineName("Routine-Name");
-        routine1.setWeek(1);
+        routine1.setWeek(4);
         routine1.setRoutineDescription("Routine-Description");
 
-        Exercise exercise1 = new Exercise();
-        exercise1.setExerciseName("Squat");
-        exercise1.setExerciseType("T1");
-        exercise1.setExerciseDescription("Barbell Back Squat");
-        exerciseDao.addExercise(exercise1);
+        Integer squatId = exerciseDao.getExerciseByName("Squat").getExerciseId();
+        Exercise squat = exerciseDao.getExercise(squatId);
 
-        Exercise exercise2 = new Exercise();
-        exercise2.setExerciseName("Sumo Deadlift");
-        exercise2.setExerciseType("T1");
-        exercise2.setExerciseDescription("Sumo Deadlift");
-        exerciseDao.addExercise(exercise2);
+        Integer deadliftId = exerciseDao.getExerciseByName("Deadlift").getExerciseId();
+        Exercise deadlift = exerciseDao.getExercise(deadliftId);
 
-        Exercise exercise3 = new Exercise();
-        exercise3.setExerciseName("Bench Press");
-        exercise3.setExerciseType("T1");
-        exercise3.setExerciseDescription("Bench Press");
-        exerciseDao.addExercise(exercise3);
+        Integer benchId = exerciseDao.getExerciseByName("Bench Press").getExerciseId();
+        Exercise bench = exerciseDao.getExercise(benchId);
 
         RoutineExercise routineExercise1 = new RoutineExercise();
         routineExercise1.setRoutine(routine1);
-        routineExercise1.setExercise(exercise1);
+        routineExercise1.setExercise(squat);
         routineExercise1.setExpectedSets(1);
         routineExercise1.setExpectedReps("1");
-        routineExercise1.setExpectedWeight(100);
+        routineExercise1.setExpectedWeight(225);
         routineExercise1.setActualSets(1);
         routineExercise1.setActualReps(1);
-        routineExercise1.setActualWeight(100);
+        routineExercise1.setActualWeight(225);
 
         RoutineExercise routineExercise2 = new RoutineExercise();
         routineExercise2.setRoutine(routine1);
-        routineExercise2.setExercise(exercise2);
+        routineExercise2.setExercise(deadlift);
         routineExercise2.setExpectedSets(1);
         routineExercise2.setExpectedReps("1");
-        routineExercise2.setExpectedWeight(100);
+        routineExercise2.setExpectedWeight(325);
         routineExercise2.setActualSets(1);
         routineExercise2.setActualReps(1);
-        routineExercise2.setActualWeight(100);
+        routineExercise2.setActualWeight(325);
 
         RoutineExercise routineExercise3 = new RoutineExercise();
         routineExercise3.setRoutine(routine1);
-        routineExercise3.setExercise(exercise3);
+        routineExercise3.setExercise(bench);
         routineExercise3.setExpectedSets(1);
         routineExercise3.setExpectedReps("1");
-        routineExercise3.setExpectedWeight(100);
+        routineExercise3.setExpectedWeight(130);
         routineExercise3.setActualSets(1);
         routineExercise3.setActualReps(1);
-        routineExercise3.setActualWeight(100);
+        routineExercise3.setActualWeight(130);
 
         Set<Routine> routines = new HashSet<Routine>();
         routines.add(routine1);

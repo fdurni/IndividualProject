@@ -34,3 +34,85 @@
 
   </body>
 </html>
+<script type="text/javascript">
+
+    $(function() {
+        generateChart();
+
+    });
+
+    function passpercentage(json) {
+
+        $(function () {
+
+            var len = json.passpercentage.length
+            i = 0;
+
+            var options = {
+                chart: {
+                    type: 'line'
+
+                },
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: 'Weight Lifted'
+                },
+                subtitle: {
+                    text: 'Squat, Deadlift, Bench',
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Weight (lbs)'
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                xAxis: {
+                    categories: []
+                },
+                series: []
+            }
+
+            for (i; i < len; i++) {
+                if (i === 0) {
+                    var dat = json.passpercentage[i].category,
+                            lenJ = dat.length,
+                            j = 0,
+                            tmp;
+
+                    for (j; j < lenJ; j++) {
+                        options.xAxis.categories.push(dat[j]);
+                    }
+                } else {
+                    options.series.push(json.passpercentage[i]);
+                }
+            }
+
+            $('#placeholder').highcharts(options);
+
+        });
+
+    }
+
+    function generateChart() {
+        chartType="passpercentage";
+        $("#placeholder").text("");
+
+        $.ajax({
+            type: "GET",
+            url:"/person/GetChartDetails?jsonp="+chartType,
+            dataType: 'jsonp',
+            jsonpCallback: chartType, // the function to call
+            error: function () {
+                alert("Error occured generating chart");
+            }
+        });
+    }
+</script>

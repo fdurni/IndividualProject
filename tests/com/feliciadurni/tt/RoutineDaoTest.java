@@ -36,6 +36,17 @@ public class RoutineDaoTest {
     }
 
     @Test
+    public void testGetRoutinesByWeek() throws Exception {
+
+        RoutineDao dao = new RoutineDao();
+        List<Routine> routines = dao.getRoutinesByWeek(1);
+
+        log.info(routines);
+
+        assertTrue("There is the wrong amount in the list", routines.size() > 0);
+    }
+
+    @Test
     public void testUpdateRoutine() throws Exception {
 
         RoutineDao dao = new RoutineDao();

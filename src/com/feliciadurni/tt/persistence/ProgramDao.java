@@ -6,6 +6,7 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.CriteriaSpecification;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
@@ -28,6 +29,18 @@ public class ProgramDao {
     public Program getProgram(Integer id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         return (Program)session.get(Program.class, id);
+    }
+
+    public List<Program> getRoutines(Integer id) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Criteria c = session.createCriteria(Program.class, "program");
+        c.createAlias("program.routines", "routine");
+        c.add(Restrictions.eq("routine.routineId", id));
+        c.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
+
+        List programs = c.list();
+
+        return programs;
     }
 
     public void updateProgram(Program program) {

@@ -2,9 +2,11 @@ package com.feliciadurni.tt.persistence;
 
 import com.feliciadurni.tt.entity.Routine;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,16 @@ public class RoutineDao {
     public Routine getRoutine(Integer id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         return (Routine)session.get(Routine.class, id);
+    }
+
+    public List<Routine> getRoutinesByWeek(Integer week) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Criteria crit = session.createCriteria(Routine.class);
+        crit.add( Restrictions.eq("week",week) );
+        List routines = crit.list();
+
+        return routines;
     }
 
     public void updateRoutine(Routine routine) {

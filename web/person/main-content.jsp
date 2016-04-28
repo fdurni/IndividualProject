@@ -84,8 +84,9 @@
             </div>
             <div class="box-body">
                 <!-- <div id="mainChart" style="width:100%; height:400px;"></div> -->
-                <hf:chart type="line" value="# {lineChartBean.simpleList}" var="point"
-                          point="# {point}" title="List of Integer values" xaxisLabel="Index" yaxisLabel="Amount"/>
+                <div id="outerDiv" style="width:100%; height:400px;">
+                    <div  id="placeholder"></div>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>

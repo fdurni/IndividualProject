@@ -38,6 +38,17 @@ public class ProgramDaoTest {
     }
 
     @Test
+    public void testGetRoutines() throws Exception {
+
+        ProgramDao dao = new ProgramDao();
+        List<Program> programs = dao.getRoutines(46);
+
+        log.info(programs);
+
+        assertTrue("There is the wrong amount in the list", programs.size() > 0);
+    }
+
+    @Test
     public void testUpdateProgram() throws Exception {
 
         ProgramDao dao = new ProgramDao();

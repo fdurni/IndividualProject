@@ -48,6 +48,8 @@ public class SelectProgram extends HttpServlet {
         HttpSession session = req.getSession();
         ProgramDao dao = new ProgramDao();
 
+        Exercise exercise = new Exercise();
+
         int programId = Integer.parseInt(req.getParameter("selectbasic"));
         Program selectedProgram = dao.getProgram(programId);
 
