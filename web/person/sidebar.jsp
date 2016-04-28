@@ -16,7 +16,7 @@
                 <img src="../dist/img/user.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>${name}</p>
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -33,12 +33,6 @@
                     <li><a href="/person/addProgram">Add Program</a></li>
                     <li><a href="/person/selectProgram">Add Routine</a></li>
                 </ul>
-            </li>
-            <li class="treeview">
-                <a href="/person/progress"><span>My Progress</span></a>
-            </li>
-            <li class="treeview">
-                <a href="/person/personalRecords"><span>My Personal Records</span></a>
             </li>
         </ul>
         <!-- /.sidebar-menu -->
