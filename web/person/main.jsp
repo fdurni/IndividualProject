@@ -57,7 +57,7 @@
                     enabled: false
                 },
                 title: {
-                    text: 'Weight Lifted'
+                    text: 'Weight Lifted By Exercise'
                 },
                 subtitle: {
                     text: 'Squat, Deadlift, Bench',

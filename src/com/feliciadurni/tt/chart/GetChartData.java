@@ -93,19 +93,19 @@ public class GetChartData {
         chartData.put(xaxisObj);
 
         dataObj = new JSONObject();
-        dataObj.put("name", "Squat Weight");
+        dataObj.put("name", "Squat");
         dataObj.put("color", "#F39C11");
         dataObj.put("data", squat_weight);
         chartData.put(dataObj);
 
         dataObj = new JSONObject();
-        dataObj.put("name", "Deadlift Weight");
+        dataObj.put("name", "Deadlift");
         dataObj.put("color", "#01A65A");
         dataObj.put("data", deadlift_weight);
         chartData.put(dataObj);
 
         dataObj = new JSONObject();
-        dataObj.put("name", "Bench Weight");
+        dataObj.put("name", "Bench Press");
         dataObj.put("color", " #5DBCD2");
         dataObj.put("data", bench_weight);
         chartData.put(dataObj);
