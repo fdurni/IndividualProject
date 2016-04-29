@@ -34,12 +34,13 @@ public class Main extends HttpServlet {
         HttpSession session = req.getSession();
 
         PersonDao personDao = new PersonDao();
+        ProgramDao programDao = new ProgramDao();
         String username = req.getRemoteUser();
         Person loggedInPerson = personDao.getPersonByUsername(username);
         String firstName = loggedInPerson.getFirstName();
         String lastName = loggedInPerson.getLastName();
         String fullName = firstName + " " + lastName;
-        String currentProgram = null;
+        Program currentProgram = null;
         long currentWeek = 0;
         long remainingWeeks = 0;
 
@@ -53,7 +54,7 @@ public class Main extends HttpServlet {
 
             if (today.isAfter(beginDate) && today.isBefore(endDate)) {
 
-                currentProgram = program.getProgramName();
+                currentProgram = programDao.getProgram(program.getProgramId());
 
                 currentWeek = Weeks.weeksBetween(beginDate, today).getWeeks() + 1;
                 remainingWeeks = Weeks.weeksBetween(today, endDate).getWeeks();

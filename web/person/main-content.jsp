@@ -28,7 +28,7 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <p>Current Program</p>
-                        <h3 style="font-size: 20px">${currentProgram}</h3>
+                        <h3 style="font-size: 20px">${currentProgram.programName}</h3>
                     </div>
                 </div>
             </div>

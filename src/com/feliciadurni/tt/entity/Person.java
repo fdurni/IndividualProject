@@ -6,18 +6,18 @@ import java.util.Set;
  * Created by felic on 3/29/2016.
  */
 public class Person {
-    private int personId;
+    private Integer personId;
     private String firstName;
     private String lastName;
     private String userName;
     private String password;
     private Set<Program> programs;
 
-    public int getPersonId() {
+    public Integer getPersonId() {
         return personId;
     }
 
-    public void setPersonId(int personId) {
+    public void setPersonId(Integer personId) {
         this.personId = personId;
     }
 
