@@ -23,7 +23,7 @@
     <c:import url="sidebar.jsp"/>
 
     <!-- Page content -->
-    <c:import url="addRoutine-content.jsp"/>
+    <c:import url="addNewExercises-content.jsp"/>
 
     <!-- Main Footer -->
     <c:import url="footer.jsp"/>
@@ -41,27 +41,27 @@
         var addButton = $('.add_button'); //Add button selector
         var wrapper = $('.field_wrapper'); //Input field wrapper
         var fieldHTML =
-            '<div class="form-group">' +
+                '<div class="form-group">' +
                 '<label class="col-sm-2 control-label" for="exercise">Enter Exercise</label>' +
                 '<div class="col-md-2">' +
-                    '<select id="exercise" name="exercise" class="form-control">' +
-                        '<option value="">Select Exercise</option>' +
-                        '<c:forEach var="exercise" items="${exercises}">' +
-                            '<option value=${exercise.exerciseId}>${exercise.exerciseName}</option>' +
-                        '</c:forEach>' +
-                    '</select>' +
+                '<select id="exercise" name="exercise" class="form-control">' +
+                '<option value="">Select Exercise</option>' +
+                '<c:forEach var="exercise" items="${exercises}">' +
+                '<option value=${exercise.exerciseId}>${exercise.exerciseName}</option>' +
+                '</c:forEach>' +
+                '</select>' +
                 '</div>' +
                 '<div class="col-md-2">' +
-                    '<input id="sets" name="sets" placeholder="Sets" class="form-control input-md" type="text">' +
+                '<input id="sets" name="sets" placeholder="Sets" class="form-control input-md" type="text">' +
                 '</div>' +
                 '<div class="col-md-2">' +
-                    '<input id="reps" name="reps" placeholder="Reps" class="form-control input-md" type="text">' +
+                '<input id="reps" name="reps" placeholder="Reps" class="form-control input-md" type="text">' +
                 '</div>' +
                 '<div class="col-md-2">' +
-                    '<input id="weight" name="weight" placeholder="Weight" class="form-control input-md" type="text">' +
+                '<input id="weight" name="weight" placeholder="Weight" class="form-control input-md" type="text">' +
                 '</div>' +
                 '<a href="javascript:void(0);" class="remove_button" title="Remove field"><img height="30px" width="30px" src="../dist/img/remove-button.png"/></a></div>' +
-            '</div>';
+                '</div>';
         var x = 1; //Initial field counter is 1
         $(addButton).click(function(){ //Once add button is clicked
             if(x < maxField){ //Check maximum number of input fields

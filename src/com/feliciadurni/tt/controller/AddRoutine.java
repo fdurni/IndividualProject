@@ -1,10 +1,7 @@
 package com.feliciadurni.tt.controller;
 
 import com.feliciadurni.tt.entity.*;
-import com.feliciadurni.tt.persistence.ExerciseDao;
-import com.feliciadurni.tt.persistence.PersonDao;
 import com.feliciadurni.tt.persistence.ProgramDao;
-import com.feliciadurni.tt.persistence.RoutineDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,12 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * Created by felic on 4/24/2016.
@@ -31,13 +23,6 @@ public class AddRoutine extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        HttpSession session = req.getSession();
-        ExerciseDao exerciseDao = new ExerciseDao();
-
-        List<Exercise> exercises = exerciseDao.getAllExercises();
-
-        session.setAttribute("exercises", exercises);
-
         String url = "/person/addRoutine.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
@@ -48,10 +33,9 @@ public class AddRoutine extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ProgramDao programDao = new ProgramDao();
-        ExerciseDao exerciseDao = new ExerciseDao();
 
         String program = req.getParameter("program");
-        Program selectedProgram = programDao.getProgram(Integer.parseInt(program));
+        Program selectedProgram = programDao.getProgramByName(program);
 
         String[] weeks = req.getParameterValues("checkboxes");
 
@@ -66,32 +50,19 @@ public class AddRoutine extends HttpServlet {
             routine.setWeek(week);
             routine.setRoutineDescription(req.getParameter("routineDescription"));
             selectedProgram.addRoutine(routine);
-
-            Set<RoutineExercise> routineExercises = new HashSet<RoutineExercise>();
-
-            String[] exercises = req.getParameterValues("exercise");
-            String[] exerciseSets = req.getParameterValues("sets");
-            String[] exerciseReps = req.getParameterValues("reps");
-            String[] exerciseWeights = req.getParameterValues("weight");
-
-            for (int n = 0; n < exercises.length; n++) {
-
-                Exercise exercise = exerciseDao.getExercise(Integer.parseInt(exercises[n]));
-
-                RoutineExercise routineExercise = new RoutineExercise();
-                routineExercise.setRoutine(routine);
-                routineExercise.setExercise(exercise);
-                routineExercise.setExpectedSets(Integer.parseInt(exerciseSets[n]));
-                routineExercise.setExpectedReps(exerciseReps[n]);
-                routineExercise.setExpectedWeight(Integer.parseInt(exerciseWeights[n]));
-
-                routineExercises.add(routineExercise);
-                routine.setRoutineExercises(routineExercises);
-            }
         }
 
         programDao.updateProgram(selectedProgram);
 
-        resp.sendRedirect("/person/addRoutine");
+        /*
+         * Logic to redirect user
+         * if the button was clicked
+         */
+        if (req.getParameter("submit") != null) {
+            resp.sendRedirect("/person/addRoutine");
+        }
+        else if (req.getParameter("submitAndAdd") != null) {
+            resp.sendRedirect("/person/addExercises");
+        }
     }
 }

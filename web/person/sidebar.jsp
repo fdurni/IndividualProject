@@ -29,9 +29,20 @@
             <li class="treeview">
                 <a href="#"><span>My Programs</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/person/viewProgram">View Program</a></li>
                     <li><a href="/person/addProgram">Add Program</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><span>My Routines</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
                     <li><a href="/person/selectProgram">Add Routine</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><span>My Exercises</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/person/addExercises">Add Exercises to Routine</a></li>
+                    <li><a href="/person/addNewExercises">Add New Exercises</a></li>
                 </ul>
             </li>
         </ul>
