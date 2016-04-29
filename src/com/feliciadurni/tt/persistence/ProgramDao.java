@@ -31,6 +31,16 @@ public class ProgramDao {
         return (Program)session.get(Program.class, id);
     }
 
+    public Program getProgramByName(String name) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Criteria crit = session.createCriteria(Program.class);
+        crit.add( Restrictions.eq("programName",name) );
+        List<Program> program = crit.list();
+
+        return program.get(0);
+    }
+
     public List<Program> getRoutines(Integer id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(Program.class, "program");

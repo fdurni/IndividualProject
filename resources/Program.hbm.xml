@@ -9,7 +9,7 @@
             <generator class="native"/>
         </id>
         <property name="programName">
-            <column name="programName" sql-type="varchar(30)" length="30" not-null="true"/>
+            <column name="programName" sql-type="varchar(30)" length="30" not-null="true" unique="true"/>
         </property>
         <property name="programType">
             <column name="programType" sql-type="varchar(30)" length="30" not-null="true"/>

@@ -21,8 +21,8 @@
                 <!-- Select Basic -->
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="program">Selected Program</label>
-                    <div class="col-md-4" id="program">
-                        ${selectedProgram.programName}
+                    <div class="col-md-4">
+                        <input id="program" name="program" value="${selectedProgram.programId}" class="form-control input-md" readonly="readonly" type="text">
                     </div>
                 </div>
 
@@ -31,7 +31,6 @@
                     <label class="col-sm-2 control-label" for="routineName">Routine Name</label>
                     <div class="col-md-4">
                         <input id="routineName" name="routineName" placeholder="Routine Name" class="form-control input-md" type="text">
-
                     </div>
                 </div>
 
@@ -40,7 +39,6 @@
                     <label class="col-sm-2 control-label" for="routineDescription">Routine Description</label>
                     <div class="col-md-4">
                         <input id="routineDescription" name="routineDescription" placeholder="Routine Description" class="form-control input-md" type="text">
-
                     </div>
                 </div>
 
@@ -88,6 +86,31 @@
                                     ${i}
                             </label>
                         </c:forEach>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="field_wrapper">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="exercise">Enter Exercise</label>
+                        <div class="col-md-2">
+                            <select id="exercise" name="exercise" class="form-control">
+                                <option value="">Select Exercise</option>
+                                <c:forEach var="exercise" items="${exercises}">
+                                    <option value=${exercise.exerciseId}>${exercise.exerciseName}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <input id="sets" name="sets" placeholder="Sets" class="form-control input-md" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <input id="reps" name="reps" placeholder="Reps" class="form-control input-md" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <input id="weight" name="weight" placeholder="Weight" class="form-control input-md" type="text">
+                        </div>
+                        <a href="javascript:void(0);" class="add_button" title="Add Exercise"><img height="30px" width="30px" src="../dist/img/button_plus_red.png"/></a>
                     </div>
                 </div>
 

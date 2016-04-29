@@ -121,4 +121,15 @@ public class RoutineExercise {
         this.exercise = exercise;
     }
 
+    @Override
+    public String toString() {
+        return "RoutineExercise{" +
+                "routineexerciseId=" + routineexerciseId +
+                ", exerciseId=" + exerciseId +
+                ", routineId=" + routineId +
+                ", expectedSets=" + expectedSets +
+                ", expectedReps='" + expectedReps + '\'' +
+                ", expectedWeight=" + expectedWeight +
+                '}';
+    }
 }

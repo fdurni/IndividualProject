@@ -19,13 +19,13 @@
             <column name="expectedWeight" sql-type="int(11)" not-null="true"/>
         </property>
         <property name="actualSets">
-            <column name="actualSets" sql-type="int(11)" not-null="true"/>
+            <column name="actualSets" sql-type="int(11)" not-null="false"/>
         </property>
         <property name="actualReps">
-            <column name="actualReps" sql-type="int(11)" not-null="true"/>
+            <column name="actualReps" sql-type="int(11)" not-null="false"/>
         </property>
         <property name="actualWeight">
-            <column name="actualWeight" sql-type="int(11)" not-null="true"/>
+            <column name="actualWeight" sql-type="int(11)" not-null="false"/>
         </property>
         <many-to-one name="routine" class="com.feliciadurni.tt.entity.Routine"
                      column="routineId" />
