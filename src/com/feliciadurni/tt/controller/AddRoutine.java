@@ -54,12 +54,6 @@ public class AddRoutine extends HttpServlet {
         Program selectedProgram = programDao.getProgram(Integer.parseInt(program));
 
         String[] weeks = req.getParameterValues("checkboxes");
-        String[] exercises = req.getParameterValues("exercise");
-        String[] exerciseSets = req.getParameterValues("sets");
-        String[] exerciseReps = req.getParameterValues("reps");
-        String[] exerciseWeights = req.getParameterValues("weight");
-
-        Set<RoutineExercise> routineExercises = new HashSet<RoutineExercise>();
 
         for (int i = 0; i < weeks.length; i++) {
 
@@ -72,6 +66,13 @@ public class AddRoutine extends HttpServlet {
             routine.setWeek(week);
             routine.setRoutineDescription(req.getParameter("routineDescription"));
             selectedProgram.addRoutine(routine);
+
+            Set<RoutineExercise> routineExercises = new HashSet<RoutineExercise>();
+
+            String[] exercises = req.getParameterValues("exercise");
+            String[] exerciseSets = req.getParameterValues("sets");
+            String[] exerciseReps = req.getParameterValues("reps");
+            String[] exerciseWeights = req.getParameterValues("weight");
 
             for (int n = 0; n < exercises.length; n++) {
 
