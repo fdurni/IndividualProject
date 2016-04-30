@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
@@ -61,10 +63,29 @@ public class Main extends HttpServlet {
             }
         }
 
+        List<String> routineList = new ArrayList<String>();
+        List<String> nameList = new ArrayList<String>();
+
+        Set<Routine> routines = currentProgram.getRoutines();
+        ArrayList<Routine> weekRoutines = new ArrayList<Routine>();
+
+        Integer numberOfRoutines = 0;
+
+        for (Routine routine : routines) {
+
+            if (currentWeek == routine.getWeek()) {
+
+                numberOfRoutines++;
+                weekRoutines.add(routine);
+            }
+        }
+
         session.setAttribute("name", fullName);
         session.setAttribute("currentProgram", currentProgram);
         session.setAttribute("currentWeek", currentWeek);
+        session.setAttribute("numberOfRoutines", numberOfRoutines);
         session.setAttribute("remainingWeeks", remainingWeeks);
+        session.setAttribute("weekRoutines", weekRoutines);
 
         String url = "/person/main.jsp";
 

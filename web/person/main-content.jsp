@@ -27,7 +27,7 @@
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <p>Current Program</p>
+                        <p><strong>Current Program</strong></p>
                         <h3 style="font-size: 20px">${currentProgram.programName}</h3>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <p>Current Week</p>
+                        <p><strong>Current Week</strong></p>
                         <h3 style="font-size: 20px">${currentWeek}</h3>
                     </div>
                 </div>
@@ -48,32 +48,73 @@
                 <div class="small-box bg-yellow">
                     <div class="inner">
                         <h3 style="font-size: 20px">${remainingWeeks}</h3>
-                        <p>Weeks Remaining</p>
+                        <p><strong>Weeks Remaining</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3 style="font-size: 20px">${numberOfRoutines}</h3>
+                        <p><strong>Routines This Week</strong></p>
                     </div>
                 </div>
             </div>
             <!-- ./col -->
         </div>
-        <!-- /.row -->
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Line Chart</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        <div class="row">
+            <c:forEach var="routine" items="${weekRoutines}">
+                <div class="col-md-6">
+                    <!-- Routine -->
+                    <div class="box box-danger">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">${routine.routineName} Routine <small>Day ${routine.day}</small></h3>
+
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body no-padding">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Exercise</th>
+                                    <th>Sets</th>
+                                    <th>Reps</th>
+                                    <th>Weight</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <c:forEach var="exercise" items="${routine.routineExercises}">
+                                    <tr>
+                                        <td>${exercise.exercise.exerciseName}</td>
+                                        <td>${exercise.expectedSets}</td>
+                                        <td>${exercise.expectedReps}</td>
+                                        <td>${exercise.expectedWeight}</td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer text-center">
+
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                    <!--/.box -->
                 </div>
-            </div>
-            <div class="box-body">
-                <!-- <div id="mainChart" style="width:100%; height:400px;"></div> -->
-                <div id="outerDiv" style="width:100%; height:400px;">
-                    <div  id="placeholder"></div>
-                </div>
-            </div>
-            <!-- /.box-body -->
+                <!-- /.col -->
+            </c:forEach>
         </div>
-        <!-- /.box -->
+        <!-- /.row -->
 
     </section>
     <!-- /.content -->

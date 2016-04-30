@@ -73,9 +73,7 @@ public class AddExercises extends HttpServlet {
             routineExercise.setExpectedSets(Integer.parseInt(exerciseSets[n]));
             routineExercise.setExpectedReps(exerciseReps[n]);
             routineExercise.setExpectedWeight(Integer.parseInt(exerciseWeights[n]));
-
-            routineExercises.add(routineExercise);
-            selectedRoutine.setRoutineExercises(routineExercises);
+            selectedRoutine.addRoutineExercise(routineExercise);
         }
 
         routineDao.updateRoutine(selectedRoutine);
