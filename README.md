@@ -8,21 +8,18 @@ I would like to build a website that will allow me to input my training schedule
 
 ###Project Technologies/Techniques
 * Security/Authentication
-	- Admin role: create/read/update/delete all of the data
-	- User role: add exercises, create workouts, view trend information
 	- All: cannot view information pre-login
 * Database (MySQL and Hibernate)
 	- Store users and roles
 	- Store book information
 * Web Services or APIs
-	- Highcharts for showing training progression and Personal Records (PRs)
+	- reCAPTCHA for signup form
 * Bootstrap
 * Logging
   * Configurable logging using Log4J. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Site and database hosted on OpenShift
-* Jenkins for Continuous Integration
 * Unit Testing
-  * JUnit tests to achieve 80% code coverage
+  * JUnit tests to achieve 70% code coverage
 
 
 ###Design
