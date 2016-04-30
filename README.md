@@ -3,7 +3,7 @@
 ###Problem Statement
 Many powerlifters rely on spreadsheets or notebooks to document their training schedules and keep track of their workouts. There is not a website that allows a user to input their training schedule, determines if any Personal Records (PRs) were set, and shows progression over time. 
 
-I would like to build a website that will allow me to input my training schedule and upcoming powerlifting meets, show me my workout for the day, determine if a PR was set, and graph my progression over time. 
+I would like to build a website that will allow me to input my training schedule and view my routines for the current week.
 
 
 ###Project Technologies/Techniques
