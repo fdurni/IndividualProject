@@ -11,7 +11,7 @@
     <section class="content">
 
         <!-- Form code begins -->
-        <form class="form-horizontal" method="post">
+        <form class="form-horizontal" method="post" action="javascript:alert(grecaptcha.getResponse(widgetId1));">
 
             <fieldset>
 
@@ -55,7 +55,7 @@
                 </div>
                 <!-- Submit Button -->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="submit"></label>
+                    <div class="col-sm-2"></div>
                     <div class="col-md-4">
                         <button class="btn btn-primary " name="submit" id="submit" type="submit">Submit</button>
                     </div>

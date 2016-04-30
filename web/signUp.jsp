@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -69,6 +72,14 @@
             <div class="row">
                 <!-- /.col -->
                 <div class="col-xs-4">
+                    <div id="re-captcha"></div>
+                    <br />
+                </div>
+                <!-- /.col -->
+            </div>
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-xs-4">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
                 </div>
                 <!-- /.col -->
@@ -103,6 +114,14 @@
         }
         return true;
     });
+
+    var onloadCallback = function() {
+
+        grecaptcha.render('re-captcha', {
+            'sitekey' : '6Lfgvx4TAAAAAKfJcRGVe0O6qqSFPi3YjKxUr-CZ',
+            'theme' : 'light'
+        });
+    };
 </script>
 </body>
 </html>

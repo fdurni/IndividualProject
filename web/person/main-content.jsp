@@ -28,7 +28,17 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <p><strong>Current Program</strong></p>
-                        <h3 style="font-size: 20px">${currentProgram.programName}</h3>
+                        <h4>${currentProgram.programName}</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h4>${numberOfRoutines}</h4>
+                        <p><strong>Routines This Week</strong></p>
                     </div>
                 </div>
             </div>
@@ -38,7 +48,7 @@
                 <div class="small-box bg-green">
                     <div class="inner">
                         <p><strong>Current Week</strong></p>
-                        <h3 style="font-size: 20px">${currentWeek}</h3>
+                        <h4>${currentWeek}</h4>
                     </div>
                 </div>
             </div>
@@ -47,18 +57,8 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3 style="font-size: 20px">${remainingWeeks}</h3>
+                        <h4>${remainingWeeks}</h4>
                         <p><strong>Weeks Remaining</strong></p>
-                    </div>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
-                    <div class="inner">
-                        <h3 style="font-size: 20px">${numberOfRoutines}</h3>
-                        <p><strong>Routines This Week</strong></p>
                     </div>
                 </div>
             </div>
