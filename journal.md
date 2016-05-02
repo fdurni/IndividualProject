@@ -71,8 +71,10 @@ Today I refactored my database, then set up entities and DAOs for all tables in 
 ###4/3/16
 I worked on setting up one-to-many associations between my entities. I'm not clear on how to set up the associations, so this will require a lot more research. 
 
-###4/16/16 - 4/17/16
+###4/16/16 - 4/18/16
 I've been busy with the group project and have not had much time to work on my individual project. I finally found some time and continued to work on setting up associations between my entities. Working through the group project gave me a better understanding of how to set up the associations. Since I have more tables in this project, the setup process is taking a bit longer. I also have a many-to-many association that I need to research. 
+
+I also worked on trying to display data on a page. Initially, I was just trying to dump data into a table to verify everything was set up correctly. The data wasn't displaying for some reason, so I reached out to Paula. After some more digging, I realized that the link was pointing directly to the JSP, and not the controller. Once I fixed the link, everything displayed correctly. 
 
 ###4/23/16 - 4/24/16
 Getting down to the last few weeks! I'm panicking a bit because I feel like I should be farther along with my project. I worked on the forms and controllers, but I'm still trying to figure out how to make the forms work without adding too much complexity. 
