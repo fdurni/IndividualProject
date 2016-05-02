@@ -57,29 +57,37 @@
 
 ##Week 9
 - [ ] Weekly Journal entry
-- [ ] Integrate web service (calendar)
-- [ ] Work on showing data from tables in highcharts.
+- [ ] Work on associations between entities
 
 ##Week 10
 - [ ] Weekly Journal entry
-- [ ] Add metrics to dashboard
+- [ ] Continue working on associations between entities
 
 ##Week 11
 - [ ] Weekly Journal entry
+- [ ] Work on making forms work
 
 ##Week 12
 - [ ] Weekly Journal entry
+- [ ] Work on forms
 
 ##Week 13
 - [ ] Weekly Journal entry
+- [ ] Add web service
+- [ ] Finish forms
+- [ ] Add metrics to dashboard
 
 ##Week 14
 - [ ] Weekly Journal entry
-- [ ] Create final presentation
+- [ ] 
 
 ##Week 15
 - [ ] Weekly Journal entry
-- [ ] Final Presentation
+- [ ] Move javascript from HTML files to JS files
+- [ ] Add Javadoc
+- [ ] Add test cases
+- [ ] Create final presentation
 
 ##Week 16
 - [ ] Weekly Journal entry
+- [ ] Final Presentation
