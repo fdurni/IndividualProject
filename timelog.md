@@ -18,3 +18,11 @@
 | 2/24/16 | Week 5 exercises, re-setting up project after Windows update. | 3 | |
 | 3/6/16 | Set up DAOs. | 3 | |
 | 3/29/16 | Finished setting up DAOs. Refactored database. Set up all JSPs. Began setting up controllers. | 5.5 | |
+| 4/3/16 | Worked on setting up associations between entities in hibernate. | 4| |
+| 4/16/16 | Continued working on setting up one-to-many associations in hibernate | 4| |
+| 4/17/16 | Finished setting up associations in hibernate | 5| |
+| 4/23/16 | Worked on setting up forms and controllers  | 2| |
+| 4/24/16 | Continued work on forms and controllers | 2| |
+| 4/28/16 | Worked on adding chart to dashboard, working on forms | 10| |
+| 4/29/16 | Continued to work on adding a chart, finished forms | 10| |
+| 4/30/16 | Add web service, added data to dashboard, continued trying to get a chart to work | 8| |
