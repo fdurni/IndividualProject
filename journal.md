@@ -66,4 +66,16 @@ I worked on week 4 exercises over lunch at work today, and my laptop installed a
 This week I set up entities for all of my tables and began setting up DAOs. I also refactored my project structure so that a user must log in to access the website. I'm feeling pretty good about my project. I would like to be farther along, but I've had projects due for other classes and have not found the time. I'm hoping that I'll get some time over spring break. 
 
 ###3/29/16
-Today I refactored my database, then set up entities and DAOs for all tables in my database. I also setup my remaining JSPs and began setting up controllers. I need to revisit projects from last semester Advanced Java to refresh my memory of servlets and controllers. I'm also a little fuzzy on how to use hibernate to select and insert data. 
+Today I refactored my database, then set up entities and DAOs for all tables in my database. I also setup my remaining JSPs and began setting up controllers. I need to revisit projects from last semester Advanced Java to refresh my memory of servlets and controllers. I'm also a little fuzzy on how to use hibernate to select and insert data. I haven't had much time to work on this project lately because I've had many projects due for other classes, as well as midterms. Hoping to have more time in the coming weeks. 
+
+###4/3/16
+I worked on setting up one-to-many associations between my entities. I'm not clear on how to set up the associations, so this will require a lot more research. 
+
+###4/16/16 - 4/17/16
+I've been busy with the group project and have not had much time to work on my individual project. I finally found some time and continued to work on setting up associations between my entities. Working through the group project gave me a better understanding of how to set up the associations. Since I have more tables in this project, the setup process is taking a bit longer. I also have a many-to-many association that I need to research. 
+
+###4/23/16 - 4/24/16
+Getting down to the last few weeks! I'm panicking a bit because I feel like I should be farther along with my project. I worked on the forms and controllers, but I'm still trying to figure out how to make the forms work without adding too much complexity. 
+
+###4/27/16 - 04/30/16
+I took a couple of days off of work to work on this project. I spent a fair amount of time trying to add a chart to my dashboard. I got a chart to work, but then it starting displaying very oddly when I inserted more data through my forms. After some time, I gave up on the chart and scrapped it. I may work on this more next weekend, but I didn't want to spend too much time on something that is not crucial to the project. I finished setting up my forms. It took some time to work through how the forms should work so that the user does not have to enter the same information multiple times (a routine can occur on multiple weeks). I'm happy with how my forms ended up. I added a web service as well. I was torn on what to add for a web service, and ended up adding a re-captcha to my sign up page. This was fairly easy to implement. 
