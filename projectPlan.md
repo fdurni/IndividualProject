@@ -9,20 +9,20 @@
 - [X] Look for Web Services to use or APIs to use
 
 ##Week 2
-- [ ] Document application flow
+- [X] Document application flow
 - [X] Get project approved
 - [X] Create project structure in IntelliJ
 - [X] Work on database design
 - [X] Start working on JSPs
 - [X] Weekly journal entry
-- [ ] Complete project plan
+- [X] Complete project plan
 
 ##Week 3
-- [ ] Add ERD to repository
-- [ ] Complete JSPs
-- [ ] Create database and all tables/columns
+- [X] Add ERD to repository
+- [X] Complete JSPs
+- [X] Create database and all tables/columns
 - [X] Weekly journal entry
-- [ ] Add authentication/login
+- [X] Add authentication/login
 - [X] Set up unit testing
 - [X] Set up logging
 - [x] Add Hiberate config
@@ -37,49 +37,52 @@
 - [X] Finish setting up database
 
 ##Week 5
-- [ ] Weekly Journal entry
-- [ ] Continue work on DAOs.
-- [ ] Begin setting up servlets.
+- [X] Weekly Journal entry
+- [X] Continue work on DAOs.
+- [X] Begin setting up servlets.
 
 ##Week 6
-- [ ] Weekly Journal entry
+- [X] Weekly Journal entry
+- [X] Work on controllers
+- [X] Continue working on DAOs.
 
 ##Week 7
-- [ ] Weekly Journal entry
-- [ ] Continue setting up DAOs. 
+- [X] Weekly Journal entry
+- [X] Continue setting up DAOs. 
 
 ##Week 8
-- [ ] Weekly Journal entry
-- [ ] Code review
-- [ ] Finish setting up DAOs. 
-- [ ] Create JSPs for remaining pages.
-- [ ] Work on adding forms to pages, and making forms work. 
+- [X] Weekly Journal entry
+- [X] Code review
+- [X] Finish setting up DAOs. 
+- [X] Create JSPs for remaining pages.
+- [X] Work on adding forms to pages, and making forms work. 
 
 ##Week 9
-- [ ] Weekly Journal entry
-- [ ] Work on associations between entities
+- [X] Weekly Journal entry
+- [X] Work on associations between entities
 
 ##Week 10
-- [ ] Weekly Journal entry
-- [ ] Continue working on associations between entities
+- [X] Weekly Journal entry
+- [X] Continue working on associations between entities
 
 ##Week 11
-- [ ] Weekly Journal entry
-- [ ] Work on making forms work
+- [X] Weekly Journal entry
+- [X] Work on making forms work
 
 ##Week 12
-- [ ] Weekly Journal entry
-- [ ] Work on forms
+- [X] Weekly Journal entry
+- [X] Work on forms
 
 ##Week 13
-- [ ] Weekly Journal entry
-- [ ] Add web service
-- [ ] Finish forms
-- [ ] Add metrics to dashboard
+- [X] Weekly Journal entry
+- [X] Add metrics to dashboard
+- [X] Work on forms
 
 ##Week 14
-- [ ] Weekly Journal entry
-- [ ] 
+- [X] Weekly Journal entry
+- [X] Continue adding metrics to dashboard
+- [X] Finish forms
+- [X] Add web service
 
 ##Week 15
 - [ ] Weekly Journal entry
