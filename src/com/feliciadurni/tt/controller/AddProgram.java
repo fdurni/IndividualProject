@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.feliciadurni.tt.entity.*;
+import com.feliciadurni.tt.impl.MainImpl;
 import com.feliciadurni.tt.persistence.PersonDao;
 import com.feliciadurni.tt.persistence.ProgramDao;
 import org.apache.log4j.Logger;
@@ -40,6 +41,7 @@ public class AddProgram extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        MainImpl mainImpl = new MainImpl();
         Program program = new Program();
         ProgramDao dao = new ProgramDao();
         PersonDao personDao = new PersonDao();
@@ -58,7 +60,7 @@ public class AddProgram extends HttpServlet {
 
         int numberOfWeeks = Integer.parseInt(req.getParameter("numberOfWeeks"));
 
-        Date endDate = program.calculateEndDate(formattedBeginDate,numberOfWeeks);
+        Date endDate = mainImpl.calculateEndDate(formattedBeginDate,numberOfWeeks);
 
         program.setPerson(loggedInPerson);
         program.setProgramName(req.getParameter("programName"));

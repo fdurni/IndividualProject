@@ -4,7 +4,11 @@ import javax.persistence.Transient;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
+
+import com.feliciadurni.tt.persistence.ProgramDao;
 import org.apache.commons.lang.time.DateUtils;
+import org.joda.time.DateTime;
+import org.joda.time.Weeks;
 
 /**
  * Created by felic on 3/29/2016.
@@ -19,7 +23,9 @@ public class Program {
     private Person person;
     private Date beginDate;
     private Date endDate;
-    private Date calculatedEndDate;
+    private Integer currentWeek;
+    private Integer remainingWeeks;
+    private Integer numberOfRoutines;
 
     public Program() {}
 
@@ -70,6 +76,22 @@ public class Program {
         this.numberOfWeeks = numberOfWeeks;
     }
 
+    public Integer getCurrentWeek() {
+        return currentWeek;
+    }
+
+    public void setCurrentWeek(Integer currentWeek) {
+        this.currentWeek = currentWeek;
+    }
+
+    public Integer getRemainingWeeks() {
+        return remainingWeeks;
+    }
+
+    public void setRemainingWeeks(Integer remainingWeeks) {
+        this.remainingWeeks = remainingWeeks;
+    }
+
     public Set<Routine> getRoutines() {
         return routines;
     }
@@ -107,10 +129,11 @@ public class Program {
         this.endDate = endDate;
     }
 
-    public Date calculateEndDate(Date beginDate, int numberOfWeeks) {
+    public Integer getNumberOfRoutines() {
+        return numberOfRoutines;
+    }
 
-        calculatedEndDate = DateUtils.addDays(beginDate, (numberOfWeeks * 7));
-
-        return calculatedEndDate;
+    public void setNumberOfRoutines(Integer numberOfRoutines) {
+        this.numberOfRoutines = numberOfRoutines;
     }
 }

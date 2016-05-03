@@ -21,10 +21,10 @@
             <column name="numberOfWeeks" sql-type="int(11)" />
         </property>
         <property name="beginDate">
-            <column name="beginDate" sql-type="date" not-null="true"/>
+            <column name="beginDate" sql-type="date" />
         </property>
         <property name="endDate">
-            <column name="endDate" sql-type="date" not-null="true"/>
+            <column name="endDate" sql-type="date" />
         </property>
         <set name="routines" cascade="all" lazy="true">
             <key column="programId"/>

@@ -81,20 +81,9 @@ public class ProgramDaoTest {
 
         Program program = new Program();
 
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-
-        String beginDate = "2016-01-01";
-        Date formattedBeginDate = format.parse(beginDate);
-
-        int numberOfWeeks = 12;
-
-        Date endDate = program.calculateEndDate(formattedBeginDate,numberOfWeeks);
-
         program.setProgramName("Program-Name");
         program.setProgramType("Program-Type");
         program.setProgramDescription("Program-Description");
-        program.setBeginDate(formattedBeginDate);
-        program.setEndDate(endDate);
 
         insertProgramId = dao.addProgram(program);
 

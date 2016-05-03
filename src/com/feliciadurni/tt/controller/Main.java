@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+
+import com.feliciadurni.tt.impl.MainImpl;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 
@@ -34,51 +36,31 @@ public class Main extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession session = req.getSession();
-
+        MainImpl mainImpl = new MainImpl();
         PersonDao personDao = new PersonDao();
-        ProgramDao programDao = new ProgramDao();
-        String username = req.getRemoteUser();
-        Person loggedInPerson = personDao.getPersonByUsername(username);
-        String firstName = loggedInPerson.getFirstName();
-        String lastName = loggedInPerson.getLastName();
-        String fullName = firstName + " " + lastName;
-        Program currentProgram = null;
-        long currentWeek = 0;
-        long remainingWeeks = 0;
+        String username;
+        Person loggedInPerson;
+        String firstName;
+        String lastName;
+        String fullName;
+        Program currentProgram;
+        long currentWeek;
+        long remainingWeeks;
+        Integer numberOfRoutines;
 
-        Set<Program> programs = loggedInPerson.getPrograms();
+        username = req.getRemoteUser();
+        loggedInPerson = personDao.getPersonByUsername(username);
 
-        for (Program program : programs) {
+        firstName = loggedInPerson.getFirstName();
+        lastName = loggedInPerson.getLastName();
+        fullName = firstName + " " + lastName;
 
-            DateTime beginDate = new DateTime(program.getBeginDate());
-            DateTime endDate = new DateTime(program.getEndDate());
-            DateTime today = new DateTime();
+        currentProgram = mainImpl.getCurrentProgram(loggedInPerson);
+        ArrayList<Routine> weekRoutines = mainImpl.getRoutinesForWeek(currentProgram);
 
-            if (today.isAfter(beginDate) && today.isBefore(endDate)) {
-
-                currentProgram = programDao.getProgram(program.getProgramId());
-
-                currentWeek = Weeks.weeksBetween(beginDate, today).getWeeks() + 1;
-                remainingWeeks = Weeks.weeksBetween(today, endDate).getWeeks();
-            }
-        }
-
-        List<String> routineList = new ArrayList<String>();
-        List<String> nameList = new ArrayList<String>();
-
-        Set<Routine> routines = currentProgram.getRoutines();
-        ArrayList<Routine> weekRoutines = new ArrayList<Routine>();
-
-        Integer numberOfRoutines = 0;
-
-        for (Routine routine : routines) {
-
-            if (currentWeek == routine.getWeek()) {
-
-                numberOfRoutines++;
-                weekRoutines.add(routine);
-            }
-        }
+        currentWeek = currentProgram.getCurrentWeek();
+        remainingWeeks = currentProgram.getRemainingWeeks();
+        numberOfRoutines = currentProgram.getNumberOfRoutines();
 
         session.setAttribute("name", fullName);
         session.setAttribute("currentProgram", currentProgram);
