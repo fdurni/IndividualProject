@@ -42,13 +42,13 @@ public class ChartData implements Comparable<ChartData>{
     }
     
     /*
-     * Comparator implementation to Sort ChartData object based on Weight
+     * Comparator implementation to Sort ChartData object based on Week
      */
-    public static class ChartDataByWeight implements Comparator<ChartData> {
+    public static class ChartDataByWeek implements Comparator<ChartData> {
 
         @Override
         public int compare(ChartData cd1, ChartData cd2) {
-            return cd1.weight > cd2.weight ? 1 : (cd1.weight < cd2.weight ? -1 : 0);
+            return cd1.week > cd2.week ? 1 : (cd1.week < cd2.week ? -1 : 0);
         }
     }
 }
