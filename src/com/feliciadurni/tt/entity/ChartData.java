@@ -3,7 +3,7 @@ package com.feliciadurni.tt.chart;
 /**
  * Created by felic on 4/28/2016.
  */
-public class ChartData {
+public class ChartData implements Comparable<ChartData>{
 
     int week =0;
     float squat_weight=0;
@@ -39,5 +39,16 @@ public class ChartData {
 
     public void setBench_weight(float bench_weight) {
         this.bench_weight = bench_weight;
+    }
+    
+    /*
+     * Comparator implementation to Sort Order object based on Amount
+     */
+    public static class ChartDataByWeight implements Comparator<ChartData> {
+
+        @Override
+        public int compare(ChartData cd1, ChartData cd2) {
+            return cd1.weight > cd2.weight ? 1 : (cd1.weight < cd2.weight ? -1 : 0);
+        }
     }
 }
