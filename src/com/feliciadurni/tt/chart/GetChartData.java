@@ -4,14 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import com.feliciadurni.tt.chart.ChartData;
-
-import com.feliciadurni.tt.entity.Exercise;
-import com.feliciadurni.tt.entity.Routine;
-import com.feliciadurni.tt.entity.RoutineExercise;
-import com.feliciadurni.tt.persistence.ExerciseDao;
-import com.feliciadurni.tt.persistence.RoutineDao;
-import com.feliciadurni.tt.persistence.RoutineExerciseDao;
+import com.feliciadurni.tt.entity.*;
+import com.feliciadurni.tt.persistence.*;
 import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
