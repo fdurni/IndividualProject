@@ -42,7 +42,7 @@ public class ChartData implements Comparable<ChartData>{
     }
     
     /*
-     * Comparator implementation to Sort Order object based on Amount
+     * Comparator implementation to Sort ChartData object based on Weight
      */
     public static class ChartDataByWeight implements Comparator<ChartData> {
 
