@@ -64,26 +64,6 @@
             </div>
             <!-- ./col -->
         </div>
-        
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Line Chart</h3>
-
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                </div>
-            </div>
-            <div class="box-body">
-                <!-- <div id="mainChart" style="width:100%; height:400px;"></div> -->
-                <div id="outerDiv" style="width:100%; height:400px;">
-                    <div  id="placeholder"></div>
-                </div>
-            </div>
-            <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
 
         <div class="row">
             <c:forEach var="routine" items="${weekRoutines}">
