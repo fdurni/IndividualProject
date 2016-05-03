@@ -18,6 +18,7 @@ public class GetChartData {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+    //also pass current program for user
     public String GenerateJSonChart(String jsonp) throws JSONException {
 
         String chartType = jsonp;
@@ -30,6 +31,7 @@ public class GetChartData {
 
         RoutineDao routineDao = new RoutineDao();
 
+        //get all routines for current program
         List<Routine> routines = routineDao.getAllRoutines();
 
         for (Routine routine : routines) {
@@ -61,6 +63,7 @@ public class GetChartData {
         }
         
         //sort chartDataArray by week
+        Collections.sort(chartDataArray, new ChartData.ChartDataByWeek());
 
         JSONArray chartData = new JSONArray();
         JSONArray xaxisArr = new JSONArray();
@@ -77,8 +80,10 @@ public class GetChartData {
 
             System.out.println("Json data " + i);
 
-            xaxisArr.put(chartDataArray.get(i).getWeek());
-
+            if (!xaxisArr.contains(chartDataArray.get(i).getWeek()) {
+                xaxisArr.put(chartDataArray.get(i).getWeek());
+            }
+            
             squat_weight.put(chartDataArray.get(i).getSquat_weight());
             deadlift_weight.put(chartDataArray.get(i).getDeadlift_weight());
             bench_weight.put(chartDataArray.get(i).getBench_weight());
