@@ -81,3 +81,6 @@ Getting down to the last few weeks! I'm panicking a bit because I feel like I sh
 
 ###4/27/16 - 04/30/16
 I took a couple of days off of work to work on this project. I spent a fair amount of time trying to add a chart to my dashboard. I got a chart to work, but then it starting displaying very oddly when I inserted more data through my forms. After some time, I gave up on the chart and scrapped it. I may work on this more next weekend, but I didn't want to spend too much time on something that is not crucial to the project. I finished setting up my forms. It took some time to work through how the forms should work so that the user does not have to enter the same information multiple times (a routine can occur on multiple weeks). I'm happy with how my forms ended up. I added a web service as well. I was torn on what to add for a web service, and ended up adding a re-captcha to my sign up page. This was fairly easy to implement. 
+
+###5/3/16
+I worked on adding javadoc and refactoring one of my controllers so that there isn't so much logic. I debated trying to work with a chart again, but gave up and decided to first work on feedback from the instructor review. 
