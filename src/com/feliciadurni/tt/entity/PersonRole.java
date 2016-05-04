@@ -10,26 +10,56 @@ public class PersonRole {
     private String role;
     private Integer personId;
 
+    /**
+     * Gets user name.
+     *
+     * @return the user name
+     */
     public String getUserName() {
         return userName;
     }
 
+    /**
+     * Sets user name.
+     *
+     * @param userName the user name
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
+    /**
+     * Gets role.
+     *
+     * @return the role
+     */
     public String getRole() {
         return role;
     }
 
+    /**
+     * Sets role.
+     *
+     * @param role the role
+     */
     public void setRole(String role) {
         this.role = role;
     }
 
+    /**
+     * Gets person id.
+     *
+     * @return the person id
+     */
     public Integer getPersonId() {
         return personId;
     }
 
+    /**
+     * Sets person id.
+     *
+     * @param personId the person id
+     */
     public void setPersonId(Integer personId) {
         this.personId = personId;
     }

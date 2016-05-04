@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 
 import com.feliciadurni.tt.entity.*;
 import com.feliciadurni.tt.persistence.PersonDao;
+import com.feliciadurni.tt.persistence.PersonRoleDao;
 import com.feliciadurni.tt.utils.VerifyRecaptcha;
 import org.apache.log4j.Logger;
 
@@ -26,23 +27,27 @@ public class SignUpUser extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Person person = new Person();
+        PersonDao dao = new PersonDao();
+        PersonRole personRole = new PersonRole();
         String gRecaptchaResponse;
+        String username = req.getParameter("userName");
 
         person.setFirstName(req.getParameter("firstName"));
         person.setLastName(req.getParameter("lastName"));
-        person.setUserName(req.getParameter("userName"));
+        person.setUserName(username);
         person.setPassword(req.getParameter("password"));
         gRecaptchaResponse = req.getParameter("g-recaptcha-response");
         boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
 
-        PersonDao dao = new PersonDao();
+        personRole.setRole("user");
+        personRole.setUserName(username);
+        personRole.setPersonId(person.getPersonId());
+
         dao.addPerson(person);
 
         if (verify) {
             resp.sendRedirect("/person/main.jsp");
             log.info("captcha success!");
-
-            System.out.println("captcha success!");
         } else {
             PrintWriter out = resp.getWriter();
             out.println("<font color=red>You missed the Captcha.</font>");

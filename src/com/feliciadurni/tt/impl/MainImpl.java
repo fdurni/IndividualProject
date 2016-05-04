@@ -22,6 +22,13 @@ public class MainImpl {
     private DateTime programEndDate;
     private DateTime today;
 
+    /**
+     * Calculate end date date.
+     *
+     * @param beginDate     the begin date
+     * @param numberOfWeeks the number of weeks
+     * @return the date
+     */
     public Date calculateEndDate(Date beginDate, int numberOfWeeks) {
 
         calculatedEndDate = DateUtils.addDays(beginDate, (numberOfWeeks * 7));
@@ -29,6 +36,12 @@ public class MainImpl {
         return calculatedEndDate;
     }
 
+    /**
+     * Gets current program.
+     *
+     * @param loggedInPerson the logged in person
+     * @return the current program
+     */
     public Program getCurrentProgram(Person loggedInPerson) {
 
         ProgramDao programDao = new ProgramDao();
@@ -51,6 +64,12 @@ public class MainImpl {
         return currentProgram;
     }
 
+    /**
+     * Gets routines for week.
+     *
+     * @param currentProgram the current program
+     * @return the routines for week
+     */
     public ArrayList<Routine> getRoutinesForWeek(Program currentProgram) {
 
         Set<Routine> routines = currentProgram.getRoutines();
