@@ -27,3 +27,4 @@
 | 4/28/16 | Worked on adding chart to dashboard, working on forms | 10| |
 | 4/29/16 | Continued to work on adding a chart, finished forms | 10| |
 | 4/30/16 | Add web service, added data to dashboard, continued trying to get a chart to work | 8| |
+| 5/3/16 | Worked on instructor feedback | 2| |
