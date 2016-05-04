@@ -14,7 +14,7 @@ I would like to build a website that will allow me to input my training schedule
 	- Store book information
 * Web Services or APIs
 	- reCAPTCHA for signup form
-* Bootstrap
+* Bootstrap (independent research)
 * Logging
   * Configurable logging using Log4J. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Site and database hosted on OpenShift
