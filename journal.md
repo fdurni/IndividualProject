@@ -84,3 +84,9 @@ I took a couple of days off of work to work on this project. I spent a fair amou
 
 ###5/3/16
 I worked on adding javadoc and refactoring one of my controllers so that there isn't so much logic. I debated trying to work with a chart again, but gave up and decided to first work on feedback from the instructor review. 
+
+###5/6/16
+I added update and delete functionality - the user can now update or delete a routine. I've limited the update/delete functionality for now to a routine and routineExercise, but may add this functionality to other entities/tables in the future. I also worked on more JavaDoc and wrote some unit tests.
+
+###5/8/16
+I continued to work on JavaDoc and writing unit tests. I'm at about 50% code coverage, and think that may have to be where I end up. I'm not currently testing a majority of my controllers, since most are only displaying/inserting/updating using the daos. If there is logic in the controller, I did pull some logic out and am testing it. 
