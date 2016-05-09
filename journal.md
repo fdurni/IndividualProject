@@ -61,6 +61,7 @@ Finally, I had some time to work on my project. I changed User in my database to
 ###2/21/16
 I spent time working on week 5 exercises, but wasn't able to get the login to work. I will continue working on this. 
 
+##Week 6
 ###2/24/16
 I worked on week 4 exercises over lunch at work today, and my laptop installed a windows update. This update moved many things on my laptop, which caused many issues with my project. With Paula's help, I was able to get everything back up and running, but this was pretty stressful. I was able to get the week 5 exercises working though, which is great. 
 
