@@ -30,6 +30,16 @@ public class RoutineDao {
         return (Routine)session.get(Routine.class, id);
     }
 
+    public List<Routine> getRoutinesByName(String name) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+
+        Criteria crit = session.createCriteria(Routine.class);
+        crit.add( Restrictions.eq("routineName",name) );
+        List routines = crit.list();
+
+        return routines;
+    }
+
     public List<Routine> getRoutinesByWeek(Integer week) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
 

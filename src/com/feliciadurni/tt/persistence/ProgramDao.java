@@ -41,18 +41,6 @@ public class ProgramDao {
         return program.get(0);
     }
 
-    public List<Program> getRoutines(Integer id) {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Criteria c = session.createCriteria(Program.class, "program");
-        c.createAlias("program.routines", "routine");
-        c.add(Restrictions.eq("routine.routineId", id));
-        c.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
-
-        List programs = c.list();
-
-        return programs;
-    }
-
     public void updateProgram(Program program) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();

@@ -1,10 +1,10 @@
 package com.feliciadurni.tt;
 
 import com.feliciadurni.tt.entity.Person;
-import com.feliciadurni.tt.entity.Program;
 import com.feliciadurni.tt.persistence.PersonDao;
-import com.feliciadurni.tt.persistence.ProgramDao;
 import org.apache.log4j.Logger;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
@@ -18,11 +18,16 @@ import static org.junit.Assert.assertTrue;
 public class PersonDaoTest {
 
     private final Logger log = Logger.getLogger(this.getClass());
+    PersonDao dao;
+
+    @Before
+    public void setUp() throws Exception {
+        dao = new PersonDao();
+    }
 
     @Test
     public void testGetAllPeople() throws Exception {
 
-        PersonDao dao = new PersonDao();
         List<Person> people = dao.getAllPeople();
 
         assertTrue("There is the wrong amount in the list", people.size() > 0);
@@ -31,7 +36,6 @@ public class PersonDaoTest {
     @Test
     public void testGetPerson() throws Exception {
 
-        PersonDao dao = new PersonDao();
         Person person = dao.getPerson(1);
         assertNotNull("Could not get person", person);
     }
@@ -39,7 +43,6 @@ public class PersonDaoTest {
     @Test
     public void testGetPersonByUsername() throws Exception {
 
-        PersonDao dao = new PersonDao();
         Person person = dao.getPersonByUsername("Storm");
 
         Integer personId = person.getPersonId();
@@ -51,7 +54,6 @@ public class PersonDaoTest {
     @Test
     public void testUpdatePerson() throws Exception {
 
-        PersonDao dao = new PersonDao();
         Person person = new Person();
         person.setPersonId(1);
         person.setFirstName("Updated-First-Name");
@@ -66,7 +68,6 @@ public class PersonDaoTest {
     @Test
     public void testDeletePerson() throws Exception {
 
-        PersonDao dao = new PersonDao();
         Person person = new Person();
         person.setPersonId(2);
 
@@ -77,7 +78,6 @@ public class PersonDaoTest {
     @Test
     public void testAddPerson() throws Exception {
 
-        PersonDao dao = new PersonDao();
         int insertPersonId = 0;
 
         Person person = new Person();

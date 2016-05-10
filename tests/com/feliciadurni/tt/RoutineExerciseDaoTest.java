@@ -3,6 +3,7 @@ package com.feliciadurni.tt;
 import com.feliciadurni.tt.entity.RoutineExercise;
 import com.feliciadurni.tt.persistence.RoutineExerciseDao;
 import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -16,11 +17,16 @@ import static org.junit.Assert.assertTrue;
 public class RoutineExerciseDaoTest {
 
     private final Logger log = Logger.getLogger(this.getClass());
+    RoutineExerciseDao dao;
+
+    @Before
+    public void setUp() throws Exception {
+        dao = new RoutineExerciseDao();
+    }
 
     @Test
     public void testGetAllRoutineExercises() throws Exception {
 
-        RoutineExerciseDao dao = new RoutineExerciseDao();
         List<RoutineExercise> routineExercises = dao.getAllRoutineExercises();
 
         assertTrue("There is the wrong amount in the list", routineExercises.size() > 0);
@@ -29,7 +35,6 @@ public class RoutineExerciseDaoTest {
     @Test
     public void testGetRoutineExercise() throws Exception {
 
-        RoutineExerciseDao dao = new RoutineExerciseDao();
         RoutineExercise routineExercise = dao.getRoutineExercise(12);
         assertNotNull("Could not get routineExercise", routineExercise);
     }
@@ -37,7 +42,6 @@ public class RoutineExerciseDaoTest {
     @Test
     public void testUpdateRoutineExercise() throws Exception {
 
-        RoutineExerciseDao dao = new RoutineExerciseDao();
         RoutineExercise routineExercise = new RoutineExercise();
         routineExercise.setRoutineexerciseId(1);
         routineExercise.setExpectedSets(2);
@@ -54,9 +58,8 @@ public class RoutineExerciseDaoTest {
     @Test
     public void testDeleteRoutineExercise() throws Exception {
 
-        RoutineExerciseDao dao = new RoutineExerciseDao();
         RoutineExercise routineExercise = new RoutineExercise();
-        routineExercise.setRoutineexerciseId(1);
+        routineExercise.setRoutineexerciseId(99);
 
         Boolean routineExerciseDeleted = dao.deleteRoutineExercise(routineExercise);
         assertTrue(routineExerciseDeleted);
@@ -65,7 +68,6 @@ public class RoutineExerciseDaoTest {
     @Test
     public void testAddRoutineExercise() throws Exception {
 
-        RoutineExerciseDao dao = new RoutineExerciseDao();
         int insertRoutineExerciseId = 0;
 
         RoutineExercise routineExercise = new RoutineExercise();

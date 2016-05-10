@@ -22,7 +22,7 @@
     <c:import url="sidebar.jsp"/>
 
     <!-- Page content -->
-    <c:import url="viewPrograms-content.jsp"/>
+    <c:import url="viewRoutines-content.jsp"/>
 
     <!-- Main Footer -->
     <c:import url="footer.jsp"/>
@@ -31,6 +31,6 @@
 
 <!-- REQUIRED JS SCRIPTS -->
 <c:import url="include.jsp"/>
-<script type="text/javascript" src="../js/viewPrograms.js"></script>
+<script type="text/javascript" src="../js/viewRoutines.js"></script>
 </body>
 </html>

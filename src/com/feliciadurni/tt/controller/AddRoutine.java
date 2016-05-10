@@ -34,11 +34,20 @@ public class AddRoutine extends HttpServlet {
 
         ProgramDao programDao = new ProgramDao();
 
+        /*
+         * get the program that was selected by the user on the previous page
+         */
         String program = req.getParameter("program");
         Program selectedProgram = programDao.getProgramByName(program);
 
+        /*
+         * get the checkboxes that were checked on the page
+         */
         String[] weeks = req.getParameterValues("checkboxes");
 
+        /*
+         * insert a routine for each checkbox that was checked
+         */
         for (int i = 0; i < weeks.length; i++) {
 
             Integer day = Integer.parseInt(req.getParameter("radios"));
@@ -52,6 +61,9 @@ public class AddRoutine extends HttpServlet {
             selectedProgram.addRoutine(routine);
         }
 
+        /*
+         * update the selected program with the added routines
+         */
         programDao.updateProgram(selectedProgram);
 
         /*

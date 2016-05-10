@@ -3,7 +3,6 @@ package com.feliciadurni.tt.controller;
 import com.feliciadurni.tt.entity.*;
 import com.feliciadurni.tt.persistence.ExerciseDao;
 import com.feliciadurni.tt.persistence.PersonDao;
-import com.feliciadurni.tt.persistence.ProgramDao;
 import com.feliciadurni.tt.persistence.RoutineDao;
 
 import javax.servlet.RequestDispatcher;
@@ -14,10 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * Created by felic on 4/24/2016.
@@ -33,10 +29,23 @@ public class AddExercises extends HttpServlet {
 
         HttpSession session = req.getSession();
         ExerciseDao exerciseDao = new ExerciseDao();
-        RoutineDao routineDao = new RoutineDao();
+        PersonDao personDao = new PersonDao();
+        String username = req.getRemoteUser();
+        Person loggedInPerson = personDao.getPersonByUsername(username);
+        List<Routine> routines = new ArrayList<Routine>();
+
+        /*
+         * create a List of all routines for the logged in user
+         */
+        Set<Program> programs = loggedInPerson.getPrograms();
+
+        for (Program program : programs) {
+
+            Set<Routine> programRoutines = program.getRoutines();
+            routines.addAll(programRoutines);
+        }
 
         List<Exercise> exercises = exerciseDao.getAllExercises();
-        List<Routine> routines = routineDao.getAllRoutines();
 
         session.setAttribute("exercises", exercises);
         session.setAttribute("routines", routines);
@@ -53,10 +62,8 @@ public class AddExercises extends HttpServlet {
         RoutineDao routineDao = new RoutineDao();
         ExerciseDao exerciseDao = new ExerciseDao();
 
-        String routine = req.getParameter("routine");
-        Routine selectedRoutine = routineDao.getRoutine(Integer.parseInt(routine));
-
-        Set<RoutineExercise> routineExercises = new HashSet<RoutineExercise>();
+        Integer routine = Integer.parseInt(req.getParameter("routine"));
+        Routine selectedRoutine = routineDao.getRoutine(routine);
 
         String[] exercises = req.getParameterValues("exercise");
         String[] exerciseSets = req.getParameterValues("sets");

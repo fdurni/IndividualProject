@@ -1,5 +1,7 @@
 package com.feliciadurni.tt.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Transient;
 import java.util.Set;
 
@@ -131,6 +133,7 @@ public class Routine {
      * @return the program
      */
     @Transient
+    @JsonIgnore
     public Program getProgram() {
         return program;
     }

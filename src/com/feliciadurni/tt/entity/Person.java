@@ -12,6 +12,7 @@ public class Person {
     private String userName;
     private String password;
     private Set<Program> programs;
+    private Set<PersonRole> roles;
 
     /**
      * Gets person id.
@@ -128,5 +129,17 @@ public class Person {
      */
     public void addProgram(Program program) {
         this.programs.add(program);
+    }
+
+    public Set<PersonRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<PersonRole> roles) {
+        this.roles = roles;
+    }
+
+    public void addRole(PersonRole role) {
+        this.roles.add(role);
     }
 }

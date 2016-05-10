@@ -32,13 +32,13 @@
 
 <!-- REQUIRED JS SCRIPTS -->
 <c:import url="include.jsp"/>
-
 </body>
 </html>
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
         var maxField = 10; //Input fields increment limitation
         var addButton = $('.add_button'); //Add button selector
+        var list = $('.exercise');
         var wrapper = $('.field_wrapper'); //Input field wrapper
         var fieldHTML =
                 '<div class="form-group">' +

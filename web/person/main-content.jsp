@@ -28,7 +28,14 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <p><strong>Current Program</strong></p>
-                        <h4>${currentProgram.programName}</h4>
+                        <c:choose>
+                            <c:when test="${not empty currentProgram.programName}">
+                                <h4>${currentProgram.programName}</h4>
+                            </c:when>
+                            <c:otherwise>
+                                <h4>Nothing to Display</h4>
+                            </c:otherwise>
+                        </c:choose>
                     </div>
                 </div>
             </div>
@@ -37,7 +44,14 @@
                 <!-- small box -->
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h4>${numberOfRoutines}</h4>
+                        <c:choose>
+                            <c:when test="${not empty numberOfRoutines}">
+                                <h4>${numberOfRoutines}</h4>
+                            </c:when>
+                            <c:otherwise>
+                                <h4>Nothing to Display</h4>
+                            </c:otherwise>
+                        </c:choose>
                         <p><strong>Routines This Week</strong></p>
                     </div>
                 </div>
@@ -48,7 +62,14 @@
                 <div class="small-box bg-green">
                     <div class="inner">
                         <p><strong>Current Week</strong></p>
-                        <h4>${currentWeek}</h4>
+                        <c:choose>
+                            <c:when test="${not empty currentWeek}">
+                                <h4>${currentWeek}</h4>
+                            </c:when>
+                            <c:otherwise>
+                                <h4>Nothing to Display</h4>
+                            </c:otherwise>
+                        </c:choose>
                     </div>
                 </div>
             </div>
@@ -57,7 +78,14 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h4>${remainingWeeks}</h4>
+                        <c:choose>
+                            <c:when test="${not empty remainingWeeks}">
+                                <h4>${remainingWeeks}</h4>
+                            </c:when>
+                            <c:otherwise>
+                                <h4>Nothing to Display</h4>
+                            </c:otherwise>
+                        </c:choose>
                         <p><strong>Weeks Remaining</strong></p>
                     </div>
                 </div>
@@ -104,9 +132,7 @@
                             </table>
                         </div>
                         <!-- /.box-body -->
-                        <div class="box-footer text-center">
-
-                        </div>
+                        <div class="box-footer"></div>
                         <!-- /.box-footer -->
                     </div>
                     <!--/.box -->

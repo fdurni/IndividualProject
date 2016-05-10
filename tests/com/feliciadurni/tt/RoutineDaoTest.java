@@ -4,6 +4,7 @@ import com.feliciadurni.tt.entity.Routine;
 import com.feliciadurni.tt.persistence.ProgramDao;
 import com.feliciadurni.tt.persistence.RoutineDao;
 import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -17,11 +18,16 @@ import static org.junit.Assert.assertTrue;
 public class RoutineDaoTest {
 
     private final Logger log = Logger.getLogger(this.getClass());
+    RoutineDao dao;
+
+    @Before
+    public void setUp() throws Exception {
+        dao = new RoutineDao();
+    }
 
     @Test
     public void testGetAllRoutines() throws Exception {
 
-        RoutineDao dao = new RoutineDao();
         List<Routine> routines = dao.getAllRoutines();
 
         assertTrue("There is the wrong amount in the list", routines.size() > 0);
@@ -30,15 +36,23 @@ public class RoutineDaoTest {
     @Test
     public void testGetRoutine() throws Exception {
 
-        RoutineDao dao = new RoutineDao();
         Routine routine = dao.getRoutine(5);
         assertNotNull("Could not get routine", routine);
     }
 
     @Test
+    public void testGetRoutinesByName() throws Exception {
+
+        List<Routine> routines = dao.getRoutinesByName("Squat");
+
+        log.info(routines);
+
+        assertTrue("There is the wrong amount in the list", routines.size() > 0);
+    }
+
+    @Test
     public void testGetRoutinesByWeek() throws Exception {
 
-        RoutineDao dao = new RoutineDao();
         List<Routine> routines = dao.getRoutinesByWeek(1);
 
         log.info(routines);
@@ -49,7 +63,6 @@ public class RoutineDaoTest {
     @Test
     public void testUpdateRoutine() throws Exception {
 
-        RoutineDao dao = new RoutineDao();
         Routine routine = new Routine();
         routine.setRoutineId(1);
         routine.setDay(1);
@@ -64,7 +77,6 @@ public class RoutineDaoTest {
     @Test
     public void testDeleteRoutine() throws Exception {
 
-        RoutineDao dao = new RoutineDao();
         Routine routine = new Routine();
         routine.setRoutineId(6);
 
@@ -75,7 +87,6 @@ public class RoutineDaoTest {
     @Test
     public void testAddRoutine() throws Exception {
 
-        RoutineDao dao = new RoutineDao();
         int insertRoutineId = 0;
 
         Routine routine = new Routine();

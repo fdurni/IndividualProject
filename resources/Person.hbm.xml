@@ -25,5 +25,9 @@
             <key column="personId"/>
             <one-to-many class="com.feliciadurni.tt.entity.Program"/>
         </set>
+        <set name="roles" cascade="all" lazy="true">
+            <key column="personId"/>
+            <one-to-many class="com.feliciadurni.tt.entity.PersonRole"/>
+        </set>
     </class>
 </hibernate-mapping>

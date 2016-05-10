@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -41,6 +42,7 @@ public class AddNewExercises extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ExerciseDao exerciseDao = new ExerciseDao();
+        int insertedExercise = 0;
 
         String[] exerciseName = req.getParameterValues("exerciseName");
         String[] exerciseType = req.getParameterValues("exerciseType");
@@ -53,9 +55,15 @@ public class AddNewExercises extends HttpServlet {
             exercise.setExerciseType(exerciseType[i]);
             exercise.setExerciseDescription(exerciseDescription[i]);
 
-            exerciseDao.addExercise(exercise);
+            insertedExercise += exerciseDao.addExercise(exercise);
         }
 
-        resp.sendRedirect("/person/addNewExercises");
+        PrintWriter out = resp.getWriter();
+
+        if (insertedExercise > 0) {
+            resp.sendRedirect("/person/addNewExercises");
+        } else {
+            out.println("<font color=red>Could not add exercise(s). Try again.</font>");
+        }
     }
 }

@@ -15,7 +15,7 @@
 
             <fieldset>
                 <!-- Form Name -->
-                <legend>Add Exercises to Existing Routine</legend>
+                <legend>Add New Exercises</legend>
 
                 <div class="field_wrapper">
                     <div class="form-group">

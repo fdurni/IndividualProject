@@ -22,7 +22,7 @@
     <c:import url="sidebar.jsp"/>
 
     <!-- Page content -->
-    <c:import url="progress-content.jsp"/>
+    <c:import url="updateRoutine-content.jsp"/>
 
     <!-- Main Footer -->
     <c:import url="footer.jsp"/>

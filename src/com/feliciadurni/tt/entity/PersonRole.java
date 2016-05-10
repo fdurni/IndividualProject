@@ -1,5 +1,7 @@
 package com.feliciadurni.tt.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 /**
@@ -8,7 +10,7 @@ import javax.persistence.*;
 public class PersonRole {
     private String userName;
     private String role;
-    private Integer personId;
+    private Person person;
 
     /**
      * Gets user name.
@@ -47,20 +49,22 @@ public class PersonRole {
     }
 
     /**
-     * Gets person id.
+     * Gets person.
      *
-     * @return the person id
+     * @return the person
      */
-    public Integer getPersonId() {
-        return personId;
+    @Transient
+    @JsonIgnore
+    public Person getPerson() {
+        return person;
     }
 
     /**
-     * Sets person id.
+     * Sets person.
      *
-     * @param personId the person id
+     * @param person the person
      */
-    public void setPersonId(Integer personId) {
-        this.personId = personId;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }

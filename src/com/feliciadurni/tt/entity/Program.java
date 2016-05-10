@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.feliciadurni.tt.persistence.ProgramDao;
 import org.apache.commons.lang.time.DateUtils;
 import org.joda.time.DateTime;
@@ -206,6 +207,7 @@ public class Program {
      * @return the person
      */
     @Transient
+    @JsonIgnore
     public Person getPerson() {
         return person;
     }

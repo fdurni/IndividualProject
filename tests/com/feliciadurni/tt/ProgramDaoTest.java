@@ -3,6 +3,7 @@ package com.feliciadurni.tt;
 import com.feliciadurni.tt.entity.Program;
 import com.feliciadurni.tt.persistence.ProgramDao;
 import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
@@ -19,11 +20,16 @@ import static org.junit.Assert.assertTrue;
 public class ProgramDaoTest {
 
     private final Logger log = Logger.getLogger(this.getClass());
+    ProgramDao dao;
+
+    @Before
+    public void setUp() throws Exception {
+        dao = new ProgramDao();
+    }
 
     @Test
     public void testGetAllPrograms() throws Exception {
 
-        ProgramDao dao = new ProgramDao();
         List<Program> programs = dao.getAllPrograms();
 
         assertTrue("There is the wrong amount in the list", programs.size() > 0);
@@ -32,7 +38,6 @@ public class ProgramDaoTest {
     @Test
     public void testGetProgram() throws Exception {
 
-        ProgramDao dao = new ProgramDao();
         Program program = dao.getProgram(7);
         assertNotNull("Could not get program", program);
     }
@@ -40,7 +45,6 @@ public class ProgramDaoTest {
     @Test
     public void testGetProgramByName() throws Exception {
 
-        ProgramDao dao = new ProgramDao();
         Program program = dao.getProgramByName("Felicia Program");
 
         log.info(program);
@@ -51,7 +55,6 @@ public class ProgramDaoTest {
     @Test
     public void testUpdateProgram() throws Exception {
 
-        ProgramDao dao = new ProgramDao();
         Program program = new Program();
         program.setProgramId(7);
         program.setProgramName("Program-Name");
@@ -65,7 +68,6 @@ public class ProgramDaoTest {
     @Test
     public void testDeleteProgram() throws Exception {
 
-        ProgramDao dao = new ProgramDao();
         Program program = new Program();
         program.setProgramId(11);
 
@@ -76,7 +78,6 @@ public class ProgramDaoTest {
     @Test
     public void testAddProgram() throws Exception {
 
-        ProgramDao dao = new ProgramDao();
         int insertProgramId = 0;
 
         Program program = new Program();

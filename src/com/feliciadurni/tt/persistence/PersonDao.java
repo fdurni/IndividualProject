@@ -1,6 +1,7 @@
 package com.feliciadurni.tt.persistence;
 
 import com.feliciadurni.tt.entity.Person;
+import com.feliciadurni.tt.entity.PersonRole;
 import com.feliciadurni.tt.entity.Program;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;

@@ -8,10 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.feliciadurni.tt.entity.*;
 import com.feliciadurni.tt.persistence.PersonDao;
-import com.feliciadurni.tt.persistence.PersonRoleDao;
 import com.feliciadurni.tt.utils.VerifyRecaptcha;
 import org.apache.log4j.Logger;
 
@@ -31,25 +32,55 @@ public class SignUpUser extends HttpServlet {
         PersonRole personRole = new PersonRole();
         String gRecaptchaResponse;
         String username = req.getParameter("userName");
+        int insertPersonId = 0;
 
+        /*
+         * setters for a person
+         */
         person.setFirstName(req.getParameter("firstName"));
         person.setLastName(req.getParameter("lastName"));
         person.setUserName(username);
         person.setPassword(req.getParameter("password"));
+
+        /*
+         * get the g-recaptcha-response and verify it
+         */
         gRecaptchaResponse = req.getParameter("g-recaptcha-response");
         boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
 
+        /*
+         * setters for a personrole
+         */
         personRole.setRole("user");
         personRole.setUserName(username);
-        personRole.setPersonId(person.getPersonId());
+        personRole.setPerson(person);
 
-        dao.addPerson(person);
+        /*
+         * create a Set of roles that will be created for the person
+         */
+        Set<PersonRole> roles = new HashSet<PersonRole>();
+        roles.add(personRole);
+        person.setRoles(roles);
 
-        if (verify) {
-            resp.sendRedirect("/person/main.jsp");
-            log.info("captcha success!");
+        /*
+         * insert the person into the database
+         */
+        insertPersonId = dao.addPerson(person);
+
+        /*
+         * used to output an error message if insert is unsuccessful
+         */
+        PrintWriter out = resp.getWriter();
+
+        /*
+         * verify re-captcha and that a person was inserted
+         * else, output error messages
+         */
+        if (verify && insertPersonId > 0) {
+            resp.sendRedirect("/person/home");
+        } else if (insertPersonId == 0) {
+            out.println("<font color=red>Could not register new user. Try again.</font>");
         } else {
-            PrintWriter out = resp.getWriter();
             out.println("<font color=red>You missed the Captcha.</font>");
         }
     }

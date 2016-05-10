@@ -4,7 +4,7 @@
     <section class="content-header">
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Add Routine</li>
+            <li class="active">Select Program</li>
         </ol>
     </section>
     <!-- Main content -->
@@ -24,7 +24,7 @@
                     <div class="col-md-4">
                         <select id="selectbasic" name="selectbasic" class="form-control">
                             <option value="">Select Program</option>
-                            <c:forEach var="program" items="${programInfo}">
+                            <c:forEach var="program" items="${personPrograms}">
                                 <option value=${program.programId}>${program.programName}</option>
                             </c:forEach>
                         </select>

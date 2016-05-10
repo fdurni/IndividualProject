@@ -7,6 +7,7 @@ import com.feliciadurni.tt.persistence.ExerciseDao;
 import com.feliciadurni.tt.persistence.RoutineDao;
 import com.feliciadurni.tt.persistence.RoutineExerciseDao;
 import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -20,11 +21,16 @@ import static org.junit.Assert.assertTrue;
 public class ExerciseDaoTest {
 
     private final Logger log = Logger.getLogger(this.getClass());
+    ExerciseDao dao;
+
+    @Before
+    public void setUp() throws Exception {
+        dao = new ExerciseDao();
+    }
 
     @Test
     public void testGetAllExercises() throws Exception {
 
-        ExerciseDao dao = new ExerciseDao();
         List<Exercise> exercises = dao.getAllExercises();
 
         assertTrue("There is the wrong amount in the list", exercises.size() > 0);
@@ -33,7 +39,6 @@ public class ExerciseDaoTest {
     @Test
     public void testGetExercise() throws Exception {
 
-        ExerciseDao dao = new ExerciseDao();
         Exercise exercise = dao.getExercise(5);
         assertNotNull("Could not get exercise", exercise);
     }
@@ -41,7 +46,6 @@ public class ExerciseDaoTest {
     @Test
     public void testGetExerciseByName() throws Exception {
 
-        ExerciseDao dao = new ExerciseDao();
         Exercise exercise = dao.getExerciseByName("Squat");
         RoutineExerciseDao routineExerciseDao = new RoutineExerciseDao();
 
@@ -54,7 +58,6 @@ public class ExerciseDaoTest {
     @Test
     public void testUpdateExercise() throws Exception {
 
-        ExerciseDao dao = new ExerciseDao();
         Exercise exercise = new Exercise();
         exercise.setExerciseName("Updated-Exercise-Name");
         exercise.setExerciseType("Updated-Exercise-Type");
@@ -67,7 +70,6 @@ public class ExerciseDaoTest {
     @Test
     public void testDeleteExercise() throws Exception {
 
-        ExerciseDao dao = new ExerciseDao();
         Exercise exercise = new Exercise();
         exercise.setExerciseId(4);
 
@@ -78,7 +80,6 @@ public class ExerciseDaoTest {
     @Test
     public void testAddExercise() throws Exception {
 
-        ExerciseDao dao = new ExerciseDao();
         int insertExerciseId = 0;
 
         Exercise exercise = new Exercise();

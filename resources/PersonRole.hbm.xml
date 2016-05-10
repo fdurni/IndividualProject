@@ -13,8 +13,7 @@
                 <column name="role" sql-type="varchar(30)" length="30"/>
             </key-property>
         </composite-id>
-        <property name="personId">
-            <column name="personId" sql-type="int(11)" not-null="false"/>
-        </property>
+        <many-to-one name="person" class="com.feliciadurni.tt.entity.Person"
+                     column="personId" />
     </class>
 </hibernate-mapping>

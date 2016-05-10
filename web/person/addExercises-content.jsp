@@ -11,12 +11,12 @@
     <section class="content">
 
         <!-- Form code begins -->
-        <form class="form-horizontal" method="post" action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+        <form class="form-horizontal" method="post">
 
             <fieldset>
 
                 <!-- Form Name -->
-                <legend>Add Exercises</legend>
+                <legend>Add Exercises to Routine</legend>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="exercise">Select Routine</label>
@@ -24,7 +24,7 @@
                         <select id="routine" name="routine" class="form-control">
                             <option value="">Select Routine</option>
                             <c:forEach var="routine" items="${routines}">
-                                <option value=${routine.routineId}>${routine.routineName} - Week ${routine.week}</option>
+                                <option value=${routine.routineId}>${routine.program.programName} | ${routine.routineName} | Week ${routine.week}</option>
                             </c:forEach>
                         </select>
                     </div>

@@ -10,8 +10,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import com.feliciadurni.tt.entity.*;
+import com.feliciadurni.tt.persistence.PersonDao;
 import com.feliciadurni.tt.persistence.ProgramDao;
 import org.apache.log4j.Logger;
 
@@ -26,16 +28,6 @@ public class SelectProgram extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        HttpSession session = req.getSession();
-        List<Program> allPrograms = new ArrayList<Program>();
-        ProgramDao dao = new ProgramDao();
-
-        allPrograms = dao.getAllPrograms();
-
-        log.info("The Program List: " + allPrograms);
-
-        session.setAttribute("programInfo", allPrograms);
-
         String url = "/person/selectProgram.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
@@ -48,13 +40,20 @@ public class SelectProgram extends HttpServlet {
         HttpSession session = req.getSession();
         ProgramDao dao = new ProgramDao();
 
+        /*
+         * determine which program was selected from the dropdown
+         */
         int programId = Integer.parseInt(req.getParameter("selectbasic"));
         Program selectedProgram = dao.getProgram(programId);
 
-        log.info("The Program: " + selectedProgram);
-
+        /*
+         * set the attribute for the selected program
+         */
         session.setAttribute("selectedProgram", selectedProgram);
 
+        /*
+         * redirect to the add routine page
+         */
         resp.sendRedirect("/person/addRoutine");
     }
 }

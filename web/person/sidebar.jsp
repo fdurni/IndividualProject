@@ -36,6 +36,7 @@
                 <a href="#"><span>My Routines</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="/person/selectProgram">Add Routine</a></li>
+                    <li><a href="/person/viewPrograms">View/Update/Delete Routine</a></li>
                 </ul>
             </li>
             <li class="treeview">
