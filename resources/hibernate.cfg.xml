@@ -8,16 +8,16 @@
             org.hibernate.dialect.MySQL5Dialect
         </property>
         <property name="connection.url">
-            <!--jdbc:mysql://127.3.72.130:3306/groupproj-->
-            jdbc:mysql://localhost:3306/trainingtracker
+            jdbc:mysql://127.7.145.130:3306/trainingtracker
+            <!--jdbc:mysql://localhost:3306/trainingtracker-->
         </property>
         <property name="connection.username">
-            <!--adminuNsgvyg-->
-            felicia
+            adminuNsgvyg
+            <!--felicia-->
         </property>
         <property name="connection.password">
-            <!--G4N1RmPpx8XP-->
-            Dodgers4
+            G4N1RmPpx8XP
+            <!--Dodgers4-->
         </property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <mapping resource="Exercise.hbm.xml" />

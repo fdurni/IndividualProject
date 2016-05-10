@@ -9,7 +9,7 @@
 <!-- Content Type -->
 <c:import url="../contentType.jsp"/>
 <html>
-<c:import url="head.jsp"/>
+<c:import url="../head.jsp"/>
 <link rel="stylesheet" href="../dist/css/addRoutine.css">
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -31,7 +31,7 @@
 </div>
 
 <!-- REQUIRED JS SCRIPTS -->
-<c:import url="include.jsp"/>
+<c:import url="../include.jsp"/>
 <script type="text/javascript" src="../js/addNewExercises.js"></script>
 </body>
 </html>

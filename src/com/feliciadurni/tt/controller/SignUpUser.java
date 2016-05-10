@@ -26,6 +26,15 @@ public class SignUpUser extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String url = "/signUp.jsp";
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(req, resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Person person = new Person();
         PersonDao dao = new PersonDao();

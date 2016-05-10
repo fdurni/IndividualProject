@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: felic
@@ -7,10 +8,11 @@
 --%>
 <jsp:include page="contentType.jsp" />
 <html>
-<jsp:include page="person/head.jsp" />
+<c:import url="head.jsp"/>
     <body role="document">
 <H2>Log In Failed!!!</H2>
 This will be the sign in error page
 
+<c:import url="include.jsp"/>
 </body>
 </html>
