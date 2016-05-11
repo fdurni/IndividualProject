@@ -30,3 +30,5 @@
 | 5/3/16 | Worked on instructor feedback | 2| |
 | 5/6/16 | Update/Delete functionality | 7| |
 | 5/8/16 | JavaDoc and Unit Tests | 3| |
+| 5/9/16 | Worked on deploying to Openshift | 4| |
+| 5/10/16 | Worked on deploying to Openshift | 6| |
