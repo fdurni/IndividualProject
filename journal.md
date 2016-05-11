@@ -99,3 +99,9 @@ I added update and delete functionality - the user can now update or delete a ro
 
 ###5/8/16
 I continued to work on JavaDoc and writing unit tests. I'm at about 50% code coverage, and think that may have to be where I end up. I'm not currently testing a majority of my controllers, since most are only displaying/inserting/updating using the daos. If there is logic in the controller, I did pull some logic out and am testing it. 
+
+###5/9/16
+I worked on trying to get my site deployed to OpenShift. I was able to get deployed, but none of my css or js is loading. Not sure what the problem is yet. I'm concerned I won't be able to get deployed. 
+
+###5/10/16
+I continued to work on deploying to OpenShift. My paths throughout the project were incorrect, so I made many changes to correct the paths. I was able to successfully deploy and connect to my database, but I can't figure out the authentication piece. This functionality works perfectly locally, but for some reason I can't login using a username and password in the database. I will probably need to show my site locally when I present, instead of showing it on OpenShift, because my site is only available after login. Thinking back, I should have worked on deploying regularly, instead of waiting until the final step. 
