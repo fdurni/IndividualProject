@@ -25,6 +25,14 @@ public class SignUpUser extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * This method displays signUp.jsp.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -34,6 +42,14 @@ public class SignUpUser extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method inserts a user into the person table, and a role into the personrole table.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Person person = new Person();
@@ -86,7 +102,7 @@ public class SignUpUser extends HttpServlet {
          * else, output error messages
          */
         if (verify && insertPersonId > 0) {
-            resp.sendRedirect("person/home");
+            resp.sendRedirect("/TrainingTracker_war/");
         } else if (insertPersonId == 0) {
             out.println("<font color=red>Could not register new user. Try again.</font>");
         } else {

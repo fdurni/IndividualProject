@@ -24,6 +24,14 @@ public class UpdateRoutine extends HttpServlet {
 
     private final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(this.getClass());
 
+    /**
+     * This method displays updateRoutine.jsp.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -33,6 +41,14 @@ public class UpdateRoutine extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method updates the selected routine.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -103,10 +119,10 @@ public class UpdateRoutine extends HttpServlet {
          * if the button was clicked
          */
         if (req.getParameter("submit") != null) {
-            resp.sendRedirect("person/viewPrograms");
+            resp.sendRedirect("viewPrograms");
         }
         else {
-            resp.sendRedirect("person/viewRoutines");
+            resp.sendRedirect("viewRoutines");
         }
     }
 }

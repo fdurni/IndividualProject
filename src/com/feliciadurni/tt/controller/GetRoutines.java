@@ -26,8 +26,13 @@ public class GetRoutines extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /*
-     * Creates a list of routine names
+    /**
+     * This method gets a list of routines for the selected program.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

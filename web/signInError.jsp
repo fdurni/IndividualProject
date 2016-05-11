@@ -16,7 +16,7 @@
     <!-- /.login-logo -->
     <div class="error-page">
         <p>Sign In Error. Try Again.</p>
-        <a href="person/main" class="text-center">Sign In</a>
+        <a href="${pageContext.request.contextPath}" class="text-center">Sign In</a>
 
     </div>
     <!-- /.login-box-body -->

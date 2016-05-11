@@ -39,7 +39,7 @@ public class ExerciseDaoTest {
     @Test
     public void testGetExercise() throws Exception {
 
-        Exercise exercise = dao.getExercise(5);
+        Exercise exercise = dao.getExercise(19);
         assertNotNull("Could not get exercise", exercise);
     }
 
@@ -59,6 +59,7 @@ public class ExerciseDaoTest {
     public void testUpdateExercise() throws Exception {
 
         Exercise exercise = new Exercise();
+        exercise.setExerciseId(20);
         exercise.setExerciseName("Updated-Exercise-Name");
         exercise.setExerciseType("Updated-Exercise-Type");
         exercise.setExerciseDescription("Updated-Exercise-Description");
@@ -71,7 +72,7 @@ public class ExerciseDaoTest {
     public void testDeleteExercise() throws Exception {
 
         Exercise exercise = new Exercise();
-        exercise.setExerciseId(4);
+        exercise.setExerciseId(25);
 
         Boolean exerciseDeleted = dao.deleteExercise(exercise);
         assertTrue(exerciseDeleted);

@@ -25,6 +25,14 @@ public class SelectProgram extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * This method displays selectProgram.jsp.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -34,6 +42,14 @@ public class SelectProgram extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method creates a list of the user's programs.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -54,6 +70,6 @@ public class SelectProgram extends HttpServlet {
         /*
          * redirect to the add routine page
          */
-        resp.sendRedirect("person/addRoutine");
+        resp.sendRedirect("addRoutine");
     }
 }

@@ -7,9 +7,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <!-- Content Type -->
-<c:import url="../contentType.jsp"/>
+<c:import url="/contentType.jsp"/>
 <html>
-  <c:import url="../head.jsp"/>
+  <c:import url="head.jsp"/>
   <body class="hold-transition skin-blue sidebar-mini">
 
       <!-- wrapper -->
@@ -30,7 +30,7 @@
       </div>
 
       <!-- REQUIRED JS SCRIPTS -->
-      <c:import url="../include.jsp"/>
+      <c:import url="include.jsp"/>
 
   </body>
 </html>

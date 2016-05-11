@@ -36,7 +36,7 @@ public class RoutineDaoTest {
     @Test
     public void testGetRoutine() throws Exception {
 
-        Routine routine = dao.getRoutine(5);
+        Routine routine = dao.getRoutine(129);
         assertNotNull("Could not get routine", routine);
     }
 
@@ -64,7 +64,7 @@ public class RoutineDaoTest {
     public void testUpdateRoutine() throws Exception {
 
         Routine routine = new Routine();
-        routine.setRoutineId(1);
+        routine.setRoutineId(134);
         routine.setDay(1);
         routine.setRoutineName("Updated-Routine-Name");
         routine.setWeek(1);
@@ -78,7 +78,7 @@ public class RoutineDaoTest {
     public void testDeleteRoutine() throws Exception {
 
         Routine routine = new Routine();
-        routine.setRoutineId(6);
+        routine.setRoutineId(137);
 
         Boolean routineDeleted = dao.deleteRoutine(routine);
         assertTrue(routineDeleted);

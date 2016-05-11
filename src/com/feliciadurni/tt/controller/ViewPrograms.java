@@ -29,6 +29,14 @@ public class ViewPrograms extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * This method displays viewPrograms.jsp.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -38,6 +46,14 @@ public class ViewPrograms extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method gets a routine based on the program selected.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -66,7 +82,7 @@ public class ViewPrograms extends HttpServlet {
 
         session.setAttribute("selectedRoutine", selectedRoutine);
 
-        resp.sendRedirect("person/viewRoutines");
+        resp.sendRedirect("viewRoutines");
     }
 
     /**

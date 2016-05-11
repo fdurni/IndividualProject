@@ -7,10 +7,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <!-- Content Type -->
-<c:import url="../contentType.jsp"/>
+<c:import url="/contentType.jsp"/>
 <html>
-<c:import url="../head.jsp"/>
-<link rel="stylesheet" href="../dist/css/addRoutine.css">
+<c:import url="head.jsp"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/addRoutine.css">
 <body class="hold-transition skin-blue sidebar-mini">
 
 <!-- wrapper -->
@@ -31,7 +31,7 @@
 </div>
 
 <!-- REQUIRED JS SCRIPTS -->
-<c:import url="../include.jsp"/>
-<script type="text/javascript" src="../js/addNewExercises.js"></script>
+<c:import url="include.jsp"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/addNewExercises.js"></script>
 </body>
 </html>

@@ -38,7 +38,7 @@ public class ProgramDaoTest {
     @Test
     public void testGetProgram() throws Exception {
 
-        Program program = dao.getProgram(7);
+        Program program = dao.getProgram(56);
         assertNotNull("Could not get program", program);
     }
 
@@ -56,7 +56,7 @@ public class ProgramDaoTest {
     public void testUpdateProgram() throws Exception {
 
         Program program = new Program();
-        program.setProgramId(7);
+        program.setProgramId(58);
         program.setProgramName("Program-Name");
         program.setProgramType("Program-Type");
         program.setProgramDescription("Updated-Description");
@@ -69,7 +69,7 @@ public class ProgramDaoTest {
     public void testDeleteProgram() throws Exception {
 
         Program program = new Program();
-        program.setProgramId(11);
+        program.setProgramId(60);
 
         Boolean siteDeleted = dao.deleteProgram(program);
         assertTrue(siteDeleted);

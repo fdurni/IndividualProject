@@ -22,8 +22,13 @@ public class GetWeeks extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /*
-     * Creates a list of weeks that a routine occurs
+    /**
+     * This method gets the weeks for the selected routine.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -24,6 +24,14 @@ public class AddExercises extends HttpServlet {
 
     private final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(this.getClass());
 
+    /**
+     * This method gets routines for the current user and all exercises.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -56,6 +64,14 @@ public class AddExercises extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method inserts exercises into the routineexercise table for the selected routine.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -85,6 +101,6 @@ public class AddExercises extends HttpServlet {
 
         routineDao.updateRoutine(selectedRoutine);
 
-        resp.sendRedirect("person/addExercises");
+        resp.sendRedirect("addExercises");
     }
 }

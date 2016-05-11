@@ -36,7 +36,7 @@ public class PersonDaoTest {
     @Test
     public void testGetPerson() throws Exception {
 
-        Person person = dao.getPerson(1);
+        Person person = dao.getPerson(21);
         assertNotNull("Could not get person", person);
     }
 
@@ -55,7 +55,7 @@ public class PersonDaoTest {
     public void testUpdatePerson() throws Exception {
 
         Person person = new Person();
-        person.setPersonId(1);
+        person.setPersonId(34);
         person.setFirstName("Updated-First-Name");
         person.setLastName("Updated-Last-Name");
         person.setUserName("Updated-User-Name");
@@ -69,7 +69,7 @@ public class PersonDaoTest {
     public void testDeletePerson() throws Exception {
 
         Person person = new Person();
-        person.setPersonId(2);
+        person.setPersonId(41);
 
         Boolean personDeleted = dao.deletePerson(person);
         assertTrue(personDeleted);

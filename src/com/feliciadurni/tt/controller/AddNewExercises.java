@@ -2,9 +2,6 @@ package com.feliciadurni.tt.controller;
 
 import com.feliciadurni.tt.entity.*;
 import com.feliciadurni.tt.persistence.ExerciseDao;
-import com.feliciadurni.tt.persistence.PersonDao;
-import com.feliciadurni.tt.persistence.ProgramDao;
-import com.feliciadurni.tt.persistence.RoutineDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,13 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * Created by felic on 4/24/2016.
@@ -29,6 +21,14 @@ public class AddNewExercises extends HttpServlet {
 
     private final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(this.getClass());
 
+    /**
+     * This method displays the jsp page.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -38,6 +38,14 @@ public class AddNewExercises extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method inserts new exercises into the exercise table.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -61,7 +69,7 @@ public class AddNewExercises extends HttpServlet {
         PrintWriter out = resp.getWriter();
 
         if (insertedExercise > 0) {
-            resp.sendRedirect("person/addNewExercises");
+            resp.sendRedirect("addNewExercises");
         } else {
             out.println("<font color=red>Could not add exercise(s). Try again.</font>");
         }

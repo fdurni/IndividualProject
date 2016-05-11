@@ -35,7 +35,7 @@ public class RoutineExerciseDaoTest {
     @Test
     public void testGetRoutineExercise() throws Exception {
 
-        RoutineExercise routineExercise = dao.getRoutineExercise(12);
+        RoutineExercise routineExercise = dao.getRoutineExercise(112);
         assertNotNull("Could not get routineExercise", routineExercise);
     }
 
@@ -43,7 +43,7 @@ public class RoutineExerciseDaoTest {
     public void testUpdateRoutineExercise() throws Exception {
 
         RoutineExercise routineExercise = new RoutineExercise();
-        routineExercise.setRoutineexerciseId(1);
+        routineExercise.setRoutineexerciseId(105);
         routineExercise.setExpectedSets(2);
         routineExercise.setExpectedReps("2");
         routineExercise.setExpectedWeight(100);
@@ -59,7 +59,7 @@ public class RoutineExerciseDaoTest {
     public void testDeleteRoutineExercise() throws Exception {
 
         RoutineExercise routineExercise = new RoutineExercise();
-        routineExercise.setRoutineexerciseId(99);
+        routineExercise.setRoutineexerciseId(106);
 
         Boolean routineExerciseDeleted = dao.deleteRoutineExercise(routineExercise);
         assertTrue(routineExerciseDeleted);

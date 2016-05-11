@@ -13,7 +13,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="../dist/img/user.png" class="img-circle" alt="User Image">
+                <img src="${pageContext.request.contextPath}/dist/img/user.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>${name}</p>
@@ -29,21 +29,21 @@
             <li class="treeview">
                 <a href="#"><span>My Programs</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/person/addProgram">Add Program</a></li>
+                    <li><a href="${pageContext.request.contextPath}/person/addProgram">Add Program</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><span>My Routines</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/person/selectProgram">Add Routine</a></li>
-                    <li><a href="/person/viewPrograms">View/Update/Delete Routine</a></li>
+                    <li><a href="${pageContext.request.contextPath}/person/selectProgram">Add Routine</a></li>
+                    <li><a href="${pageContext.request.contextPath}/person/viewPrograms">View/Update/Delete Routine</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><span>My Exercises</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/person/addExercises">Add Exercises to Routine</a></li>
-                    <li><a href="/person/addNewExercises">Add New Exercises</a></li>
+                    <li><a href="${pageContext.request.contextPath}/person/addExercises">Add Exercises to Routine</a></li>
+                    <li><a href="${pageContext.request.contextPath}/person/addNewExercises">Add New Exercises</a></li>
                 </ul>
             </li>
         </ul>

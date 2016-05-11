@@ -30,6 +30,14 @@ public class AddProgram extends HttpServlet {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * This method displays addProgram.jsp.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -39,6 +47,14 @@ public class AddProgram extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * This method inserts programs into the program table for the current user.
+     *
+     * @param req The http request object
+     * @param resp the http response object
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -91,10 +107,10 @@ public class AddProgram extends HttpServlet {
          * if the button was clicked
          */
         if (req.getParameter("submit") != null && insertedProgram > 0) {
-            resp.sendRedirect("person/addProgram");
+            resp.sendRedirect("addProgram");
         }
         else if (req.getParameter("submitAndAdd") != null && insertedProgram > 0) {
-            resp.sendRedirect("person/selectProgram");
+            resp.sendRedirect("selectProgram");
         } else {
             out.println("<font color=red>Could not add program. Try again.</font>");
         }
