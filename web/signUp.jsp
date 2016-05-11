@@ -11,13 +11,13 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="/person/home"><b>Training</b>Tracker</a>
+        <a href="person/home"><b>Training</b>Tracker</a>
     </div>
 
     <div class="register-box-body">
         <p class="login-box-msg">Registration</p>
 
-        <form id="signUpForm" role="form" action="/signUpUser" method="post">
+        <form id="signUpForm" role="form" action="signUpUser" method="post">
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" id="firstName"
                        name="firstName" placeholder="First Name">

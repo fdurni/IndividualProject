@@ -5,7 +5,6 @@ import com.feliciadurni.tt.persistence.RoutineDao;
 import com.google.gson.Gson;
 import org.apache.log4j.Logger;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

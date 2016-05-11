@@ -86,7 +86,7 @@ public class SignUpUser extends HttpServlet {
          * else, output error messages
          */
         if (verify && insertPersonId > 0) {
-            resp.sendRedirect("/person/home");
+            resp.sendRedirect("person/home");
         } else if (insertPersonId == 0) {
             out.println("<font color=red>Could not register new user. Try again.</font>");
         } else {

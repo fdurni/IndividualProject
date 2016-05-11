@@ -1,18 +1,27 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: felic
-  Date: 2/21/2016
-  Time: 2:17 PM
+  Date: 2/9/2016
+  Time: 6:03 PM
   To change this template use File | Settings | File Templates.
 --%>
 <jsp:include page="contentType.jsp" />
 <html>
-<c:import url="head.jsp"/>
-    <body role="document">
-<H2>Log In Failed!!!</H2>
-This will be the sign in error page
+<jsp:include page="head.jsp" />
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <b>Training</b>Tracker
+    </div>
+    <!-- /.login-logo -->
+    <div class="error-page">
+        <p>Sign In Error. Try Again.</p>
+        <a href="person/main" class="text-center">Sign In</a>
 
-<c:import url="include.jsp"/>
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+<jsp:include page="include.jsp" />
 </body>
 </html>

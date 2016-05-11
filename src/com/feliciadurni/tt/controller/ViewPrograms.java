@@ -66,7 +66,7 @@ public class ViewPrograms extends HttpServlet {
 
         session.setAttribute("selectedRoutine", selectedRoutine);
 
-        resp.sendRedirect("/person/viewRoutines");
+        resp.sendRedirect("person/viewRoutines");
     }
 
     /**

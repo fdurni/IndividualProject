@@ -91,10 +91,10 @@ public class AddProgram extends HttpServlet {
          * if the button was clicked
          */
         if (req.getParameter("submit") != null && insertedProgram > 0) {
-            resp.sendRedirect("/person/addProgram");
+            resp.sendRedirect("person/addProgram");
         }
         else if (req.getParameter("submitAndAdd") != null && insertedProgram > 0) {
-            resp.sendRedirect("/person/selectProgram");
+            resp.sendRedirect("person/selectProgram");
         } else {
             out.println("<font color=red>Could not add program. Try again.</font>");
         }

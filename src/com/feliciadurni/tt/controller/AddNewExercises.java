@@ -61,7 +61,7 @@ public class AddNewExercises extends HttpServlet {
         PrintWriter out = resp.getWriter();
 
         if (insertedExercise > 0) {
-            resp.sendRedirect("/person/addNewExercises");
+            resp.sendRedirect("person/addNewExercises");
         } else {
             out.println("<font color=red>Could not add exercise(s). Try again.</font>");
         }

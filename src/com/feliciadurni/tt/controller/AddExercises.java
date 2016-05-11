@@ -85,6 +85,6 @@ public class AddExercises extends HttpServlet {
 
         routineDao.updateRoutine(selectedRoutine);
 
-        resp.sendRedirect("/person/addExercises");
+        resp.sendRedirect("person/addExercises");
     }
 }

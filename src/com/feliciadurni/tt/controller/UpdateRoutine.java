@@ -103,10 +103,10 @@ public class UpdateRoutine extends HttpServlet {
          * if the button was clicked
          */
         if (req.getParameter("submit") != null) {
-            resp.sendRedirect("/person/viewPrograms");
+            resp.sendRedirect("person/viewPrograms");
         }
         else {
-            resp.sendRedirect("/person/viewRoutines");
+            resp.sendRedirect("person/viewRoutines");
         }
     }
 }

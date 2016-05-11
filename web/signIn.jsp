@@ -28,7 +28,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-8">
-                    <div class="checkbox icheck">
+                    <div class="checkbox icheck" style="padding-left: 20px">
                         <label>
                             <input type="checkbox"> Remember Me
                         </label>
@@ -42,7 +42,7 @@
             </div>
         </form>
 
-        <a href="/signUpUser" class="text-center">Register</a>
+        <a href="signUpUser" class="text-center">Register</a>
 
     </div>
     <!-- /.login-box-body -->

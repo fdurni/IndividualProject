@@ -71,10 +71,10 @@ public class AddRoutine extends HttpServlet {
          * if the button was clicked
          */
         if (req.getParameter("submit") != null) {
-            resp.sendRedirect("/person/addRoutine");
+            resp.sendRedirect("person/addRoutine");
         }
         else if (req.getParameter("submitAndAdd") != null) {
-            resp.sendRedirect("/person/addExercises");
+            resp.sendRedirect("person/addExercises");
         }
     }
 }

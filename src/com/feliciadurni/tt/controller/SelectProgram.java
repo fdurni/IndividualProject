@@ -54,6 +54,6 @@ public class SelectProgram extends HttpServlet {
         /*
          * redirect to the add routine page
          */
-        resp.sendRedirect("/person/addRoutine");
+        resp.sendRedirect("person/addRoutine");
     }
 }
