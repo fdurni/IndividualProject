@@ -32,3 +32,4 @@
 | 5/8/16 | JavaDoc and Unit Tests | 3| |
 | 5/9/16 | Worked on deploying to Openshift | 4| |
 | 5/10/16 | Worked on deploying to Openshift | 6| |
+| 5/11/16 | Worked on deploying to Openshift | 4| |
