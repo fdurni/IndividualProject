@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     $('#selectProgram').change(function(event) {
         var programId = $("#selectProgram").val();
-        $.get('/person/getRoutines', {
+        $.get('getRoutines', {
             programId : programId
         }, function(response) {
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
     $('#selectRoutine').change(function(event) {
 
         var routineName = $("#selectRoutine").val();
-        $.get('/person/getWeeks', {
+        $.get('getWeeks', {
             routineName : routineName
         }, function(response) {
 

@@ -29,7 +29,7 @@ public class ViewRoutines extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String url = "viewRoutines.jsp";
+        String url = "/person/viewRoutines.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(req, resp);

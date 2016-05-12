@@ -8,10 +8,10 @@ $(document).ready(function(){
 
         var routineId = $("#routine").val();
 
-        $.post('/person/deleteRoutine', {
+        $.post('deleteRoutine', {
             routineId : routineId
         }, function(response) {
-            window.location.href = '/person/viewPrograms';
+            window.location.href = 'viewPrograms';
         });
     });
 });

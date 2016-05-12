@@ -12,7 +12,7 @@
     <section class="content-header">
         <h1>
             View Routine Details
-            <a href="/person/updateRoutine" class="update_button" title="Update Routine"><img height="15px" src="../dist/img/update.jpg"/></a>
+            <a href="updateRoutine" class="update_button" title="Update Routine"><img height="15px" src="../dist/img/update.jpg"/></a>
             <a href="javascript:void(0);" class="delete_button" title="Delete Routine"><img height="15px" src="../dist/img/delete.jpg"/></a>
         </h1>
         <ol class="breadcrumb">
