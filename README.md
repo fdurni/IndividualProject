@@ -22,10 +22,8 @@ I would like to build a website that will allow me to input my training schedule
   * JUnit tests to achieve 50% code coverage
 
 
-###Design
-* Application Flow
-* Screen Design
-* Database Design
+###[Application Link](http://tomcat-fdurni.rhcloud.com/TrainingTracker_war/)
+
 
 ###[Project Plan](projectPlan.md)
 
